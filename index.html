@@ -1,17 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- HEADER -->
+<!-- PAGE FORMATTING -->
 
 <head>
     <title>neeha ravula</title>
     <style>
         /* CSS STYLE ELEMENTS */
         
+        body {
+            background-color: #E5EBE2;
+        }
+        /* NAVIGATION */
+        
+        nav {
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 90px;
+            position: fixed;
+        }
+        
+        ul {
+            padding-top: 1em;
+            list-style-type: none;
+            overflow: hidden;
+        }
+        
+        li {
+            display: inline;
+        }
+        
+        li a {
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            text-decoration: none;
+            color: black;
+            font-family: "Fjalla One", monospace;
+            font-size: 2em;
+        }
+        /* HEADER */
+        
+        header {
+            padding-top: 150px;
+            padding-bottom: 200px
+        }
+        
         h1 {
             text-align: center;
-            font-size: 3em;
-            color: rgb(83, 124, 196);
+            color: black;
+            font-family: "Xanh Mono", monospace;
+            font-weight: 100;
+            font-stretch: 50%;
+            font-size: 10em;
+        }
+        /* MAIN */
+        
+        main {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+        footer {
+            color: #87A678;
+            text-align: center;
+            font-family: "Monaco", monospace;
         }
     </style>
 </head>
@@ -19,8 +77,33 @@
 <!-- BODY -->
 
 <body>
-    <h1 title="welcome!"> Neeha Ravula </h1>
+    <!-- NAV -->
+    <nav>
+        <ul>
+            <style>a:hover {color: #87A678; }</style>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla One">
+            <li><a href="index.html">home</a></li>
+            <li style="float:right"><a href="#about">about</a></li>
+            <li style="float:right"><a href="#experience">experience</a></li>
+            <li style="float:right"><a href="#projects">projects</a></li>
+        </ul>
+    </nav>
 
+    <!-- HEADER -->
+    <header>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Xanh Mono">
+        <h1 title="Neeha Ravula"> Neeha Ravula </h1>
+    </header>
+
+    <!-- MAIN
+    <main>
+        <p>under construction...</p>
+    </main> -->
+
+    <!-- FOOTER -->
+    <footer>
+        <p>LAST UPDATED NOVEMBER 2022</p>
+    </footer>
 
 </body>
 
