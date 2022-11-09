@@ -4,12 +4,15 @@
 <!-- PAGE FORMATTING -->
 
 <head>
-    <title>neeha ravula</title>
+    <title>Neeha's Portfolio</title>
     <style>
         /* CSS STYLE ELEMENTS */
         
         body {
             background-color: #E5EBE2;
+            animation: fadeIn ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
         }
         /* NAVIGATION */
         
@@ -65,11 +68,24 @@
             right: 0;
             left: 0;
         }
-
+        
         footer {
             color: #87A678;
             text-align: center;
             font-family: "Monaco", monospace;
+        }
+        
+        .fade-in-text {
+            animation: fadeIn 4s
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0
+            }
+            100% {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -80,10 +96,14 @@
     <!-- NAV -->
     <nav>
         <ul>
-            <style>a:hover {color: #87A678; }</style>
+            <style>
+                a:hover {
+                    color: #87A678;
+                }
+            </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla One">
             <li><a href="https://neeharavula.github.io/">home</a></li>
-            <li style="float:right"><a href="#about">about</a></li>
+            <li style="float:right"><a href="https://neeharavula.github.io/about">about</a></li>
             <li style="float:right"><a href="#experience">experience</a></li>
             <li style="float:right"><a href="#projects">projects</a></li>
         </ul>
@@ -92,7 +112,9 @@
     <!-- HEADER -->
     <header>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Xanh Mono">
-        <h1 title="Neeha Ravula"> Neeha Ravula </h1>
+        <div class="fade-in-text">
+            <h1 title="Neeha Ravula"> Neeha Ravula </h1>
+        </div>
     </header>
 
     <!-- MAIN
