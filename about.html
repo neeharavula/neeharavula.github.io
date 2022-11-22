@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- PAGE FORMATTING -->
+<!-- PAGE STYLE & FORMAT -->
 
 <head>
     <title>About Me</title>
     <style>
-        /* CSS STYLE ELEMENTS */
+        /* PAGE BACKGROUND */
         
         body {
             background-color: #E5EBE2;
+            animation: fadeIn ease 2s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
         }
         /* NAVIGATION */
         
@@ -41,19 +44,13 @@
             font-family: "Fjalla One", monospace;
             font-size: 2em;
         }
-        /* HEADER */
+        /* HEADER (ABOUT ME) */
         
         header {
             padding-top: 150px;
             padding-bottom: 100px
         }
-        /* MAIN */
-        
-        body {
-            animation: fadeIn ease 2s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        }
+        /* MAIN (CONTENT) */
         
         main {
             padding-bottom: 800px;
@@ -83,17 +80,26 @@
             float: left;
             border-radius: 10%;
         }
+        /* TEXT ON TEXT-BOX */
         
-        #exp-button {
-            width: 220px;
-            height: 40px;
-            margin-top: 3em;
-            margin-right: 8em;
-            padding-bottom: 30px;
-            background: rgba(255, 255, 255, 0.5);
-            float: right;
-            border-radius: 30px 30px 30px 30px;
+        h1 {
+            text-align: left;
+            color: black;
+            font-family: "Xanh Mono", monospace;
+            font-weight: 100;
+            font-stretch: 50%;
+            font-size: 2em;
         }
+        /* TEXT ON BUTTONS */
+        
+        h2 {
+            text-align: center;
+            color: black;
+            font-family: "Xanh Mono", monospace;
+            font-weight: 100;
+            font-size: 1.5em;
+        }
+        /* RESUME BUTTON */
         
         #resume-button {
             width: 220px;
@@ -106,14 +112,6 @@
             border-radius: 30px 30px 30px 30px;
         }
         
-        #change-exp-color:hover #exp-button {
-            background: #87A678;
-        }
-        
-        #change-exp-color:hover h2 {
-            color: white;
-        }
-        
         #change-resume-color:hover #resume-button {
             background: #87A678;
         }
@@ -121,29 +119,34 @@
         #change-resume-color:hover h2 {
             color: white;
         }
+        /* EXPERIENCE BUTTON */
         
-        h1 {
-            text-align: left;
-            color: black;
-            font-family: "Xanh Mono", monospace;
-            font-weight: 100;
-            font-stretch: 50%;
-            font-size: 2em;
+        #experience-button {
+            width: 220px;
+            height: 40px;
+            margin-top: 3em;
+            margin-right: 8em;
+            padding-bottom: 30px;
+            background: rgba(255, 255, 255, 0.5);
+            float: right;
+            border-radius: 30px 30px 30px 30px;
         }
         
-        h2 {
-            text-align: center;
-            color: black;
-            font-family: "Xanh Mono", monospace;
-            font-weight: 100;
-            font-size: 1.5em;
+        #change-experience-color:hover #experience-button {
+            background: #87A678;
         }
+        
+        #change-experience-color:hover h2 {
+            color: white;
+        }
+        /* FOOTER */
         
         footer {
             color: #87A678;
             text-align: center;
             font-family: "Monaco", monospace;
         }
+        /* TRANSITIONS */
         
         .fade-in-box {
             animation: fadeIn 2s
@@ -181,7 +184,7 @@
 
     <!-- HEADER -->
     <header>
-
+        <!-- add about me header here -->
     </header>
 
     <!-- MAIN -->
@@ -197,8 +200,8 @@
         </div>
 
         <div class="fade-in-box">
-            <div id="change-exp-color">
-                <div id="exp-button">
+            <div id="change-experience-color">
+                <div id="experience-button">
                     <h2>Experience</h2>
                 </div>
             </div>
