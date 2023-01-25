@@ -23,6 +23,7 @@
             right: 0;
             height: 90px;
             position: fixed;
+            padding-right: 35px;
         }
         
         ul {
@@ -41,30 +42,31 @@
             padding-right: 20px;
             padding-bottom: 20px;
             text-decoration: none;
-            color: black;
+            color: #3d3d3d;
             font-family: "Fjalla One", monospace;
             font-size: 2em;
         }
-        /* HEADER (NAME) */
         
-        header {
-            padding-top: 150px;
-            padding-bottom: 200px
+        video {
+            padding-top: 90px;
+            padding-bottom: 20px;
         }
-        
-        h1 {
+        /* HEADER (NAME) */
+        /*header {
+            /*padding-top: 150px;
+            padding-bottom: 200px
+        }*/
+        /*h1 {
             text-align: center;
             color: black;
             font-family: "Xanh Mono", monospace;
             font-weight: 100;
             font-stretch: 50%;
             font-size: 10em;
-        }
+        }*/
         /* MAIN (EMPTY) */
         
         main {
-            padding-top: 100px;
-            padding-bottom: 100px;
             top: 0;
             right: 0;
             left: 0;
@@ -76,9 +78,34 @@
             text-align: center;
             font-family: "Monaco", monospace;
         }
+        
+        .socials li {
+            margin: 10px;
+        }
+        
+        .fa {
+            padding-right: 10px;
+            padding-left: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: 100px;
+            width: 20px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .fa-linkedin {
+            background: #E5EBE2;
+            color: #87A678;
+        }
+        
+        .fa-envelope {
+            background: #E5EBE2;
+            color: #87A678;
+        }
         /* TRANSITIONS */
         
-        .fade-in-text {
+        .fade-in {
             animation: fadeIn 2s
         }
         
@@ -107,22 +134,37 @@
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla One">
             <li><a href="https://neeharavula.github.io/">home</a></li>
             <li style="float:right"><a href="https://neeharavula.github.io/about">about</a></li>
-            <li style="float:right"><a href="#experience">experience</a></li>
-            <li style="float:right"><a href="#projects">projects</a></li>
+            <li style="float:right"><a href="#work">work</a></li>
         </ul>
     </nav>
 
     <!-- HEADER -->
     <header>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Xanh Mono">
-        <div class="fade-in-text">
-            <h1 title="Neeha Ravula"> Neeha Ravula </h1>
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Xanh Mono"> -->
+        <div class="fade-in">
+            <center>
+                <!-- onmouseover="this.play()" onmouseout="this.pause();" -->
+                <video loop width="720" height="600" autoplay muted>
+                    <source src="neeharavula.mov" type="video/mp4">
+                </video>
+            </center>
+            <!-- <h1 title="Neeha Ravula"> Neeha Ravula </h1> -->
         </div>
     </header>
 
     <!-- FOOTER -->
     <footer>
-        <p>LAST UPDATED NOVEMBER 2022</p>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Add font awesome icons -->
+        <div class="socials">
+            <li>
+                <a href="mailto: ravulaneeha@gmail.com" class="fa fa-envelope fa-2x" aria-hidden="true"></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/neeharavula/" class="fa fa-linkedin fa-2x"></a>
+            </li>
+        </div>
     </footer>
 
 </body>
