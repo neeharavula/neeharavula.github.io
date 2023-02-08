@@ -15,6 +15,7 @@
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
             margin: 0;
+            transition: background-color 1s ease;
         }
         /* NAVIGATION */
         
@@ -45,7 +46,7 @@
             text-decoration: none;
             color: #3d3d3d;
             font-family: "Fjalla One", monospace;
-            font-size: 2em;
+            font-size: 1.8em;
         }
         
         video {
@@ -53,10 +54,11 @@
             padding-bottom: 20px;
         }
         /* HEADER (NAME) */
-        /*header {
-            /*padding-top: 150px;
-            padding-bottom: 200px
-        }*/
+        
+        header {
+            /*padding-top: 150px;*/
+            padding-bottom: 100px;
+        }
         /*h1 {
             text-align: center;
             color: black;
@@ -78,8 +80,8 @@
             background-color: #e3e2de;
             padding-right: 8em;
             padding-left: 8em;
-            padding-top: 20em;
-            padding-bottom: 20em;
+            padding-top: 25em;
+            padding-bottom: 25em;
         }
         
         .about h1 {
@@ -91,8 +93,8 @@
             background-color: #3d3d3d;
             padding-right: 8em;
             padding-left: 8em;
-            padding-top: 20em;
-            padding-bottom: 20em;
+            padding-top: 25em;
+            padding-bottom: 25em;
         }
         
         .experience h1 {
@@ -117,8 +119,8 @@
             background-color: #3d3d3d;
             padding-right: 8em;
             padding-left: 8em;
-            padding-top: 15em;
-            padding-bottom: 15em;
+            padding-top: 12em;
+            padding-bottom: 12em;
         }
         
         .resume h1 {
@@ -131,6 +133,7 @@
             color: #87A678;
             text-align: center;
             font-family: "Monaco", monospace;
+            padding: 1em;
         }
         
         .socials li {
@@ -171,13 +174,17 @@
                 opacity: 1;
             }
         }
+        
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
+
 </head>
 
 <!-- BODY -->
 
 <body>
-
     <!-- NAV -->
     <nav>
         <ul>
@@ -187,9 +194,11 @@
                 }
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla One">
-            <li><a href="https://neeharavula.github.io/">home</a></li>
-            <li style="float:right"><a href="https://neeharavula.github.io/about">about</a></li>
+            <li><a href="#home">home</a></li>
+            <li style="float:right"><a href="#resume">resume</a></li>
             <li style="float:right"><a href="#work">work</a></li>
+            <li style="float:right"><a href="#experience">experience</a></li>
+            <li style="float:right"><a href="#about">about</a></li>
         </ul>
     </nav>
     <!-- HEADER -->
@@ -206,24 +215,26 @@
         </div>
     </header>
 
-
     <!-- ABOUT ME-->
-    <div class="about">
+    <div id="about" class="about">
         <h1>about me</h1>
     </div>
 
     <!-- EXPERIENCE-->
-    <div class="experience">
+
+    <div id="experience" class="experience">
         <h1>experience</h1>
     </div>
 
+
     <!-- WORK-->
-    <div class="work">
+
+    <div id="work" class="work">
         <h1>work</h1>
     </div>
 
     <!-- RESUME-->
-    <div class="resume">
+    <div id="resume" class="resume">
         <h1>want to learn more? here's my resume</h1>
     </div>
 
@@ -255,6 +266,7 @@
             </li>
         </div>
     </footer>
+
 
 </body>
 
