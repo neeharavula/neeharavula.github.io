@@ -14,6 +14,7 @@
             animation: fadeIn ease 2s;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
+            margin: 0;
         }
         /* NAVIGATION */
         
@@ -70,6 +71,59 @@
             top: 0;
             right: 0;
             left: 0;
+        }
+        /* ABOUT ME */
+        
+        .about {
+            background-color: #e3e2de;
+            padding-right: 8em;
+            padding-left: 8em;
+            padding-top: 20em;
+            padding-bottom: 20em;
+        }
+        
+        .about h1 {
+            color: #3d3d3d;
+        }
+        /* EXPERIENCE */
+        
+        .experience {
+            background-color: #3d3d3d;
+            padding-right: 8em;
+            padding-left: 8em;
+            padding-top: 20em;
+            padding-bottom: 20em;
+        }
+        
+        .experience h1 {
+            color: #e3e2de;
+        }
+        /* WORK */
+        
+        .work {
+            background-color: #E5EBE2;
+            padding-right: 8em;
+            padding-left: 8em;
+            padding-top: 20em;
+            padding-bottom: 20em;
+        }
+        
+        .work h1 {
+            color: #3d3d3d;
+        }
+        /* RESUME */
+        
+        .resume {
+            background-color: #3d3d3d;
+            padding-right: 8em;
+            padding-left: 8em;
+            padding-top: 15em;
+            padding-bottom: 15em;
+        }
+        
+        .resume h1 {
+            color: #e3e2de;
+            align-items: center;
         }
         /* FOOTER */
         
@@ -152,8 +206,43 @@
         </div>
     </header>
 
+
+    <!-- ABOUT ME-->
+    <div class="about">
+        <h1>about me</h1>
+    </div>
+
+    <!-- EXPERIENCE-->
+    <div class="experience">
+        <h1>experience</h1>
+    </div>
+
+    <!-- WORK-->
+    <div class="work">
+        <h1>work</h1>
+    </div>
+
+    <!-- RESUME-->
+    <div class="resume">
+        <h1>want to learn more? here's my resume</h1>
+    </div>
+
     <!-- FOOTER -->
     <footer>
+        <!--<script> TO USE ON FADEIN
+            const observer = new IntersectionObserver(entries => {
+                // Loop over the entries
+                entries.forEach(entry => {
+                    // If the element is visible
+                    if (entry.isIntersecting) {
+                        // Add the animation class
+                        entry.target.classList.add('square-animation');
+                    }
+                });
+            });
+
+            observer.observe(document.querySelector('.square'));
+        </script> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- Add font awesome icons -->
