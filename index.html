@@ -37,13 +37,15 @@
         }
         /* NAVIGATION */
         
-        nav {
+        #navbar {
             top: 0;
             left: 0;
             right: 0;
             height: 90px;
             position: fixed;
+            z-index: 1;
             padding-right: 35px;
+            background-color: rgba(229, 235, 226, 0.6);
         }
         
         ul {
@@ -57,10 +59,9 @@
         }
         
         li a {
-            padding-top: 20px;
+            /*padding-top: 20px;*/
             padding-left: 20px;
             padding-right: 20px;
-            padding-bottom: 20px;
             text-decoration: none;
             color: #3d3d3d;
             font-family: "Jura", monospace;
@@ -274,14 +275,65 @@
         
         .work {
             background-color: #E5EBE2;
-            padding-right: 8em;
-            padding-left: 8em;
-            padding-top: 20em;
-            padding-bottom: 20em;
+            padding-right: 5em;
+            padding-left: 5em;
+            padding-top: 8em;
+            padding-bottom: 8em;
+        }
+        
+        .work a:hover {
+            color: #3d3d3d;
+            text-decoration: none;
+        }
+        
+        .work .centerboxes {
+            display: flex;
+            justify-content: center;
+            justify-content: space-evenly;
+        }
+        
+        .work .centerboxes .portfolio-box {
+            display: inline-block;
+            width: 370px;
+            height: 520px;
+            background-color: rgba(135, 166, 120, 0.4);
+            /*background-image: linear-gradient(to bottom right, #e3e2de, #87a678);*/
+            border-radius: 10%;
+            padding: 3em;
+        }
+        
+        .work .centerboxes .athenahacks-box {
+            display: inline-block;
+            width: 370px;
+            height: 520px;
+            background-color: rgba(135, 166, 120, 0.4);
+            /*background-image: linear-gradient(to bottom right, #e3e2de, #87a678);*/
+            border-radius: 10%;
+            padding: 3em;
         }
         
         .work h1 {
+            font-family: "Jura", monospace;
+            font-size: 2.5em;
+            text-align: center;
             color: #3d3d3d;
+        }
+        
+        .work h2 {
+            font-family: "Jura", monospace;
+            font-size: 1em;
+            color: white;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            text-align: center;
+        }
+        
+        .work p {
+            font-family: "Jura", monospace;
+            font-size: 1.2em;
+            padding-top: 1em;
+            color: #3d3d3d;
+            text-align: left;
         }
         /* RESUME */
         
@@ -289,13 +341,45 @@
             background-color: #3d3d3d;
             padding-right: 8em;
             padding-left: 8em;
-            padding-top: 12em;
-            padding-bottom: 12em;
+            padding-top: 13.5em;
+            padding-bottom: 13.5em;
         }
         
         .resume h1 {
             color: #e3e2de;
-            align-items: center;
+            font-family: "Jura", monospace;
+            font-size: 2.5em;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 1em;
+        }
+        
+        .resume .button {
+            background-color: #3d3d3d;
+            border: 5px solid #e3e2de;
+            border-radius: 30px;
+            color: #e3e2de;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            padding-left: 2em;
+            padding-right: 2em;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            font-family: "Jura", monospace;
+            font-size: 2em;
+        }
+        
+        .resume .button:hover {
+            background-color: #e3e2de;
+            color: #3d3d3d;
+            cursor: pointer;
+        }
+        
+        .resume a {
+            text-decoration: none;
         }
         /* FOOTER */
         
@@ -346,7 +430,15 @@
         }
         
         .active.fade-bottom {
-            animation: fade-bottom 0.8s ease-in;
+            animation: fade-bottom 0.5s ease-in;
+        }
+        
+        .grow {
+            transition: all .2s ease-in-out;
+        }
+        
+        .grow:hover {
+            transform: scale(1.05);
         }
         
         @keyframes fadeIn {
@@ -384,7 +476,7 @@
 
 <body>
     <!-- NAV -->
-    <nav>
+    <div id="navbar">
         <ul>
             <style>
                 a:hover {
@@ -398,7 +490,7 @@
             <li style="float:right"><a href="#experience">Experience</a></li>
             <li style="float:right"><a href="#about">About</a></li>
         </ul>
-    </nav>
+    </div>
     <!-- HEADER -->
     <header id="home">
         <div id="monster">
@@ -492,32 +584,48 @@
     <!-- WORK-->
 
     <div id="work" class="work">
-        <h1>work</h1>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
+        <div class="centerboxes">
+            <div class="reveal fade-bottom">
+                <div class="grow">
+                    <div class="portfolio-box">
+                        <h1>Portfolio Website</h1>
+                        <h2>HTML &nbsp&nbsp| &nbsp&nbspCSS&nbsp&nbsp| &nbsp&nbspJavaScript</h2>
+                        <p>You are here! Personal portfolio website created with JavaScript and CSS transitions
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal fade-bottom">
+                <div class="fade">
+                    <div class="grow">
+                        <a href="https://devpost.com/software/usc_sos">
+                            <div class="athenahacks-box">
+                                <h1>USC SOS</h1>
+                                <h2>JavaScript &nbsp&nbsp| &nbsp&nbspTwilio&nbsp&nbsp| &nbsp&nbspGitHub</h2>
+                                <p>Calling service and mobile application that serves as a hub for emergency contacts at USC
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- RESUME-->
     <div id="resume" class="resume">
-        <div class="hideme">
-            <h1>want to learn more? here's my resume</h1>
+        <div class="reveal fade-bottom">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
+            <h1>Want to learn more? Check out my resume!</h1>
+            <a href="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/files/Neeha-Ravula-Resume.pdf">
+                <button class="button">Resume</button>
+            </a>
         </div>
     </div>
 
     <!-- FOOTER -->
     <footer>
-        <!--<script> TO USE ON FADEIN
-            const observer = new IntersectionObserver(entries => {
-                // Loop over the entries
-                entries.forEach(entry => {
-                    // If the element is visible
-                    if (entry.isIntersecting) {
-                        // Add the animation class
-                        entry.target.classList.add('square-animation');
-                    }
-                });
-            });
-
-            observer.observe(document.querySelector('.square'));
-        </script> -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Add font awesome icons -->
         <div class="socials">
