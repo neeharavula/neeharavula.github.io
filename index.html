@@ -45,7 +45,8 @@
             position: fixed;
             z-index: 1;
             padding-right: 35px;
-            background-color: rgba(229, 235, 226, 0.6);
+            /*background-color: rgba(229, 235, 226, 0.6);*/
+            background-color: transparent;
         }
         
         ul {
@@ -87,8 +88,8 @@
         
         .about {
             background-color: #e3e2de;
-            padding-right: 8em;
-            padding-left: 8em;
+            padding-right: 9em;
+            padding-left: 9em;
             padding-top: 5em;
             padding-bottom: 7em;
         }
@@ -102,10 +103,21 @@
             height: auto;
         }
         
-        .about .bio p {
+        .about .nametag {
             padding-top: 5em;
-            padding-left: 5em;
-            text-align: justify;
+            padding-left: 7em;
+        }
+        
+        .about .nametag img {
+            width: 600px;
+            height: auto;
+            position: absolute;
+        }
+        
+        .about .bio p {
+            padding-top: 7em;
+            padding-left: 0.5em;
+            text-align: left;
             font-family: "Jura", monospace;
             font-size: 1.4em;
         }
@@ -302,6 +314,20 @@
             padding: 3em;
         }
         
+        .work .centerboxes .portfolio-box .portimg img {
+            width: 280px;
+            height: auto;
+        }
+        
+        .work .centerboxes .portfolio-box .webimg {
+            padding-left: 1em;
+        }
+        
+        .work .centerboxes .portfolio-box .webimg img {
+            width: 230px;
+            height: auto;
+        }
+        
         .work .centerboxes .athenahacks-box {
             display: inline-block;
             width: 370px;
@@ -310,6 +336,24 @@
             /*background-image: linear-gradient(to bottom right, #e3e2de, #87a678);*/
             border-radius: 10%;
             padding: 3em;
+        }
+        
+        .work .centerboxes .athenahacks-box .uscimg {
+            padding-left: 5em;
+        }
+        
+        .work .centerboxes .athenahacks-box .uscimg img {
+            width: 110px;
+            height: auto;
+        }
+        
+        .work .centerboxes .athenahacks-box .sosimg {
+            padding-left: 5em;
+        }
+        
+        .work .centerboxes .athenahacks-box .sosimg img {
+            width: 110px;
+            height: auto;
         }
         
         .work h1 {
@@ -513,11 +557,18 @@
                 <div class="photo">
                     <img src="polaroid.png" alt="Neeha Ravula">
                 </div>
+                <div class="nametag">
+                    <img src="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/images/nametag.png" alt="nametag">
+                </div>
                 <div class="bio">
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
                     <p>
-                        I'm currently a third year undergraduate student pursuing a bachelor's in Computer Science at the University of California, Santa Cruz. I'm an aspiring software engineer and creative interested in full-stack and web development, UI/UX design, and AI.
-                        <br><br> Outisde of tech I'm avid fan of hiking, exploring new cafes, art, travel, and listening to music. Learn more about me below!
+                        I’m currently a third year undergraduate student pursuing a bachelor’s in Computer Science at the University of California, Santa Cruz. As an emerging software engineer and creative, I am always seeking to find where my passions for art and technology
+                        intersect, and explore coding not just as a technical subject but as a means of expression and creativity. A few areas I’m interested in are full-stack and web development, UI/UX design, and artificial intelligence.
+
+                        <br><br> Outside of tech, you can find me exploring the outdoors, strolling through museums, or walking along the beaches of my hometown, San Diego.
+
+                        <br><br>Learn more about me below!
                     </p>
                 </div>
             </div>
@@ -589,7 +640,13 @@
             <div class="reveal fade-bottom">
                 <div class="grow">
                     <div class="portfolio-box">
-                        <h1>Portfolio Website</h1>
+                        <div class="portimg">
+                            <img src="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/images/portimg.png" />
+                        </div>
+                        <div class="webimg">
+                            <img src="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/images/webimg.png" />
+                        </div>
+                        <!--<h1>Portfolio Website</h1>-->
                         <h2>HTML &nbsp&nbsp| &nbsp&nbspCSS&nbsp&nbsp| &nbsp&nbspJavaScript</h2>
                         <p>You are here! Personal portfolio website created with JavaScript and CSS transitions
                         </p>
@@ -601,7 +658,12 @@
                     <div class="grow">
                         <a href="https://devpost.com/software/usc_sos">
                             <div class="athenahacks-box">
-                                <h1>USC SOS</h1>
+                                <div class="uscimg">
+                                    <img src="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/images/uscimg.png" />
+                                </div>
+                                <div class="sosimg">
+                                    <img src="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/images/sosimg.png" />
+                                </div>
                                 <h2>JavaScript &nbsp&nbsp| &nbsp&nbspTwilio&nbsp&nbsp| &nbsp&nbspGitHub</h2>
                                 <p>Calling service and mobile application that serves as a hub for emergency contacts at USC
                                 </p>
