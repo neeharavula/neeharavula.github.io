@@ -26,37 +26,25 @@
     </script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <script>
-        // Get all sections that have an ID defined
-        const sections = document.querySelectorAll("section[id]");
+        const sections = document.querySelectorAll("section");
+        const navLi = document.querySelectorAll("nav ul li");
+        window.onscroll = () => {
+            var current = "";
 
-        // Add an event listener listening for scroll
-        window.addEventListener("scroll", navHighlighter);
-
-        function navHighlighter() {
-
-            // Get current scroll position
-            let scrollY = window.pageYOffset;
-
-            // Now we loop through sections to get height, top and ID values for each
-            sections.forEach(current => {
-                const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 50;
-                sectionId = current.getAttribute("id");
-
-                /*
-                - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
-                - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
-                */
-                if (
-                    scrollY > sectionTop &&
-                    scrollY <= sectionTop + sectionHeight
-                ) {
-                    document.querySelector(".navbar a[href*=" + sectionId + "]").classList.add("active");
-                } else {
-                    document.querySelector(".navbar a[href*=" + sectionId + "]").classList.remove("active");
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute("id");
                 }
             });
-        }
+
+            navLi.forEach((li) => {
+                li.classList.remove("active");
+                if (li.href.includes(current)) {
+                    li.classList.add('active');
+                }
+            });
+        };
     </script>
     <style>
         /* PAGE BACKGROUND & TRANSITIONS */
@@ -105,6 +93,12 @@
             transition: all ease-out 250ms;
         }
         
+        nav ul li section.active a {
+            color: #87A678;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+        
         video {
             padding-top: 8em;
             padding-bottom: 1.5em;
@@ -113,10 +107,6 @@
         
         header {
             padding-bottom: 100px;
-        }
-        
-        section {
-            height: 100vh;
         }
         /* ABOUT ME */
         
@@ -144,10 +134,10 @@
         }
         
         .about .nametag {
-            padding-top: 3em;
-            padding-left: 24em;
+            padding-top: 1em;
+            padding-left: 14.5em;
             font-family: "Fjalla One", monospace;
-            font-size: 1.2em;
+            font-size: 2em;
             position: absolute;
         }
         
@@ -604,10 +594,10 @@
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
             <li><a href="#home">Neeha Ravula</a></li>
-            <li style="float:right"><a href="#resume">Resume</a></li>
-            <li style="float:right"><a href="#work">Work</a></li>
-            <li style="float:right"><a href="#experience">Experience</a></li>
-            <li style="float:right"><a href="#about">About</a></li>
+            <li style="float:right"><a href="#resumet">Resume</a></li>
+            <li style="float:right"><a href="#workt">Work</a></li>
+            <li style="float:right"><a href="#experiencet">Experience</a></li>
+            <li style="float:right"><a href="#aboutt">About</a></li>
         </ul>
     </nav>
     <!-- HEADER -->
@@ -626,99 +616,104 @@
     </header>
 
     <!-- ABOUT ME-->
-    <div id="about" class="about">
-        <div class="reveal fade-bottom">
-            <div class="about-grid">
-                <div class="photo">
-                    <img src="polaroid.png" alt="Neeha Ravula">
-                </div>
-                <div class="nametag">
-                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla One">
-                    <h1>Hi! My name is Neeha.</h1>
-                    <!--<img src="images/nametag.png" alt="nametag">-->
-                </div>
-
-                <div class="bio">
-                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
-                    <div class="location">
-                        <div class="loctag">
-                            <link href='https://unpkg.com/css.gg@2.0.0/icons/css/pin.css' rel='stylesheet'>
-                            <i class="gg-pin"></i>
-                        </div>
-                        <p>SAN DIEGO, CA</p>
+    <section id="aboutt">
+        <div id="about" class="about">
+            <div class="reveal fade-bottom">
+                <div class="about-grid">
+                    <div class="photo">
+                        <img src="polaroid.png" alt="Neeha Ravula">
                     </div>
-                    <p>
-                        I’m currently a junior pursuing a bachelor’s degree in Computer Science at the University of California, Santa Cruz. As an emerging software engineer and creative, I am always seeking to find where my passions for art and technology intersect, and explore
-                        coding not just as a technical subject but as a means of expression and creativity. A few areas I’m interested in are full-stack and web development, UI/UX design, and artificial intelligence.
-                        <!--
+                    <div class="nametag">
+                        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla One">
+                        <h1>Hi! My name is Neeha.</h1>
+                        <!--<img src="images/nametag.png" alt="nametag">-->
+                    </div>
+
+                    <div class="bio">
+                        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
+                        <div class="location">
+                            <div class="loctag">
+                                <link href='https://unpkg.com/css.gg@2.0.0/icons/css/pin.css' rel='stylesheet'>
+                                <i class="gg-pin"></i>
+                            </div>
+                            <p>SAN DIEGO, CA</p>
+                        </div>
+                        <p>
+                            I’m currently a junior pursuing a bachelor’s degree in Computer Science at the University of California, Santa Cruz. As an emerging software engineer and creative, I am always seeking to find where my passions for art and technology intersect, and explore
+                            coding not just as a technical subject but as a means of expression and creativity. A few areas I’m interested in are full-stack and web development, UI/UX design, and artificial intelligence.
+                            <!--
                         <br><br> Outside of tech, you can find me exploring the outdoors, strolling through museums, or walking along the beaches of my hometown, San Diego.
                         -->
-                        <br><br>Learn more about me below!
-                    </p>
+                            <br><br>Learn more about me below!
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
 
     <!-- EXPERIENCE-->
 
-    <div id="experience" class="experience">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
-        <div class="timeline">
-            <div class="reveal fade-bottom">
-                <div class="container left">
-                    <div class="content">
-                        <span class="circle-images">
+    <section id="experiencet">
+        <div id="experience" class="experience">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
+            <div class="timeline">
+                <div class="reveal fade-bottom">
+                    <div class="container left">
+                        <div class="content">
+                            <span class="circle-images">
                         <img src="/images/acmw.PNG"/>
                     </span>
-                        <h2>Publicity Chair Officer</h2>
-                        <h3>ACM's Council on Women in Computing (ACM-W)</h3>
-                        <h1>JUN 2022 - PRESENT &nbsp | &nbsp Santa Cruz, CA</h1>
-                        <p>Worked with a team of five to plan events and collaborations with on-campus and international STEM organizations. Managed social media accounts including Instagram, Discord, and LinkTree and designed content with Canva to increase
-                            club exposure.</p>
+                            <h2>Publicity Chair Officer</h2>
+                            <h3>ACM's Council on Women in Computing (ACM-W)</h3>
+                            <h1>JUN 2022 - PRESENT &nbsp | &nbsp Santa Cruz, CA</h1>
+                            <p>Worked with a team of five to plan events and collaborations with on-campus and international STEM organizations. Managed social media accounts including Instagram, Discord, and LinkTree and designed content with Canva to increase
+                                club exposure.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="reveal fade-bottom">
-                <div class="container right">
-                    <div class="content">
-                        <span class="circle-images">
+                <div class="reveal fade-bottom">
+                    <div class="container right">
+                        <div class="content">
+                            <span class="circle-images">
                         <img src="/images/generalatomics.PNG"/>
                     </span>
-                        <h2>Software Developer Intern</h2>
-                        <h3>General Atomics Aeronautical Systems</h3>
-                        <h1>JUN 2022 - AUG 2022 &nbsp | &nbsp Poway, CA</h1>
-                        <p>Designed and developed full-stack Python application that receives messages containing aircraft telemetry data of MQ-9 Reaper unmanned aerial vehicle (UAV) from a flight simulation program, parses it, and displays it on a GUI.
+                            <h2>Software Developer Intern</h2>
+                            <h3>General Atomics Aeronautical Systems</h3>
+                            <h1>JUN 2022 - AUG 2022 &nbsp | &nbsp Poway, CA</h1>
+                            <p>Designed and developed full-stack Python application that receives messages containing aircraft telemetry data of MQ-9 Reaper unmanned aerial vehicle (UAV) from a flight simulation program, parses it, and displays it on a GUI.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="reveal fade-bottom">
-                <div class="container left">
-                    <div class="content">
-                        <span class="circle-images">
+                <div class="reveal fade-bottom">
+                    <div class="container left">
+                        <div class="content">
+                            <span class="circle-images">
                         <img src="/images/baskin.jpg"/>
                     </span>
-                        <h2>Discrete Mathematics Grader</h2>
-                        <h3>UCSC Baskin Engineering</h3>
-                        <h1>MAR 2022 - JUN 2022 &nbsp | &nbsp Santa Cruz, CA</h1>
-                        <p>Reviewed and graded 280+ student submissions. Provided students with explanations on discrete math concepts for incorrect answers.</p>
+                            <h2>Discrete Mathematics Grader</h2>
+                            <h3>UCSC Baskin Engineering</h3>
+                            <h1>MAR 2022 - JUN 2022 &nbsp | &nbsp Santa Cruz, CA</h1>
+                            <p>Reviewed and graded 280+ student submissions. Provided students with explanations on discrete math concepts for incorrect answers.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="reveal fade-bottom">
-                <div class="container right">
-                    <div class="content">
-                        <span class="circle-images">
+                <div class="reveal fade-bottom">
+                    <div class="container right">
+                        <div class="content">
+                            <span class="circle-images">
                         <img src="/images/athenahacks.PNG"/>
                     </span>
-                        <h2>USC AthenaHacks Hackathon</h2>
-                        <h1>MARCH 2021</h1>
-                        <p>Worked in a team of four to create USC SOS, a calling service and mobile application that serves as a hub for emergency contacts at USC.</p>
+                            <h2>USC AthenaHacks Hackathon</h2>
+                            <h1>MARCH 2021</h1>
+                            <p>Worked in a team of four to create USC SOS, a calling service and mobile application that serves as a hub for emergency contacts at USC.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- WORK-->
 
