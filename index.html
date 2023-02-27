@@ -24,6 +24,40 @@
 
         window.addEventListener("scroll", reveal);
     </script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script>
+        // Get all sections that have an ID defined
+        const sections = document.querySelectorAll("section[id]");
+
+        // Add an event listener listening for scroll
+        window.addEventListener("scroll", navHighlighter);
+
+        function navHighlighter() {
+
+            // Get current scroll position
+            let scrollY = window.pageYOffset;
+
+            // Now we loop through sections to get height, top and ID values for each
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 50;
+                sectionId = current.getAttribute("id");
+
+                /*
+                - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+                - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+                */
+                if (
+                    scrollY > sectionTop &&
+                    scrollY <= sectionTop + sectionHeight
+                ) {
+                    document.querySelector(".navbar a[href*=" + sectionId + "]").classList.add("active");
+                } else {
+                    document.querySelector(".navbar a[href*=" + sectionId + "]").classList.remove("active");
+                }
+            });
+        }
+    </script>
     <style>
         /* PAGE BACKGROUND & TRANSITIONS */
         
@@ -37,7 +71,7 @@
         }
         /* NAVIGATION */
         
-        #navbar {
+        nav {
             top: 0;
             left: 0;
             right: 0;
@@ -50,17 +84,17 @@
             backdrop-filter: blur(0.8);
         }
         
-        ul {
+        nav ul {
             padding-top: 1em;
             list-style-type: none;
             overflow: hidden;
         }
         
-        li {
+        nav li {
             display: inline;
         }
         
-        li a {
+        nav li a {
             /*padding-top: 20px;*/
             padding-left: 20px;
             padding-right: 20px;
@@ -68,6 +102,7 @@
             color: #3d3d3d;
             font-family: "Jura", monospace;
             font-size: 1.4em;
+            transition: all ease-out 250ms;
         }
         
         video {
@@ -78,6 +113,10 @@
         
         header {
             padding-bottom: 100px;
+        }
+        
+        section {
+            height: 100vh;
         }
         /* ABOUT ME */
         
@@ -105,19 +144,47 @@
         }
         
         .about .nametag {
-            padding-top: 5em;
-            padding-left: 7em;
+            padding-top: 3em;
+            padding-left: 24em;
+            font-family: "Fjalla One", monospace;
+            font-size: 1.2em;
+            position: absolute;
         }
         
+        .about .nametag h1 {
+            color: #494949;
+        }
+        /*
         .about .nametag img {
             width: 600px;
             height: auto;
             position: absolute;
+        }*/
+        
+        .about .bio .location {
+            display: inline-block;
+        }
+        
+        .about .bio .location .loctag {
+            padding-top: 11.5em;
+            padding-left: 7em;
+            display: inline-block;
+        }
+        
+        .about .bio .location .loctag .gg-pin {
+            color: #93b284;
+        }
+        
+        .about .bio .location p {
+            display: inline-block;
+            padding-left: 0.8em;
+            color: #87A678;
+            font-size: 1.1em;
         }
         
         .about .bio p {
-            padding-top: 7em;
-            padding-left: 0.5em;
+            padding-top: 0.8em;
+            padding-left: 5em;
             text-align: left;
             font-family: "Jura", monospace;
             font-size: 1.4em;
@@ -364,8 +431,8 @@
         }
         
         .work h1 {
-            font-family: "Jura", monospace;
-            font-size: 2.5em;
+            font-family: "Fjalla One", monospace;
+            font-size: 3em;
             text-align: center;
             color: #3d3d3d;
         }
@@ -443,6 +510,7 @@
         
         .socials li {
             margin: 10px;
+            display: inline;
         }
         
         .fa {
@@ -527,7 +595,7 @@
 
 <body>
     <!-- NAV -->
-    <div id="navbar">
+    <nav class="navbar">
         <ul>
             <style>
                 a:hover {
@@ -541,7 +609,7 @@
             <li style="float:right"><a href="#experience">Experience</a></li>
             <li style="float:right"><a href="#about">About</a></li>
         </ul>
-    </div>
+    </nav>
     <!-- HEADER -->
     <header id="home">
         <div id="monster">
@@ -565,16 +633,26 @@
                     <img src="polaroid.png" alt="Neeha Ravula">
                 </div>
                 <div class="nametag">
-                    <img src="images/nametag.png" alt="nametag">
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla One">
+                    <h1>Hi! My name is Neeha.</h1>
+                    <!--<img src="images/nametag.png" alt="nametag">-->
                 </div>
+
                 <div class="bio">
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
+                    <div class="location">
+                        <div class="loctag">
+                            <link href='https://unpkg.com/css.gg@2.0.0/icons/css/pin.css' rel='stylesheet'>
+                            <i class="gg-pin"></i>
+                        </div>
+                        <p>SAN DIEGO, CA</p>
+                    </div>
                     <p>
-                        I’m currently a third year undergraduate student pursuing a bachelor’s in Computer Science at the University of California, Santa Cruz. As an emerging software engineer and creative, I am always seeking to find where my passions for art and technology
-                        intersect, and explore coding not just as a technical subject but as a means of expression and creativity. A few areas I’m interested in are full-stack and web development, UI/UX design, and artificial intelligence.
-
+                        I’m currently a junior pursuing a bachelor’s degree in Computer Science at the University of California, Santa Cruz. As an emerging software engineer and creative, I am always seeking to find where my passions for art and technology intersect, and explore
+                        coding not just as a technical subject but as a means of expression and creativity. A few areas I’m interested in are full-stack and web development, UI/UX design, and artificial intelligence.
+                        <!--
                         <br><br> Outside of tech, you can find me exploring the outdoors, strolling through museums, or walking along the beaches of my hometown, San Diego.
-
+                        -->
                         <br><br>Learn more about me below!
                     </p>
                 </div>
@@ -642,7 +720,6 @@
         </div>
     </div>
 
-
     <!-- WORK-->
 
     <div id="work" class="work">
@@ -651,13 +728,17 @@
             <div class="reveal fade-bottom">
                 <div class="grow">
                     <div class="portfolio-box">
+                        <!--
                         <div class="portimg">
                             <img src="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/images/portimg.png" />
                         </div>
                         <div class="webimg">
                             <img src="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/images/webimg.png" />
                         </div>
+                        -->
                         <!--<h1>Portfolio Website</h1>-->
+                        <h1>
+                            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla One">Portfolio Website</h1>
                         <h2>HTML &nbsp&nbsp| &nbsp&nbspCSS&nbsp&nbsp| &nbsp&nbspJavaScript</h2>
                         <p>You are here! Personal portfolio website created with JavaScript and CSS transitions
                         </p>
@@ -669,12 +750,15 @@
                     <div class="grow">
                         <a href="https://devpost.com/software/usc_sos">
                             <div class="athenahacks-box">
+                                <!--
                                 <div class="uscimg">
                                     <img src="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/images/uscimg.png" />
                                 </div>
                                 <div class="sosimg">
                                     <img src="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/images/sosimg.png" />
                                 </div>
+                                -->
+                                <h1>USC SOS</h1>
                                 <h2>JavaScript &nbsp&nbsp| &nbsp&nbspTwilio&nbsp&nbsp| &nbsp&nbspGitHub</h2>
                                 <p>Calling service and mobile application that serves as a hub for emergency contacts at USC
                                 </p>
@@ -691,7 +775,7 @@
         <div class="reveal fade-bottom">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
             <h1>Want to learn more? Check out my resume!</h1>
-            <a href="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/files/Neeha-Ravula-Resume.pdf">
+            <a href="/files/Neeha-Ravula-Resume.pdf">
                 <button class="button">Resume</button>
             </a>
         </div>
