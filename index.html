@@ -11,6 +11,7 @@
     <!-- JAVASCRIPT ANIMATIONS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
     <script>
+        // REVEAL ON SCROLL ANIMATION
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
 
@@ -24,8 +25,8 @@
                 }
             }
         }
-
-        function changeNavColor() {
+        // NAVIGATION MARKER
+        function navMarker() {
             const sections = document.querySelectorAll("section");
             const navLi = document.querySelectorAll("nav ul li");
             window.onscroll = () => {
@@ -47,7 +48,23 @@
             };
         }
 
+        function changeNavColor() {
+            document.onscroll = function() {
+                const expr = document.querySelector('#experience');
+                const res = document.querySelector('#resume');
+                const nav = document.querySelector('nav');
+
+                if (expr.getBoundingClientRect().top <= 0 || res.getBoundingClientRect().top <= 0) { // if the distance of the 'specs' section to the browser top is smaller than 0
+                    nav.classList.add('light'); // add light font color
+                } else {
+                    nav.classList.remove('light'); // light dark  font color
+                }
+            }
+        }
+
+
         window.addEventListener("scroll", reveal);
+        window.addEventListener("scroll", navMarker);
         window.addEventListener("scroll", changeNavColor);
     </script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
@@ -74,7 +91,6 @@
             position: fixed;
             z-index: 1;
             padding-right: 35px;
-            background-color: transparent;
             backdrop-filter: blur(0.8);
         }
         
@@ -103,6 +119,14 @@
             border-radius: 30px;
             transition: 0.2s;
             font-weight: 1000;
+        }
+        
+        nav.light a {
+            color: white;
+        }
+        
+        nav.light a:hover {
+            color: #87A678;
         }
         
         video {
@@ -630,68 +654,59 @@
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
             <div class="timeline">
                 <div class="reveal fade-bottom">
-                    <div class="grow">
-                        <div class="container left">
-                            <!-- UCSC ACM-W -->
-                            <div class="content">
-                                <span class="circle-images">
+                    <div class="container left">
+                        <!-- UCSC ACM-W -->
+                        <div class="content">
+                            <span class="circle-images">
                             <img src="/images/acmw.PNG"/>
                         </span>
-                                <h2>
-                                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">Publicity Chair Officer</h2>
-                                <h3>ACM's Council on Women in Computing (ACM-W)</h3>
-                                <h1>JUN 2022 - PRESENT &nbsp | &nbsp Santa Cruz, CA</h1>
-                                <p>Worked with a team of five to plan events and collaborations with on-campus and international STEM organizations. Managed social media accounts including Instagram, Discord, and LinkTree and designed content with Canva
-                                    to increase club exposure.</p>
-                            </div>
+                            <h2>
+                                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">Publicity Chair Officer</h2>
+                            <h3>ACM's Council on Women in Computing (ACM-W)</h3>
+                            <h1>JUN 2022 - PRESENT &nbsp | &nbsp Santa Cruz, CA</h1>
+                            <p>Worked with a team of five to plan events and collaborations with on-campus and international STEM organizations. Managed social media accounts including Instagram, Discord, and LinkTree and designed content with Canva to increase
+                                club exposure.</p>
                         </div>
                     </div>
                 </div>
                 <div class="reveal fade-bottom">
-                    <div class="grow">
-                        <div class="container right">
-                            <!-- GENERAL ATOMICS -->
-                            <div class="content">
-                                <span class="circle-images">
+                    <div class="container right">
+                        <!-- GENERAL ATOMICS -->
+                        <div class="content">
+                            <span class="circle-images">
                             <img src="/images/generalatomics.PNG"/>
                         </span>
-                                <h2>Software Developer Intern</h2>
-                                <h3>General Atomics Aeronautical Systems</h3>
-                                <h1>JUN 2022 - AUG 2022 &nbsp | &nbsp Poway, CA</h1>
-                                <p>Designed and developed full-stack Python application that receives messages containing aircraft telemetry data of MQ-9 Reaper unmanned aerial vehicle (UAV) from a flight simulation program, parses it, and displays it on
-                                    a GUI.
-                            </div>
+                            <h2>Software Developer Intern</h2>
+                            <h3>General Atomics Aeronautical Systems</h3>
+                            <h1>JUN 2022 - AUG 2022 &nbsp | &nbsp Poway, CA</h1>
+                            <p>Designed and developed full-stack Python application that receives messages containing aircraft telemetry data of MQ-9 Reaper unmanned aerial vehicle (UAV) from a flight simulation program, parses it, and displays it on a GUI.
                         </div>
                     </div>
                 </div>
                 <div class="reveal fade-bottom">
-                    <div class="grow">
-                        <div class="container left">
-                            <!-- BASKIN ENG -->
-                            <div class="content">
-                                <span class="circle-images">
+                    <div class="container left">
+                        <!-- BASKIN ENG -->
+                        <div class="content">
+                            <span class="circle-images">
                             <img src="/images/baskin.jpg"/>
                         </span>
-                                <h2>Discrete Mathematics Grader</h2>
-                                <h3>UCSC Baskin Engineering</h3>
-                                <h1>MAR 2022 - JUN 2022 &nbsp | &nbsp Santa Cruz, CA</h1>
-                                <p>Reviewed and graded 280+ student submissions. Provided students with explanations on discrete math concepts for incorrect answers.</p>
-                            </div>
+                            <h2>Discrete Mathematics Grader</h2>
+                            <h3>UCSC Baskin Engineering</h3>
+                            <h1>MAR 2022 - JUN 2022 &nbsp | &nbsp Santa Cruz, CA</h1>
+                            <p>Reviewed and graded 280+ student submissions. Provided students with explanations on discrete math concepts for incorrect answers.</p>
                         </div>
                     </div>
                 </div>
                 <div class="reveal fade-bottom">
-                    <div class="grow">
-                        <div class="container right">
-                            <!-- ATHENAHACKS -->
-                            <div class="content">
-                                <span class="circle-images">
+                    <div class="container right">
+                        <!-- ATHENAHACKS -->
+                        <div class="content">
+                            <span class="circle-images">
                             <img src="/images/athenahacks.PNG"/>
                         </span>
-                                <h2>USC AthenaHacks Hackathon</h2>
-                                <h1>MARCH 2021</h1>
-                                <p>Worked in a team of four to create USC SOS, a calling service and mobile application that serves as a hub for emergency contacts at USC.</p>
-                            </div>
+                            <h2>USC AthenaHacks Hackathon</h2>
+                            <h1>MARCH 2021</h1>
+                            <p>Worked in a team of four to create USC SOS, a calling service and mobile application that serves as a hub for emergency contacts at USC.</p>
                         </div>
                     </div>
                 </div>
