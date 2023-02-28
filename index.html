@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- PAGE STYLE & FORMAT -->
+<!-- PAGE TITLE -->
 
 <head>
-    <title>Neeha's Portfolio</title>
+    <title>Neeha Ravula</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+
+    <!-- JAVASCRIPT ANIMATIONS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
     <script>
         function reveal() {
             var reveals = document.querySelectorAll(".reveal");
@@ -22,32 +25,36 @@
             }
         }
 
+        function changeNavColor() {
+            const sections = document.querySelectorAll("section");
+            const navLi = document.querySelectorAll("nav ul li");
+            window.onscroll = () => {
+                var current = "";
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= sectionTop - 60) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLi.forEach((li) => {
+                    li.classList.remove("active");
+                    if (li.classList.contains(current)) {
+                        li.classList.add("active");
+                    }
+                });
+            };
+        }
+
         window.addEventListener("scroll", reveal);
+        window.addEventListener("scroll", changeNavColor);
     </script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script>
-        const sections = document.querySelectorAll("section");
-        const navLi = document.querySelectorAll("nav ul li");
-        window.onscroll = () => {
-            var current = "";
 
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 60) {
-                    current = section.getAttribute("id");
-                }
-            });
-
-            navLi.forEach((li) => {
-                li.classList.remove("active");
-                if (li.href.includes(current)) {
-                    li.classList.add('active');
-                }
-            });
-        };
-    </script>
+    <!-- PAGE STYLE & FORMAT -->
     <style>
-        /* PAGE BACKGROUND & TRANSITIONS */
+        /* PAGE BACKGROUND */
         
         body {
             background-color: #E5EBE2;
@@ -57,7 +64,7 @@
             margin: 0;
             transition: background-color 1s ease;
         }
-        /* NAVIGATION */
+        /* NAVIGATION BAR*/
         
         nav {
             top: 0;
@@ -67,7 +74,6 @@
             position: fixed;
             z-index: 1;
             padding-right: 35px;
-            /*background-color: rgba(229, 235, 226, 0.6);*/
             background-color: transparent;
             backdrop-filter: blur(0.8);
         }
@@ -78,12 +84,11 @@
             overflow: hidden;
         }
         
-        nav li {
+        nav ul li {
             display: inline;
         }
         
-        nav li a {
-            /*padding-top: 20px;*/
+        nav ul li a {
             padding-left: 20px;
             padding-right: 20px;
             text-decoration: none;
@@ -93,30 +98,31 @@
             transition: all ease-out 250ms;
         }
         
-        nav ul li section.active a {
+        nav ul li.active a {
             color: #87A678;
             border-radius: 30px;
-            transition: 0.3s;
+            transition: 0.2s;
+            font-weight: 1000;
         }
         
         video {
             padding-top: 8em;
             padding-bottom: 1.5em;
         }
-        /* HEADER (NAME) */
+        /* HEADER */
         
         header {
             padding-bottom: 100px;
         }
-        /* ABOUT ME */
+        /* ABOUT SECTION */
         
-        .about-grid {
+        .aboutme-grid {
             display: flex;
             align-items: left;
             justify-content: left;
         }
         
-        .about {
+        .aboutme {
             background-color: #e3e2de;
             padding-right: 9em;
             padding-left: 9em;
@@ -124,64 +130,60 @@
             padding-bottom: 7em;
         }
         
-        .about h1 {
+        .aboutme h1 {
             color: #3d3d3d;
         }
         
-        .about .photo img {
+        .aboutme .photo img {
             width: 350px;
             height: auto;
         }
         
-        .about .nametag {
+        .aboutme .nametag {
             padding-top: 1em;
             padding-left: 14.5em;
             font-family: "Barlow Semi Condensed", monospace;
             font-size: 2em;
-            position: absolute;
+            position: relative;
+            margin-top: -18em;
         }
         
-        .about .nametag h1 {
+        .aboutme .nametag h1 {
             color: #494949;
         }
-        /*
-        .about .nametag img {
-            width: 600px;
-            height: auto;
-            position: absolute;
-        }*/
         
-        .about .bio .location {
+        .aboutme .bio .location {
             display: inline-block;
         }
         
-        .about .bio .location .loctag {
-            padding-top: 11.5em;
-            padding-left: 7em;
+        .aboutme .bio .location .loctag {
+            margin-top: -15em;
+            padding-top: 10em;
+            padding-left: 29em;
             display: inline-block;
         }
         
-        .about .bio .location .loctag .gg-pin {
+        .aboutme .bio .location .loctag .gg-pin {
             color: #93b284;
         }
         
-        .about .bio .location p {
+        .aboutme .bio .location p {
             display: inline-block;
             padding-left: 0.8em;
             color: #87A678;
             font-size: 1.1em;
         }
         
-        .about .bio p {
+        .aboutme .bio p {
             padding-top: 0.8em;
-            padding-left: 5em;
+            padding-left: 21em;
             text-align: left;
             font-family: "Jura", monospace;
             font-size: 1.4em;
         }
-        /* EXPERIENCE */
+        /* EXPERIENCE SECTION */
         
-        .experience {
+        .experiencesec {
             background-color: #3d3d3d;
             width: 100%;
             min-height: 100vh;
@@ -195,7 +197,7 @@
         * {
             box-sizing: border-box;
         }
-        /* The actual timeline (the vertical ruler) */
+        /* vertical line */
         
         .timeline {
             position: relative;
@@ -204,7 +206,6 @@
             padding-top: 5em;
             padding-bottom: 5em;
         }
-        /* The actual timeline (the vertical ruler) */
         
         .timeline::after {
             content: '';
@@ -216,7 +217,7 @@
             left: 50%;
             margin-left: -3px;
         }
-        /* Container around content */
+        /* containers around content */
         
         .container {
             padding: 10px 35px;
@@ -224,7 +225,7 @@
             background-color: inherit;
             width: 50%;
         }
-        /* The circles on the timeline */
+        /* circles on timeline */
         
         .container::after {
             content: '';
@@ -244,50 +245,22 @@
             float: left;
             width: 4em;
         }
-        /* Place the container to the left */
+        /* place container to left */
         
         .left {
             left: 0;
         }
-        /* Place the container to the right */
+        /* place container to right */
         
         .right {
             left: 50%;
         }
-        /* Add arrows to the left container (pointing right) */
-        /*
-        .left::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-            right: 30px;
-            border: medium solid white;
-            border-width: 10px 0 10px 10px;
-            border-color: transparent transparent transparent white;
-    }*/
-        /* Add arrows to the right container (pointing left) */
-        /*
-        .right::before {
-            content: " ";
-            height: 0;
-            position: absolute;
-            top: 22px;
-            width: 0;
-            z-index: 1;
-            left: 30px;
-            border: medium solid white;
-            border-width: 10px 10px 10px 0;
-            border-color: transparent white transparent transparent;
-    }*/
-        /* Fix the circle for containers on the right side */
+        /* fix circle position for right containers */
         
         .right::after {
             left: -11px;
         }
-        /* The actual content */
+        /* actual content */
         
         .content {
             padding: 5px 30px;
@@ -349,9 +322,9 @@
                 left: 0%;
             }
         }
-        /* WORK */
+        /* WORK SECTION */
         
-        .work {
+        .worksec {
             background-color: #E5EBE2;
             padding-right: 5em;
             padding-left: 5em;
@@ -359,18 +332,18 @@
             padding-bottom: 8em;
         }
         
-        .work a:hover {
+        .worksec a:hover {
             color: #3d3d3d;
             text-decoration: none;
         }
         
-        .work .centerboxes {
+        .worksec .centerboxes {
             display: flex;
             justify-content: center;
             justify-content: space-evenly;
         }
         
-        .work .centerboxes .portfolio-box {
+        .worksec .centerboxes .portfolio-box {
             display: inline-block;
             width: 370px;
             height: 520px;
@@ -380,21 +353,21 @@
             padding: 3em;
         }
         
-        .work .centerboxes .portfolio-box .portimg img {
+        .worksec .centerboxes .portfolio-box .portimg img {
             width: 280px;
             height: auto;
         }
         
-        .work .centerboxes .portfolio-box .webimg {
+        .worksec .centerboxes .portfolio-box .webimg {
             padding-left: 1em;
         }
         
-        .work .centerboxes .portfolio-box .webimg img {
+        .worksec .centerboxes .portfolio-box .webimg img {
             width: 230px;
             height: auto;
         }
         
-        .work .centerboxes .athenahacks-box {
+        .worksec .centerboxes .athenahacks-box {
             display: inline-block;
             width: 370px;
             height: 520px;
@@ -404,32 +377,32 @@
             padding: 3em;
         }
         
-        .work .centerboxes .athenahacks-box .uscimg {
+        .worksec .centerboxes .athenahacks-box .uscimg {
             padding-left: 5em;
         }
         
-        .work .centerboxes .athenahacks-box .uscimg img {
+        .worksec .centerboxes .athenahacks-box .uscimg img {
             width: 110px;
             height: auto;
         }
         
-        .work .centerboxes .athenahacks-box .sosimg {
+        .worksec .centerboxes .athenahacks-box .sosimg {
             padding-left: 5em;
         }
         
-        .work .centerboxes .athenahacks-box .sosimg img {
+        .worksec .centerboxes .athenahacks-box .sosimg img {
             width: 110px;
             height: auto;
         }
         
-        .work h1 {
+        .worksec h1 {
             font-family: "Barlow Semi Condensed", monospace;
             font-size: 3em;
             text-align: center;
             color: #3d3d3d;
         }
         
-        .work h2 {
+        .worksec h2 {
             font-family: "Jura", monospace;
             font-size: 1em;
             color: white;
@@ -438,7 +411,7 @@
             text-align: center;
         }
         
-        .work p {
+        .worksec p {
             font-family: "Jura", monospace;
             font-size: 1.2em;
             padding-top: 1em;
@@ -447,7 +420,7 @@
         }
         /* RESUME */
         
-        .resume {
+        .resumesec {
             background-color: #3d3d3d;
             padding-right: 8em;
             padding-left: 8em;
@@ -455,7 +428,7 @@
             padding-bottom: 13.5em;
         }
         
-        .resume h1 {
+        .resumesec h1 {
             color: #e3e2de;
             font-family: "Jura", monospace;
             font-size: 2.5em;
@@ -464,7 +437,7 @@
             padding-bottom: 1em;
         }
         
-        .resume .button {
+        .resumesec .button {
             background-color: #3d3d3d;
             border: 5px solid #e3e2de;
             border-radius: 30px;
@@ -482,13 +455,13 @@
             font-size: 2em;
         }
         
-        .resume .button:hover {
+        .resumesec .button:hover {
             background-color: #e3e2de;
             color: #3d3d3d;
             cursor: pointer;
         }
         
-        .resume a {
+        .resumesec a {
             text-decoration: none;
         }
         /* FOOTER */
@@ -586,8 +559,9 @@
 <!-- BODY -->
 
 <body>
-    <!-- NAV -->
-    <nav class="navbar">
+
+    <!-- NAVIGATION -->
+    <nav>
         <ul>
             <style>
                 a:hover {
@@ -596,39 +570,35 @@
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
             <li><a href="#home">Neeha Ravula</a></li>
-            <li style="float:right"><a href="#resume">Resume</a></li>
-            <li style="float:right"><a href="#work">Work</a></li>
-            <li style="float:right"><a href="#experience">Experience</a></li>
-            <li style="float:right"><a href="#about">About</a></li>
+            <li style="float:right" class="resume"><a href="#resume">Resume</a></li>
+            <li style="float:right" class="work"><a href="#work">Work</a></li>
+            <li style="float:right" class="experience"><a href="#experience">Experience</a></li>
+            <li style="float:right" class="about"><a href="#about">About</a></li>
         </ul>
     </nav>
-    <!-- HEADER -->
+
+    <!-- HOME SECTION -->
     <header id="home">
-        <div id="monster">
-            <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Xanh Mono"> -->
-            <div class="fade-in">
-                <center>
-                    <!-- onmouseover="this.play()" onmouseout="this.pause();" -->
-                    <video loop width="880" height="720" autoplay muted>
-                    <source src="neeharavula.mov" type="video/mp4">
-                </video>
-                </center>
-            </div>
+        <div class="fade-in">
+            <center>
+                <video loop width="880" height="720" autoplay muted>
+                        <source src="neeharavula.mov" type="video/mp4">
+                    </video>
+            </center>
         </div>
     </header>
 
-    <!-- ABOUT ME-->
+    <!-- ABOUT SECTION -->
     <section id="about">
-        <div id="about" class="about">
-            <div class="reveal fade-bottom">
-                <div class="about-grid">
+        <div id="aboutme" class="aboutme">
+            <div class="about-grid">
+                <div class="reveal fade-bottom">
                     <div class="photo">
                         <img src="polaroid.png" alt="Neeha Ravula">
                     </div>
                     <div class="nametag">
                         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">
                         <h1>Hi! My name is Neeha.</h1>
-                        <!--<img src="images/nametag.png" alt="nametag">-->
                     </div>
 
                     <div class="bio">
@@ -654,63 +624,74 @@
         </div>
     </section>
 
-
-    <!-- EXPERIENCE-->
-
+    <!-- EXPERIENCE SECTION -->
     <section id="experience">
-        <div id="experience" class="experience">
+        <div id="experiencesec" class="experiencesec">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
             <div class="timeline">
                 <div class="reveal fade-bottom">
-                    <div class="container left">
-                        <div class="content">
-                            <span class="circle-images">
-                        <img src="/images/acmw.PNG"/>
-                    </span>
-                            <h2>
-                                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">Publicity Chair Officer</h2>
-                            <h3>ACM's Council on Women in Computing (ACM-W)</h3>
-                            <h1>JUN 2022 - PRESENT &nbsp | &nbsp Santa Cruz, CA</h1>
-                            <p>Worked with a team of five to plan events and collaborations with on-campus and international STEM organizations. Managed social media accounts including Instagram, Discord, and LinkTree and designed content with Canva to increase
-                                club exposure.</p>
+                    <div class="grow">
+                        <div class="container left">
+                            <!-- UCSC ACM-W -->
+                            <div class="content">
+                                <span class="circle-images">
+                            <img src="/images/acmw.PNG"/>
+                        </span>
+                                <h2>
+                                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">Publicity Chair Officer</h2>
+                                <h3>ACM's Council on Women in Computing (ACM-W)</h3>
+                                <h1>JUN 2022 - PRESENT &nbsp | &nbsp Santa Cruz, CA</h1>
+                                <p>Worked with a team of five to plan events and collaborations with on-campus and international STEM organizations. Managed social media accounts including Instagram, Discord, and LinkTree and designed content with Canva
+                                    to increase club exposure.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="reveal fade-bottom">
-                    <div class="container right">
-                        <div class="content">
-                            <span class="circle-images">
-                        <img src="/images/generalatomics.PNG"/>
-                    </span>
-                            <h2>Software Developer Intern</h2>
-                            <h3>General Atomics Aeronautical Systems</h3>
-                            <h1>JUN 2022 - AUG 2022 &nbsp | &nbsp Poway, CA</h1>
-                            <p>Designed and developed full-stack Python application that receives messages containing aircraft telemetry data of MQ-9 Reaper unmanned aerial vehicle (UAV) from a flight simulation program, parses it, and displays it on a GUI.
+                    <div class="grow">
+                        <div class="container right">
+                            <!-- GENERAL ATOMICS -->
+                            <div class="content">
+                                <span class="circle-images">
+                            <img src="/images/generalatomics.PNG"/>
+                        </span>
+                                <h2>Software Developer Intern</h2>
+                                <h3>General Atomics Aeronautical Systems</h3>
+                                <h1>JUN 2022 - AUG 2022 &nbsp | &nbsp Poway, CA</h1>
+                                <p>Designed and developed full-stack Python application that receives messages containing aircraft telemetry data of MQ-9 Reaper unmanned aerial vehicle (UAV) from a flight simulation program, parses it, and displays it on
+                                    a GUI.
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="reveal fade-bottom">
-                    <div class="container left">
-                        <div class="content">
-                            <span class="circle-images">
-                        <img src="/images/baskin.jpg"/>
-                    </span>
-                            <h2>Discrete Mathematics Grader</h2>
-                            <h3>UCSC Baskin Engineering</h3>
-                            <h1>MAR 2022 - JUN 2022 &nbsp | &nbsp Santa Cruz, CA</h1>
-                            <p>Reviewed and graded 280+ student submissions. Provided students with explanations on discrete math concepts for incorrect answers.</p>
+                    <div class="grow">
+                        <div class="container left">
+                            <!-- BASKIN ENG -->
+                            <div class="content">
+                                <span class="circle-images">
+                            <img src="/images/baskin.jpg"/>
+                        </span>
+                                <h2>Discrete Mathematics Grader</h2>
+                                <h3>UCSC Baskin Engineering</h3>
+                                <h1>MAR 2022 - JUN 2022 &nbsp | &nbsp Santa Cruz, CA</h1>
+                                <p>Reviewed and graded 280+ student submissions. Provided students with explanations on discrete math concepts for incorrect answers.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="reveal fade-bottom">
-                    <div class="container right">
-                        <div class="content">
-                            <span class="circle-images">
-                        <img src="/images/athenahacks.PNG"/>
-                    </span>
-                            <h2>USC AthenaHacks Hackathon</h2>
-                            <h1>MARCH 2021</h1>
-                            <p>Worked in a team of four to create USC SOS, a calling service and mobile application that serves as a hub for emergency contacts at USC.</p>
+                    <div class="grow">
+                        <div class="container right">
+                            <!-- ATHENAHACKS -->
+                            <div class="content">
+                                <span class="circle-images">
+                            <img src="/images/athenahacks.PNG"/>
+                        </span>
+                                <h2>USC AthenaHacks Hackathon</h2>
+                                <h1>MARCH 2021</h1>
+                                <p>Worked in a team of four to create USC SOS, a calling service and mobile application that serves as a hub for emergency contacts at USC.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -718,71 +699,58 @@
         </div>
     </section>
 
-    <!-- WORK-->
-
-    <div id="work" class="work">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
-        <div class="centerboxes">
-            <div class="reveal fade-bottom">
-                <div class="grow">
-                    <div class="portfolio-box">
-                        <!--
-                        <div class="portimg">
-                            <img src="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/images/portimg.png" />
-                        </div>
-                        <div class="webimg">
-                            <img src="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/images/webimg.png" />
-                        </div>
-                        -->
-                        <!--<h1>Portfolio Website</h1>-->
-                        <h1>
-                            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">Portfolio Website</h1>
-                        <h2>HTML &nbsp&nbsp| &nbsp&nbspCSS&nbsp&nbsp| &nbsp&nbspJavaScript</h2>
-                        <p>You are here! Personal portfolio website created with JavaScript and CSS transitions
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="reveal fade-bottom">
-                <div class="fade">
-                    <div class="grow">
-                        <a href="https://devpost.com/software/usc_sos">
-                            <div class="athenahacks-box">
-                                <!--
-                                <div class="uscimg">
-                                    <img src="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/images/uscimg.png" />
-                                </div>
-                                <div class="sosimg">
-                                    <img src="/Users/neeharavula/Documents/neeharavula/portfolio/neeharavula.github.io/images/sosimg.png" />
-                                </div>
-                                -->
-                                <h1>USC SOS</h1>
-                                <h2>JavaScript &nbsp&nbsp| &nbsp&nbspTwilio&nbsp&nbsp| &nbsp&nbspGitHub</h2>
-                                <p>Calling service and mobile application that serves as a hub for emergency contacts at USC
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- RESUME-->
-    <div id="resume" class="resume">
-        <div class="reveal fade-bottom">
+    <!-- WORK SECTION -->
+    <section id="work">
+        <div id="worksec" class="worksec">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
-            <h1>Want to learn more? Check out my resume!</h1>
-            <a href="/files/Neeha-Ravula-Resume.pdf">
-                <button class="button">Resume</button>
-            </a>
+            <div class="reveal fade-bottom">
+                <div class="centerboxes">
+                    <div class="grow">
+                        <!-- PORTFOLIO WEBSITE -->
+                        <div class="portfolio-box">
+                            <h1>
+                                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">Portfolio Website</h1>
+                            <h2>HTML &nbsp&nbsp| &nbsp&nbspCSS&nbsp&nbsp| &nbsp&nbspJavaScript</h2>
+                            <p>You are here! Personal portfolio website created with JavaScript and CSS transitions
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fade">
+                        <div class="grow">
+                            <a href="https://devpost.com/software/usc_sos">
+                                <!-- USC SOS -->
+                                <div class="athenahacks-box">
+                                    <h1>USC SOS</h1>
+                                    <h2>JavaScript &nbsp&nbsp| &nbsp&nbspTwilio&nbsp&nbsp| &nbsp&nbspGitHub</h2>
+                                    <p>Calling service and mobile application that serves as a hub for emergency contacts at USC
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <section id="resume">
+        <div id="resumesec" class="resumesec">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
+            <div class="reveal fade-bottom">
+                <h1>Want to learn more? Check out my resume!</h1>
+            </div>
+            <div class="reveal fade-bottom">
+                <a href="/files/Neeha-Ravula-Resume.pdf">
+                    <button class="button">Resume</button>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- Add font awesome icons -->
         <div class="socials">
             <li>
                 <a href="mailto: ravulaneeha@gmail.com" class="fa fa-envelope fa-2x" aria-hidden="true"></a>
