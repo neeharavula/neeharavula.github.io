@@ -500,7 +500,7 @@ html {
     /* Make sure all circles are at the same spot */
     .left::after,
     .right::after {
-        left: 20.5px;
+        left: 20px;
     }
     /* Make all right containers behave like the left ones */
     .right {
@@ -513,6 +513,20 @@ html {
     .worksec .centerboxes {
         display: block;
         justify-content: center;
+        margin-left: -1em;
+    }
+    .worksec .centerboxes .portfolio-box {
+        width: 370px;
+        height: 450px;
+        padding: 2.5em;
+    }
+    .worksec .centerboxes .athenahacks-box {
+        width: 370px;
+        height: 450px;
+        padding: 2.5em;
+    }
+    .worksec h1 {
+        font-size: 2em;
     }
     /* FOOTER */
     footer {
