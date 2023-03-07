@@ -79,18 +79,27 @@
 
     <!-- NAVIGATION -->
     <nav>
-        <ul>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
             <style>
                 a:hover {
                     color: #87A678;
                 }
             </style>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
-            <li><a href="#home">Neeha Ravula</a></li>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla One">
             <li style="float:right" class="resume"><a href="#resume">Resume</a></li>
-            <li style="float:right" class="work"><a href="#work">Work</a></li>
-            <li style="float:right" class="experience"><a href="#experience">Experience</a></li>
+            <div class="mobileHide">
+                <li style="float:right" class="work"><a href="#work">Work</a></li>
+            </div>
+            <div class="mobileHide">
+                <li style="float:right" class="experience"><a href="#experience">Experience</a></li>
+            </div>
             <li style="float:right" class="about"><a href="#about">About</a></li>
+            <div class="mobileHide">
+                <li><a href="#home">Neeha Ravula</a></li>
+            </div>
         </ul>
     </nav>
 
