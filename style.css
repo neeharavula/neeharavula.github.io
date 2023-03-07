@@ -479,6 +479,9 @@ html {
     .mobileHide {
         display: none;
     }
+    header {
+        width: 100%;
+    }
     /* EXPERIENCE SECTION */
     /* Place the timelime to the left */
     .timeline::after {
