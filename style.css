@@ -58,6 +58,19 @@ nav.light a:hover {
     color: #87A678;
 }
 
+nav .menu {
+    clear: none;
+    max-height: none;
+}
+
+nav .menu-icon {
+    display: none;
+}
+
+nav .menu-btn[type=checkbox] {
+    display: none;
+}
+
 video {
     padding-top: 8em;
     padding-bottom: 1.5em;
@@ -479,8 +492,97 @@ html {
     .mobileHide {
         display: none;
     }
+    /* NAVIGATION */
+    nav {
+        height: 60px;
+        background-color: white;
+        padding-right: 0;
+    }
     header {
         width: 100%;
+    }
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        background-color: #fff;
+        width: 100%;
+    }
+    nav li {
+        /*float: left;*/
+        width: 100%;
+    }
+    nav ul li a {
+        display: block;
+        padding: 20px 50px;
+        text-decoration: none;
+        text-align: right;
+        font-family: "Fjalla One", monospace;
+        font-size: 2em;
+    }
+    /* menu */
+    nav .menu {
+        clear: both;
+        max-height: 0;
+        transition: max-height .2s ease-out;
+    }
+    /* menu icon */
+    nav .menu-icon {
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        padding: 28px 10px;
+        position: relative;
+        user-select: none;
+        padding-right: 20px;
+    }
+    nav .menu-icon .navicon {
+        background: #333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+    nav .menu-icon .navicon:before,
+    nav .menu-icon .navicon:after {
+        background: #333;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    nav .menu-icon .navicon:before {
+        top: 5px;
+    }
+    nav .menu-icon .navicon:after {
+        top: -5px;
+    }
+    /* menu btn */
+    .header .menu-btn {
+        display: none;
+    }
+    nav .menu-btn:checked~.menu {
+        /* MENU HEIGHT */
+        max-height: 100em;
+        height: 100em;
+        padding-top: 150px;
+    }
+    nav .menu-btn:checked~.menu-icon .navicon {
+        background: transparent;
+    }
+    nav .menu-btn:checked~.menu-icon .navicon:before {
+        transform: rotate(-45deg);
+    }
+    nav .menu-btn:checked~.menu-icon .navicon:after {
+        transform: rotate(45deg);
+    }
+    nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+    nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+        top: 0;
     }
     /* EXPERIENCE SECTION */
     /* Place the timelime to the left */
