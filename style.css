@@ -617,7 +617,11 @@ html {
     }
     /* WORK */
     .worksec {
-        background-color: #e3e2de;
+        background-color: #E5EBE2;
+        padding-right: 2em;
+        padding-left: 2em;
+        padding-top: 8em;
+        padding-bottom: 8em;
     }
     .worksec .centerboxes {
         display: block;
@@ -627,12 +631,12 @@ html {
     .worksec .centerboxes .portfolio-box {
         width: 370px;
         height: 450px;
-        padding: 2.5em;
+        padding: 2em;
     }
     .worksec .centerboxes .athenahacks-box {
         width: 370px;
         height: 450px;
-        padding: 2.5em;
+        padding: 2em;
     }
     .worksec h1 {
         font-size: 2em;
