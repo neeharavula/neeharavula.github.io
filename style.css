@@ -9,6 +9,14 @@ body {
     transition: background-color 1s ease;
 }
 
+.desktopHide {
+    display: none;
+}
+
+.mobileShow {
+    display: none;
+}
+
 
 /* NAVIGATION BAR */
 
@@ -18,7 +26,7 @@ nav {
     right: 0;
     height: 90px;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     padding-right: 35px;
     backdrop-filter: blur(0.8);
 }
@@ -402,6 +410,11 @@ footer {
     padding: 1em;
 }
 
+.socials {
+    width: 100%;
+    margin: auto;
+}
+
 .socials li {
     margin: 10px;
     display: inline;
@@ -414,7 +427,6 @@ footer {
     padding-bottom: 10px;
     font-size: 100px;
     width: 20px;
-    text-align: center;
     text-decoration: none;
 }
 
@@ -491,6 +503,9 @@ html {
     /* hide sections on mobile */
     .mobileHide {
         display: none;
+    }
+    .mobileShow {
+        display: inline;
     }
     body {
         background-color: #e3e2de;
@@ -615,23 +630,34 @@ html {
     .right {
         left: 0%;
     }
+    .content h1 {
+        margin-left: -7.8em;
+    }
+    .content h3 {
+        padding-top: 3em;
+        margin-left: -6.3em;
+    }
     /* WORK */
     .worksec {
         background-color: #E5EBE2;
         padding-right: 2em;
         padding-left: 2em;
-        padding-top: 8em;
-        padding-bottom: 8em;
+        padding-top: 5em;
+        padding-bottom: 5em;
+        margin: auto;
+        text-align: center;
     }
     .worksec .centerboxes {
         display: block;
-        justify-content: center;
-        margin-left: -1em;
+        margin: auto;
+        height: 100%;
+        /*margin-left: -1em;*/
     }
     .worksec .centerboxes .portfolio-box {
         width: 350px;
         height: 430px;
         padding: 2em;
+        margin-bottom: 2em;
     }
     .worksec .centerboxes .athenahacks-box {
         width: 350px;
