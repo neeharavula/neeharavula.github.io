@@ -542,9 +542,10 @@ html {
     }
     /* menu */
     nav .menu {
-        clear: both;
         max-height: 0;
-        transition: max-height .2s ease-out;
+        transition: all .75s ease-in;
+        transition: all .5s ease-out;
+        /*transition: max-height .1s ease-out;*/
     }
     /* menu icon */
     nav .menu-icon {
@@ -562,7 +563,7 @@ html {
         height: 2px;
         position: relative;
         transition: background .2s ease-out;
-        width: 18px;
+        width: 20px;
     }
     nav .menu-icon .navicon:before,
     nav .menu-icon .navicon:after {
