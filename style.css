@@ -612,6 +612,12 @@ html {
     .timeline::after {
         left: 31px;
     }
+    .timeline h4 {
+        font-size: 3em;
+        font-family: "Barlow Semi Condensed", monospace;
+        text-align: center;
+        margin-top: -0.5em;
+    }
     /* Full-width containers */
     .container {
         width: 100%;
@@ -670,6 +676,13 @@ html {
     }
     .worksec h1 {
         font-size: 2em;
+    }
+    .worksec h4 {
+        font-size: 3em;
+        font-family: "Barlow Semi Condensed", monospace;
+        text-align: center;
+        margin-top: -0.5em;
+        color: #3d3d3d;
     }
     /* FOOTER */
     footer {
