@@ -56,10 +56,12 @@
                 const res = document.querySelector('#resume');
                 const nav = document.querySelector('nav');
 
-                if (expr.getBoundingClientRect().top <= 0 || res.getBoundingClientRect().top <= 0) { // if the distance of the 'specs' section to the browser top is smaller than 0
-                    nav.classList.add('light'); // add light font color
-                } else {
-                    nav.classList.remove('light'); // light dark  font color
+                if ($(window).width() > 600) {
+                    if (expr.getBoundingClientRect().top <= 0 || res.getBoundingClientRect().top <= 0) { // if the distance of the 'specs' section to the browser top is smaller than 0
+                        nav.classList.add('light'); // add light font color
+                    } else {
+                        nav.classList.remove('light'); // light dark  font color
+                    }
                 }
             }
         }
