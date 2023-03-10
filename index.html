@@ -56,6 +56,7 @@
                 const res = document.querySelector('#resume');
                 const nav = document.querySelector('nav');
 
+                // only show on desktop
                 if ($(window).width() > 600) {
                     if (expr.getBoundingClientRect().top <= 0 || res.getBoundingClientRect().top <= 0) { // if the distance of the 'specs' section to the browser top is smaller than 0
                         nav.classList.add('light'); // add light font color
@@ -100,12 +101,19 @@
             </div>
             <div class="mobileShow">
                 <li style="float:right" class="home-mobile active-page"><a href="neeharavula.github.io">Home</a></li>
-            </div>
-            <div class="mobileShow">
                 <li style="float:right" class="about-mobile"><a href="about.html">About</a></li>
-            </div>
-            <div class="mobileShow">
                 <li style="float:right" class="resume-mobile"><a href="/files/Neeha-Ravula-Resume.pdf">Resume</a></li>
+                <div style="float:right" class="socials-mobile">
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                    <div class="socials">
+                        <li>
+                            <a href="mailto: ravulaneeha@gmail.com" class="fa fa-envelope fa-2x" aria-hidden="true"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/neeharavula/" target="_blank" class="fa fa-linkedin fa-2x"></a>
+                        </li>
+                    </div>
+                </div>
             </div>
         </ul>
     </nav>
