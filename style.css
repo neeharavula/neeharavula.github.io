@@ -540,11 +540,8 @@ html {
         font-family: "Fjalla One", monospace;
         font-size: 2.3em;
     }
-    nav ul li.active a {
+    nav ul li.active-page a {
         color: #87A678;
-        border-radius: 0px;
-        transition: 0s;
-        font-weight: 0;
     }
     /* menu */
     nav .menu {
