@@ -538,14 +538,14 @@ html {
         text-decoration: none;
         text-align: right;
         font-family: "Fjalla One", monospace;
-        font-size: 2.3em;
+        font-size: 2.2em;
     }
     nav ul li.active-page a {
         color: #87A678;
     }
     nav ul .socials-mobile {
         padding-top: 7em;
-        padding-right: 2em;
+        padding-right: 3em;
         background-color: #e3e2de;
     }
     nav ul .socials-mobile .fa-linkedin {
