@@ -523,6 +523,7 @@ html {
     header {
         width: 100%;
         height: 30em;
+        margin-top: 1em;
     }
     nav ul {
         margin: 0;
