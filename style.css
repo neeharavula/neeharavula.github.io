@@ -91,6 +91,10 @@ header {
     padding-bottom: 100px;
 }
 
+header video {
+    filter: brightness(100%)
+}
+
 
 /* ABOUT SECTION */
 
