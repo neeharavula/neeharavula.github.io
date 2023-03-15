@@ -626,6 +626,39 @@ html {
     nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
         top: 0;
     }
+    /* ABOUT SECTION */
+    .aboutme {
+        background-color: #e3e2de;
+        padding-right: 1em;
+        padding-left: 1em;
+        padding-top: 5em;
+        padding-bottom: 7em;
+    }
+    .aboutme-grid {
+        display: block;
+    }
+    .aboutme h1 {
+        color: #3d3d3d;
+    }
+    .aboutme .photo img {
+        width: 300px;
+        height: auto;
+    }
+    .aboutme .nametag {
+        font-family: "Barlow Semi Condensed", monospace;
+        font-size: 1.5em;
+        padding-top: 70em;
+        margin-left: -10em;
+    }
+    .aboutme .nametag h1 {
+        color: #494949;
+        text-align: left;
+    }
+    .aboutme .bio p {
+        text-align: left;
+        font-family: "Jura", monospace;
+        font-size: 1.4em;
+    }
     /* EXPERIENCE SECTION */
     /* Place the timelime to the left */
     .timeline::after {
