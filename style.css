@@ -645,7 +645,7 @@ html {
         font-family: "Barlow Semi Condensed", monospace;
         font-size: 1.5em;
         padding-top: 19em;
-        margin-left: -12em;
+        margin-left: -15em;
     }
     .aboutme .nametag h1 {
         color: #494949;
@@ -654,8 +654,8 @@ html {
     .aboutme .bio p {
         text-align: left;
         font-family: "Jura", monospace;
-        font-size: 0.6em;
-        padding-top: 40em;
+        font-size: 0.8em;
+        padding-top: 20em;
         margin-left: -20em;
     }
     /* EXPERIENCE SECTION */
