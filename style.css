@@ -633,14 +633,18 @@ html {
         padding-left: 1em;
         padding-top: 5em;
         padding-bottom: 7em;
+        justify-content: center;
     }
     .aboutme h1 {
         color: #3d3d3d;
     }
+    .aboutme .photo {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
     .aboutme .photo img {
         width: 310px;
         height: auto;
-        text-align: center;
     }
     .aboutme .nametag {
         font-family: "Barlow Semi Condensed", monospace;
