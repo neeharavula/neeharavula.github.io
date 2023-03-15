@@ -638,8 +638,9 @@ html {
         color: #3d3d3d;
     }
     .aboutme .photo img {
-        width: 300px;
+        width: 310px;
         height: auto;
+        text-align: center;
     }
     .aboutme .nametag {
         font-family: "Barlow Semi Condensed", monospace;
