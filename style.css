@@ -643,14 +643,14 @@ html {
         padding-right: 1em;
     }
     .aboutme .photo img {
-        width: 310px;
+        width: 320px;
         height: auto;
     }
     .aboutme .nametag {
         font-family: "Barlow Semi Condensed", monospace;
         font-size: 1.5em;
         padding-top: 19em;
-        margin-left: -20em;
+        margin-left: -13em;
     }
     .aboutme .nametag h1 {
         color: #494949;
