@@ -647,7 +647,7 @@ html {
     .aboutme .nametag {
         font-family: "Barlow Semi Condensed", monospace;
         font-size: 1.5em;
-        padding-top: 20em;
+        padding-top: 19em;
         margin-left: -10em;
     }
     .aboutme .nametag h1 {
@@ -659,6 +659,7 @@ html {
         font-family: "Jura", monospace;
         font-size: 1.4em;
         padding-top: 40em;
+        margin-left: -30em;
     }
     /* EXPERIENCE SECTION */
     /* Place the timelime to the left */
