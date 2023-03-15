@@ -655,9 +655,10 @@ html {
         color: #494949;
     }
     .aboutme .bio p {
+        color: #494949;
         text-align: left;
         font-family: "Jura", monospace;
-        font-size: 1em;
+        font-size: 0.8em;
         padding-top: 0.5em;
         margin-left: -20em;
     }
