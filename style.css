@@ -632,7 +632,7 @@ html {
         padding-right: 1em;
         padding-left: 1em;
         padding-top: 5em;
-        padding-bottom: 7em;
+        padding-bottom: 5em;
     }
     .aboutme h1 {
         color: #3d3d3d;
@@ -649,7 +649,7 @@ html {
         font-family: "Barlow Semi Condensed", monospace;
         font-size: 1.4em;
         padding-top: 19em;
-        margin-left: -14em;
+        margin-left: -13.8em;
     }
     .aboutme .nametag h1 {
         color: #494949;
@@ -658,7 +658,7 @@ html {
         text-align: left;
         font-family: "Jura", monospace;
         font-size: 1em;
-        padding-top: 1em;
+        padding-top: 0.5em;
         margin-left: -20em;
     }
     /* EXPERIENCE SECTION */
