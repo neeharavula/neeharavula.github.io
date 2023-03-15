@@ -650,6 +650,7 @@ html {
         font-size: 1em;
         padding-top: 19em;
         text-align: left;
+        margin-left: -13em;
     }
     .aboutme .nametag h1 {
         color: #494949;
