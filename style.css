@@ -109,7 +109,7 @@ header video {
     padding-right: 9em;
     padding-left: 9em;
     padding-top: 5em;
-    padding-bottom: 7em;
+    padding-bottom: 9em;
 }
 
 .aboutme h1 {
@@ -136,6 +136,7 @@ header video {
 
 .aboutme .bio .location {
     display: inline-block;
+    margin-top: -2em;
 }
 
 .aboutme .bio .location .loctag {
@@ -155,7 +156,7 @@ header video {
 }
 
 .aboutme .bio p {
-    padding-top: 0.8em;
+    padding-top: 0em;
     padding-left: 21em;
     text-align: left;
     font-family: "Jura", monospace;
