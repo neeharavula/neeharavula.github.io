@@ -102,7 +102,6 @@ header video {
     display: flex;
     align-items: left;
     justify-content: left;
-    padding-bottom: 12em;
 }
 
 .aboutme {
@@ -120,6 +119,7 @@ header video {
 .aboutme .photo img {
     width: 350px;
     height: auto;
+    padding-bottom: 12em;
 }
 
 .aboutme .nametag {
@@ -366,7 +366,7 @@ header video {
     padding-right: 8em;
     padding-left: 8em;
     padding-top: 13.5em;
-    padding-bottom: 13.5em;
+    padding-bottom: 13em;
 }
 
 .resumesec h1 {
