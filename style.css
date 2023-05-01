@@ -333,6 +333,10 @@ header video {
     padding: 3em;
 }
 
+.worksec .centerboxes .athenahacks-box:hover {
+    cursor: alias;
+}
+
 .worksec h1 {
     font-family: "Barlow Semi Condensed", monospace;
     font-size: 3em;
