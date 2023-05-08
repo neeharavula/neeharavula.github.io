@@ -519,8 +519,14 @@ html {
         background-color: #e3e2de;
     }
     .aboutme .photo img {
-        width: 200px;
+        width: 300px;
         height: auto;
+    }
+    .aboutme .nametag {
+        font-family: "Barlow Semi Condensed", monospace;
+        font-size: 1.4em;
+        padding-top: 16em;
+        margin-left: -12em;
     }
 }
 
