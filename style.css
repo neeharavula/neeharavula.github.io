@@ -518,6 +518,10 @@ html {
     body {
         background-color: #e3e2de;
     }
+    .aboutme .photo img {
+        width: 325px;
+        height: auto;
+    }
 }
 
 
