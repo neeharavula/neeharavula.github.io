@@ -561,9 +561,9 @@
             padding-right: 4em;
             background-color: #e3e2de;
         }
-        nav ul .socials-mobile .fa {
+        /*nav ul .socials-mobile .fa {
             font-size: 150px;
-        }
+        }*/
         nav ul .socials-mobile .fa-linkedin {
             padding-left: 0.5em;
             background: #e3e2de;
@@ -636,6 +636,42 @@
         nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
         nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
             top: 0;
+        }
+        /* ABOUT SECTION */
+        .aboutme {
+            background-color: #e3e2de;
+            padding-right: 1.5em;
+            padding-left: 1.5em;
+            padding-top: 5em;
+            padding-bottom: 5em;
+        }
+        .aboutme h1 {
+            color: #3d3d3d;
+        }
+        .aboutme .photo {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        .aboutme .photo img {
+            width: 325px;
+            height: auto;
+        }
+        .aboutme .nametag {
+            font-family: "Barlow Semi Condensed", monospace;
+            font-size: 1.4em;
+            padding-top: 16em;
+            margin-left: -14.1em;
+        }
+        .aboutme .nametag h1 {
+            color: #494949;
+        }
+        .aboutme .bio p {
+            color: #494949;
+            text-align: left;
+            font-family: "Jura", monospace;
+            font-size: 0.6em;
+            padding-top: 0.5em;
+            margin-left: -20em;
         }
     }
     /* iPhone Media Query - responsive timeline on screens less than 600px wide */
