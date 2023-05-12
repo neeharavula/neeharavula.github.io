@@ -529,10 +529,11 @@ html {
     .aboutme .nametag {
         font-size: 1.5em;
         padding-left: 16em;
-        margin-top: -20em;
+        margin-top: -17em;
     }
     .aboutme .bio p {
         font-size: 1.1em;
+        padding-left: 22em;
     }
 }
 
