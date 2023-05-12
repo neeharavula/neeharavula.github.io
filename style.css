@@ -518,9 +518,6 @@ html {
     body {
         background-color: #E5EBE2;
     }
-    nav.light a:hover {
-        color: #3d3d3d;
-    }
     /*nav ul li.active-page a {
         color: #3d3d3d;
     }*/
