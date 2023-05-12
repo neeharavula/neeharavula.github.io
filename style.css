@@ -520,7 +520,7 @@ html {
     }
     header {
         margin-top: 5em;
-        padding-bottom: 5em;
+        margin-bottom: 5em;
     }
     .aboutme .photo img {
         width: 300px;
@@ -528,9 +528,9 @@ html {
     }
     .aboutme .nametag {
         /*font-family: "Barlow Semi Condensed", monospace;*/
-        font-size: 1em;
+        font-size: 1.3em;
         /*padding-top: 16em;*/
-        /*margin-left: -14em;*/
+        margin-left: -14em;
     }
 }
 
