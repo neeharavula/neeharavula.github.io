@@ -660,9 +660,8 @@
         .aboutme .nametag {
             font-family: "Barlow Semi Condensed", monospace;
             font-size: 1.4em;
-            padding-top: 1em;
             padding-left: 17em;
-            /*margin-left: -14.1em;*/
+            margin-top: -2em;
         }
         .aboutme .nametag h1 {
             color: #494949;
