@@ -661,7 +661,7 @@
             font-family: "Barlow Semi Condensed", monospace;
             font-size: 1.4em;
             padding-top: 16em;
-            margin-left: -14.1em;
+            margin-left: -10em;
         }
         .aboutme .nametag h1 {
             color: #494949;
@@ -673,6 +673,18 @@
             font-size: 0.6em;
             padding-top: 0.5em;
             margin-left: -20em;
+        }
+        /* FOOTER */
+        footer {
+            background-color: #3d3d3d;
+        }
+        .fa-linkedin {
+            background: #3d3d3d;
+            color: #87A678;
+        }
+        .fa-envelope {
+            background: #3d3d3d;
+            color: #87A678;
         }
     }
     /* iPhone Media Query - responsive timeline on screens less than 600px wide */
