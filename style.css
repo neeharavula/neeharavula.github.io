@@ -520,17 +520,18 @@ html {
     }
     header {
         margin-top: 5em;
+        padding-bottom: 3em;
     }
     .aboutme .photo img {
         width: 300px;
         height: auto;
     }
-    /*.aboutme .nametag {
-        font-family: "Barlow Semi Condensed", monospace;
+    .aboutme .nametag {
+        /*font-family: "Barlow Semi Condensed", monospace;*/
         font-size: 1.4em;
-        padding-top: 16em;
-        margin-left: -14em;
-    }*/
+        /*padding-top: 16em;*/
+        /*margin-left: -14em;*/
+    }
 }
 
 
