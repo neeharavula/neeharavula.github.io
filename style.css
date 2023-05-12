@@ -521,6 +521,116 @@
         .tabletPShow {
             display: inline;
         }
+        header {
+            margin-top: 7em;
+            margin-bottom: 7em;
+        }
+        nav {
+            height: 60px;
+            background-color: #e3e2de;
+            padding-right: 0;
+        }
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+            background-color: #e3e2de;
+            width: 100%;
+        }
+        nav li {
+            /*float: left;*/
+            width: 100%;
+        }
+        nav ul li a {
+            display: block;
+            padding: 20px 50px;
+            text-decoration: none;
+            text-align: right;
+            font-family: "Fjalla One", monospace;
+            font-size: 2.2em;
+        }
+        nav ul li.active-page a {
+            color: #87A678;
+        }
+        nav ul .socials-mobile {
+            padding-top: 7em;
+            padding-right: 4em;
+            background-color: #e3e2de;
+        }
+        nav ul .socials-mobile .fa-linkedin {
+            padding-left: 0.5em;
+            background: #e3e2de;
+            color: #87A678;
+        }
+        nav ul .socials-mobile .fa-envelope {
+            background: #e3e2de;
+            color: #87A678;
+        }
+        /* menu */
+        nav .menu {
+            max-height: 0;
+            transition: all .75s ease-in;
+            transition: all .5s ease-out;
+            /*transition: max-height .1s ease-out;*/
+        }
+        /* menu icon */
+        nav .menu-icon {
+            cursor: pointer;
+            display: inline-block;
+            float: right;
+            padding: 28px 10px;
+            position: relative;
+            user-select: none;
+            padding-right: 20px;
+        }
+        nav .menu-icon .navicon {
+            background: #333;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 20px;
+        }
+        nav .menu-icon .navicon:before,
+        nav .menu-icon .navicon:after {
+            background: #333;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+        nav .menu-icon .navicon:before {
+            top: 5px;
+        }
+        nav .menu-icon .navicon:after {
+            top: -5px;
+        }
+        /* menu btn */
+        .header .menu-btn {
+            display: none;
+        }
+        nav .menu-btn:checked~.menu {
+            /* MENU HEIGHT */
+            max-height: 100em;
+            height: 100em;
+            padding-top: 150px;
+        }
+        nav .menu-btn:checked~.menu-icon .navicon {
+            background: transparent;
+        }
+        nav .menu-btn:checked~.menu-icon .navicon:before {
+            transform: rotate(-45deg);
+        }
+        nav .menu-btn:checked~.menu-icon .navicon:after {
+            transform: rotate(45deg);
+        }
+        nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+        nav .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+            top: 0;
+        }
     }
     /* iPhone Media Query - responsive timeline on screens less than 600px wide */
     
@@ -535,16 +645,16 @@
         body {
             background-color: #e3e2de;
         }
+        header {
+            width: 100%;
+            height: 40em;
+            margin-top: 5em;
+        }
         /* NAVIGATION */
         nav {
             height: 60px;
             background-color: #e3e2de;
             padding-right: 0;
-        }
-        header {
-            width: 100%;
-            height: 40em;
-            margin-top: 5em;
         }
         nav ul {
             margin: 0;
