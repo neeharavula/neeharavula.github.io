@@ -523,8 +523,10 @@ html {
         margin-bottom: 5em;
     }
     .aboutme {
+        margin-top: 2em;
         padding-top: 6em;
         padding-bottom: 10em;
+        margin-bottom: 2em;
     }
     .aboutme .photo img {
         width: 320px;
