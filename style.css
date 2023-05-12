@@ -522,6 +522,10 @@ html {
         margin-top: 5em;
         margin-bottom: 5em;
     }
+    .aboutme {
+        padding-top: 6em;
+        padding-bottom: 10em;
+    }
     .aboutme .photo img {
         width: 320px;
         height: auto;
@@ -530,6 +534,9 @@ html {
         font-size: 1.5em;
         padding-left: 16em;
         margin-top: -17em;
+    }
+    .aboutme .bio .location .loctag {
+        padding-left: 24em;
     }
     .aboutme .bio p {
         font-size: 1.1em;
