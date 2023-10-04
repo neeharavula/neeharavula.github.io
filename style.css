@@ -828,7 +828,7 @@
             padding-right: 1em;
         }
         .aboutme .photo img {
-            width: 325px;
+            width: 315px;
             height: auto;
         }
         .aboutme .nametag {
@@ -844,7 +844,7 @@
             color: #494949;
             text-align: left;
             font-family: "Jura", monospace;
-            font-size: 0.6em;
+            font-size: 0.8em;
             padding-top: 0.5em;
             margin-left: -20em;
         }
@@ -884,7 +884,17 @@
         .right {
             left: 0%;
         }
+        .content h2 {
+            font-family: "Barlow Semi Condensed", monospace;
+            float: center;
+            padding-left: 4.5em;
+            font-size: 1em;
+        }
         .content h1 {
+            float: center;
+            padding-left: 7.8em;
+            font-size: 0.8em;
+            margin-top: -10px;
             margin-left: -7.8em;
         }
         .content h3 {
