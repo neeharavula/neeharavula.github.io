@@ -849,6 +849,9 @@
             margin-left: -20em;
         }
         /* EXPERIENCE SECTION */
+        .experiencesec {
+            background-color: #3d3d3d;
+        }
         /* Place the timelime to the left */
         .timeline::after {
             left: 31px;
