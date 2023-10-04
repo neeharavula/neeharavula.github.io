@@ -844,7 +844,7 @@
             color: #494949;
             text-align: left;
             font-family: "Jura", monospace;
-            font-size: 1em;
+            font-size: 1.1em;
             padding-top: 0.5em;
             margin-left: -20em;
         }
@@ -940,14 +940,14 @@
         }
         /* FOOTER */
         .footer {
-            background-color: #E5EBE2;
+            background-color: #e3e2de;
         }
         .fa-linkedin {
-            background: #E5EBE2;
+            background: #e3e2de;
             color: #87A678;
         }
         .fa-envelope {
-            background: #E5EBE2;
+            background: #e3e2de;
             color: #87A678;
         }
     }
