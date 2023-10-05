@@ -824,8 +824,8 @@
             color: #3d3d3d;
         }
         .aboutme .photo {
-            /*padding-left: 1em;*/
-            padding-right: 1em;
+            padding-left: 1em;
+            padding-right: 2em;
         }
         .aboutme .photo img {
             width: 450px;
