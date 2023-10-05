@@ -100,8 +100,8 @@
     
     .aboutme {
         background-color: #e3e2de;
-        padding-right: 9em;
-        padding-left: 9em;
+        padding-right: 8em;
+        padding-left: 6em;
         padding-top: 5em;
         padding-bottom: 10em;
     }
@@ -111,7 +111,7 @@
     }
     
     .aboutme .photo img {
-        width: 350px;
+        width: 450px;
         height: auto;
     }
     
@@ -121,7 +121,7 @@
         font-family: "Barlow Semi Condensed", monospace;
         font-size: 2em;
         position: relative;
-        margin-top: -15em;
+        margin-top: -17em;
     }
     
     .aboutme .nametag h1 {
