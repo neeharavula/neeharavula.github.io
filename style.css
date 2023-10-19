@@ -957,18 +957,13 @@
             width: 350px;
             height: 430px;
             padding: 2em;
-            margin-bottom: 2em;
         }
         .worksec .centerboxes .melodics-box {
             width: 350px;
             height: 430px;
             padding: 2em;
+            margin-bottom: 2em;
         }
-        /*.worksec .centerboxes .courseplanner-box {
-            width: 250px;
-            height: 330px;
-            padding: 1em;
-        }*/
         .worksec h1 {
             font-size: 2em;
         }
