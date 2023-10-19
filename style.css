@@ -932,19 +932,20 @@
             /*margin-left: -1em;*/
         }
         .worksec .centerboxes .portfolio-box {
-            width: 380px;
-            height: 450px;
+            width: 350px;
+            height: 430px;
             padding: 1em;
             margin-bottom: 2em;
         }
         .worksec .centerboxes .athenahacks-box {
-            width: 380px;
-            height: 450px;
+            width: 350px;
+            height: 430px;
             padding: 1em;
+            margin-bottom: 2em;
         }
         .worksec .centerboxes .melodics-box {
-            width: 380px;
-            height: 450px;
+            width: 350px;
+            height: 430px;
             padding: 1em;
         }
         /*.worksec .centerboxes .courseplanner-box {
