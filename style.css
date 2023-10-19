@@ -327,6 +327,20 @@
         cursor: alias;
     }
     
+    .worksec .centerboxes .courseplanner-box {
+        display: inline-block;
+        width: 370px;
+        height: 520px;
+        background-color: rgba(135, 166, 120, 0.4);
+        /*background-image: linear-gradient(to bottom right, #e3e2de, #87a678);*/
+        border-radius: 10%;
+        padding: 3em;
+    }
+    
+    .worksec .centerboxes .courseplanner-box:hover {
+        cursor: alias;
+    }
+    
     .worksec h1 {
         font-family: "Barlow Semi Condensed", monospace;
         font-size: 3em;
