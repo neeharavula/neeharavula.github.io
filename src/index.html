@@ -1,12 +1,10 @@
-<!-- about page for mobile -->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <!-- PAGE TITLE -->
 
 <head>
-    <title>About Me</title>
+    <title>Neeha Ravula</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <script src="animations.js"></script>
@@ -103,8 +101,8 @@
                 <li><a href="#home">Neeha Ravula</a></li>
             </div>
             <div class="mobileShow tabletPShow">
-                <li style="float:right" class="home-mobile"><a href="neeharavula.github.io">Home</a></li>
-                <li style="float:right" class="about-mobile active-page"><a href="about.html">About</a></li>
+                <li style="float:right" class="home-mobile active-page"><a href="neeharavula.github.io">Home</a></li>
+                <li style="float:right" class="about-mobile"><a href="/src/about.html">About</a></li>
                 <li style="float:right" class="resume-mobile"><a href="/files/Neeha-Ravula-Resume.pdf">Resume</a></li>
                 <div style="float:right" class="socials-mobile">
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -124,47 +122,78 @@
         </ul>
     </nav>
 
+    <!-- HOME SECTION -->
+    <header id="home">
+        <div class="mobileHide tabletLHide tabletPHide">
+            <div class="fade-in">
+                <center>
+                    <video loop width="880" height="720" autoplay muted>
+                        <source src="/files/neeharavula.mov" type="video/mp4">
+                    </video>
+                </center>
+            </div>
+        </div>
+        <div class="mobileShow tabletLShow desktopHide">
+            <div class="fade-in">
+                <center>
+                    <img width="300" height="500" src="mobilehome.png" alt="Neeha Ravula">
+                </center>
+            </div>
+        </div>
+        <div class="mobileHide tabletPShow tabletLHide desktopHide">
+            <div class="fade-in">
+                <center>
+                    <img width="500" height="800" src="mobilehome.png" alt="Neeha Ravula">
+                </center>
+            </div>
+        </div>
+    </header>
+
     <!-- ABOUT SECTION -->
-    <section id="about">
-        <div id="aboutme" class="aboutme">
-            <div class="about-grid">
-                <div class="mobileShow tabletPShow">
-                    <div class="fade-bottom">
-                        <div class="photo">
-                            <img src="/images/polaroid.jpg" alt="Neeha Ravula">
-                        </div>
+    <div class="mobileHide tabletPHide">
+        <section id="about">
+            <div id="aboutme" class="aboutme">
+                <div class="about-grid">
+                    <div class="photo">
+                        <img src="/images/polaroid.jpg" alt="Neeha Ravula">
+                    </div>
+                    <div class="reveal fade-bottom">
                         <div class="nametag">
                             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">
-                            <h1>Hi! I'm Neeha.</h1>
+                            <h1>Hi! My name is Neeha.</h1>
                         </div>
+                    </div>
+                    <div class="reveal fade-bottom">
                         <div class="bio">
                             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
+                            <div class="location">
+                                <div class="loctag">
+                                    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/pin.css' rel='stylesheet'>
+                                    <i class="gg-pin"></i>
+                                </div>
+                                <p><b>SAN DIEGO, CA</b></p>
+                            </div>
                             <p>
                                 Recent grad from University of California, Santa Cruz with a bachelor's degree in Computer Science. Passionate about the intersection of design and technology and interested in full-stack and web development, UI/UX design, and AI.
                                 <!--
                         <br><br> Outside of tech, you can find me exploring the outdoors, strolling through museums, or walking along the beaches of my hometown, San Diego.
                         -->
+                                <br><br>Learn more about me below!
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- EXPERIENCE SECTION -->
-    <section id="experience" class="experience">
-        <div id="experiencesec" class="experiencesec mobileShow tabletPShow">
+    <section id="experience">
+        <div id="experiencesec" class="experiencesec mobileHide tabletPHide">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
             <div class="timeline">
                 <div class="reveal fade-bottom">
-                    <div class="mobileShow tabletPShow">
-                        <h4>
-                            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">Experience</h4>
-                    </div>
-                </div>
-                <div class="reveal fade-bottom">
-                    <div class="container right">
+                    <div class="container left">
                         <!-- NORTHWESTERN MUTUAL -->
                         <div class="content">
                             <span class="circle-images">
@@ -172,7 +201,7 @@
                         </span>
                             <h2>
                                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">Software Engineering Intern</h2>
-                            <h3>Northwestern Mutual</h3>
+                            <h3>Northwestern Mutual, Client Communications Team</h3>
                             <div class="mobileHide">
                                 <h1>JUN 2023 - AUG 2023 &nbsp | &nbsp Milwaukee, WI</h1>
                             </div>
@@ -185,7 +214,7 @@
                     </div>
                 </div>
                 <div class="reveal fade-bottom">
-                    <div class="container left">
+                    <div class="container right">
                         <!-- TECH4GOOD @ UCSC -->
                         <div class="content">
                             <span class="circle-images">
@@ -193,7 +222,7 @@
                         </span>
                             <h2>
                                 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">Undergraduate Research Assistant</h2>
-                            <h3>Tech4Good @ UCSC</h3>
+                            <h3>Tech4Good @ UCSC, APIs & Frameworks Team</h3>
                             <div class="mobileHide">
                                 <h1>APR 2023 - JUN 2023 &nbsp | &nbsp Santa Cruz, CA</h1>
                             </div>
@@ -206,7 +235,7 @@
                     </div>
                 </div>
                 <div class="reveal fade-bottom">
-                    <div class="container right">
+                    <div class="container left">
                         <!-- UCSC ACM-W -->
                         <div class="content">
                             <span class="circle-images">
@@ -222,7 +251,7 @@
                                 <h2>
                                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">Publicity Chair Officer<br>&nbsp</h2>
                                 <h3>ACM for Women in Computing</h3>
-                                <h1>JUN 2022 - JUN 2023</h1>
+                                <h1>JUN 2022 - PRESENT</h1>
                                 <h1>Santa Cruz, CA</h1>
                             </div>
                             <p>Organized events and collabs with on-campus and international STEM organizations. Managed Instagram and Discord accounts and designed content with Canva to increase club exposure.</p>
@@ -230,7 +259,7 @@
                     </div>
                 </div>
                 <div class="reveal fade-bottom">
-                    <div class="container left">
+                    <div class="container right">
                         <!-- GENERAL ATOMICS -->
                         <div class="content">
                             <span class="circle-images">
@@ -252,7 +281,7 @@
                     </div>
                 </div>
                 <div class="reveal fade-bottom">
-                    <div class="container right">
+                    <div class="container left">
                         <!-- BASKIN ENG -->
                         <div class="content">
                             <span class="circle-images">
@@ -273,7 +302,7 @@
                 </div>
                 <!-- ATHENAHACKS
                 <div class="reveal fade-bottom">
-                    <div class="container left">
+                    <div class="container right">
                         <div class="content">
                             <span class="circle-images">
                             <img src="/images/athenahacks.PNG"/>
@@ -290,6 +319,72 @@
         </div>
     </section>
 
+    <!-- WORK SECTION -->
+    <section id="work">
+        <div id="worksec" class="worksec">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
+            <div class="reveal fade-bottom">
+                <div class="mobileShow">
+                    <h4>
+                        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">Work</h4>
+                </div>
+                <div class="centerboxes">
+                    <div class="grow">
+                        <a href="https://github.com/CoursePlanner183/courseplanner/tree/main" target="_blank">
+                            <!-- COURSE PLANNER -->
+                            <div class="courseplanner-box">
+                                <h1>
+                                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">Course Planner</h1>
+                                <h2>PY4WEB &nbsp&nbsp| &nbsp&nbspJavaScript&nbsp&nbsp| &nbsp&nbspCSS</h2>
+                                <p>Worked in a team of five to develop a web application for students to organize their coursework, create an academic plan, and keep track of their GPA/grades.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grow">
+                        <a href="/files/MelodicsPoster.pdf" target="_blank">
+                            <!-- MELODICS -->
+                            <div class="melodics-box">
+                                <h1>
+                                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow Semi Condensed">Melodics</h1>
+                                <h2>Figma &nbsp&nbsp| &nbsp&nbspUsability Testing</h2>
+                                <p>Worked in a team of five to perform user research, test, and design a fully-functional prototype for a music platform that provides artists with a space to share their work and collaborate on projects.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grow">
+                        <a href="https://devpost.com/software/usc_sos" target="_blank">
+                            <!-- USC SOS -->
+                            <div class="athenahacks-box">
+                                <h1>USC<br>SOS</h1>
+                                <h2>JavaScript &nbsp&nbsp| &nbsp&nbspTwilio&nbsp&nbsp| &nbsp&nbspGitHub</h2>
+                                <p>Calling service and mobile application that serves as a hub for emergency contacts at USC. Worked in a team of four for USC AthenaHacks hackathon in March 2021.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME SECTION -->
+    <div class="mobileHide tabletPHide">
+        <section id="resume">
+            <div id="resumesec" class="resumesec">
+                <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jura">
+                <div class="reveal fade-bottom">
+                    <h1>Want to learn more? Check out my resume!</h1>
+                </div>
+                <div class="reveal fade-bottom">
+                    <a href="/files/Neeha-Ravula-Resume.pdf" target="_blank">
+                        <button class="button">Resume</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- FOOTER -->
     <footer>
