@@ -1,5 +1,5 @@
 # Neeha Ravula
 ### Welcome to my portfolio website!
+Currently under construction.<br/>
 Developed in HTML, CSS, and JavaScript.<br/>
-Last updated: October 2023<br/>
-Tools: [Space Type Generator](https://spacetypegenerator.com/)
+Last updated: February 2024<br/>
