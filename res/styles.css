@@ -1,0 +1,149 @@
+/* BODY & BACKGROUND */
+
+body {
+    background: linear-gradient(45deg, #c5f9ee, #d3f2a8, #f9ca7b, #fdc4dc);
+    background-size: 200% 200%;
+    animation: gradient 30s ease infinite;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* NAVIGATION */
+
+.navbar {
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    font-family: "JetBrains Mono", monospace;
+    color: #333333;
+    text-align: center;
+    padding: 1em 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 200;
+}
+
+.navbar-right {
+    float: right;
+}
+
+
+/* HAMBURGER MENU */
+
+#menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 2em;
+    color: #333333;
+}
+
+
+/* HOME - SUMMARY */
+
+.summary {
+    float: left;
+    padding-left: 2em;
+    padding-right: 14em;
+    padding-top: 2em;
+}
+
+.summary h1 {
+    font-family: "Bai Jamjuree", sans-serif;
+    color: #333333;
+    text-align: left;
+    font-size: 3.5vw;
+    font-weight: 400;
+    max-height: 50%;
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 2px solid #333333;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5em;
+}
+
+.socials p {
+    float: left;
+    font-family: "JetBrains Mono", monospace;
+    color: #333333;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 200;
+    padding-left: 2em;
+    padding-top: 8px;
+}
+
+.socials .fa {
+    float: right;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-right: 2em;
+    padding-left: 8px;
+    text-align: center;
+    text-decoration: none;
+    background: transparent;
+    color: #333333;
+}
+
+
+/* MOBILE MEDIA QUERY */
+
+@media screen and (max-width: 768px) {
+    /* NAVIGATION */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #menu-icon {
+        display: block;
+        float: right;
+    }
+    nav a {
+        display: none;
+    }
+    nav.open a {
+        display: block;
+    }
+    /* HOME - SUMMARY */
+    .summary {
+        padding-right: 3em;
+        padding-left: 2.5em;
+    }
+    .summary h1 {
+        font-size: 2em;
+    }
+}
+
+
+/* ANIMATIONS - GRADIENT */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
