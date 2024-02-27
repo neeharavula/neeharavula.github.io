@@ -1,22 +1,32 @@
-// HAMBURGER MENU TRANSITION
+// Responsive hamburger menu
+var hamburger = document.querySelector("#hamburger");
+var nav = document.querySelector(".navMenu");
+var navLinks = document.querySelectorAll(".navMenu li");
 
-const menuIcon = document.getElementById('menu-icon');
-const navLinks = document.querySelectorAll('nav a');
+// close nav by clicking on list items
+Array.from(navLinks).forEach((li) =>
+    li.addEventListener("click", () => {
+        if (hamburger.classList.contains("toggle")) {
+            hamburger.classList.remove("toggle");
+        }
+        if (nav.classList.contains("nav-active")) {
+            nav.classList.remove("nav-active");
+        }
+    })
+);
 
-menuIcon.addEventListener('click', () => {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('open');
+// toggle nav on click of hamburger menu icon
+hamburger.addEventListener("click", () => {
+    nav.classList.toggle("nav-active");
 
-    // toggle between hamburger and X icon
-    const isMenuOpen = nav.classList.contains('open');
-    menuIcon.innerHTML = isMenuOpen ? '&times;' : '&#9776;';
-});
+    // burger animation
+    hamburger.classList.toggle("toggle");
 
-// hide the menu when a link is clicked (for mobile)
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        const nav = document.querySelector('nav');
-        nav.classList.remove('open');
-        menuIcon.innerHTML = '&#9776;'; // Reset to hamburger icon
+    // dynamically change menu item text
+    Array.from(navLinks).forEach((li) => {
+        if (li.textContent.trim() === "NEEHA RAVULA") {
+            li.textContent = "HOME";
+        }
     });
+
 });
