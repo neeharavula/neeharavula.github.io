@@ -220,6 +220,8 @@ footer {
         /* Set body height to 100% of viewport height */
         overflow: hidden;
         /* Hide vertical scrollbar */
+        margin: 0;
+        /* Remove default margin */
     }
     /* HOME - SUMMARY */
     .summary {
@@ -231,6 +233,13 @@ footer {
     }
     .socials p {
         display: none;
+    }
+    footer {
+        border-top: 1px solid #333333;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 4.5em;
     }
 }
 
