@@ -215,6 +215,10 @@ footer {
 /* MOBILE MEDIA QUERY */
 
 @media screen and (max-width: 768px) {
+    body {
+        top: 0;
+        bottom: 0;
+    }
     /* HOME - SUMMARY */
     .summary {
         padding-right: 3em;
