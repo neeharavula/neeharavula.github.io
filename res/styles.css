@@ -217,16 +217,14 @@ footer {
 @media screen and (max-width: 768px) {
     body {
         height: 100vh;
-        /* Set body height to 100% of viewport height */
         overflow: hidden;
-        /* Hide vertical scrollbar */
         margin: 0;
-        /* Remove default margin */
     }
     /* HOME - SUMMARY */
     .summary {
         padding-right: 3em;
         padding-left: 2.5em;
+        margin-bottom: 4.5em;
     }
     .summary h1 {
         font-size: 1.5em;
