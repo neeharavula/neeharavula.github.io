@@ -219,12 +219,17 @@ footer {
         height: 100vh;
         overflow: hidden;
         margin: 0;
+        display: flex;
+        /* Use flexbox */
+        flex-direction: column;
+        /* Stack children vertically */
     }
     /* HOME - SUMMARY */
     .summary {
         padding-right: 3em;
         padding-left: 2.5em;
-        margin-bottom: 4.5em;
+        flex: 1;
+        /* Grow to fill remaining space */
     }
     .summary h1 {
         font-size: 1.5em;
@@ -234,8 +239,6 @@ footer {
     }
     footer {
         border-top: 1px solid #333333;
-        position: absolute;
-        bottom: 0;
         width: 100%;
         height: 4.5em;
     }
