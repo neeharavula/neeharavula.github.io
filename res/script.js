@@ -1,7 +1,7 @@
 // Responsive hamburger menu
 var hamburger = document.querySelector("#hamburger");
-var nav = document.querySelector(".navMenu");
-var navLinks = document.querySelectorAll(".navMenu li");
+var nav = document.querySelector(".navbar");
+var navLinks = document.querySelectorAll(".navbar li");
 
 // close nav by clicking on list items
 Array.from(navLinks).forEach((li) =>
