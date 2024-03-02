@@ -226,13 +226,18 @@ footer {
     }
     /* HOME - SUMMARY */
     .summary {
+        float: left;
         padding-right: 3em;
         padding-left: 2.5em;
-        flex: 1;
-        /* Grow to fill remaining space */
+        padding-top: 4em;
     }
     .summary h1 {
+        font-family: "Bai Jamjuree", sans-serif;
+        color: #333333;
+        text-align: left;
         font-size: 1.5em;
+        font-weight: 400;
+        max-height: none;
     }
     .socials p {
         display: none;
