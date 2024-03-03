@@ -32,7 +32,7 @@ body {
 }
 
 .work-tile:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     /*opacity: 0.8;*/
 }
 
@@ -98,7 +98,14 @@ footer {
         justify-content: center;
     }
     .work-tile {
+        padding: 15em 1em 0.8em;
         width: calc(100% - 0.5em);
+    }
+    .year {
+        font-size: 0.8em;
+    }
+    .project-name {
+        font-size: 1.5em;
     }
     /* MOBILE TITLE */
     .mobile-title {
