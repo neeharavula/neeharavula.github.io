@@ -1,0 +1,119 @@
+/* BODY & BACKGROUND */
+
+body {
+    background: #f3f3ef;
+    min-height: 100%;
+}
+
+
+/* WORK EXPERIENCE TILES */
+
+.work-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* adjust spacing between tiles */
+    margin: 2em;
+    padding-bottom: 3em;
+}
+
+.work-tile {
+    cursor: none;
+    border-radius: 15px;
+    /* box height */
+    padding: 24em 1.2em 1em;
+    /* adjust spacing between tiles */
+    margin-bottom: 2em;
+    /* two tiles per row with margin in between */
+    width: calc(50% - 1em);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.work-tile:hover {
+    transform: scale(1.05);
+    /*opacity: 0.8;*/
+}
+
+.year {
+    font-family: "JetBrains Mono", monospace;
+    color: #f3f3ef;
+    font-size: 1em;
+    font-weight: 200;
+}
+
+.project-name {
+    font-size: 2.5em;
+    font-family: "Bai Jamjuree", sans-serif;
+    color: #f3f3ef;
+    text-align: left;
+    font-weight: 400;
+}
+
+.mobile-title {
+    display: none;
+}
+
+
+/* CURSOR BUBBLE HOVER */
+
+.cursor-bubble {
+    position: fixed;
+    display: none;
+    background-color: #f3f3ef;
+    color: #333333;
+    padding: 7px 12px 7px 12px;
+    border-radius: 15px;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 200;
+    font-size: 1em;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.cursor-bubble .arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #333333;
+    margin-right: 5px;
+}
+
+
+/* FOOTER */
+
+footer {
+    height: 2em;
+}
+
+
+/* MOBILE MEDIA QUERY */
+
+@media screen and (max-width: 768px) {
+    /* WORK EXPERIENCE TILES */
+    .work-tiles {
+        justify-content: center;
+    }
+    .work-tile {
+        width: calc(100% - 0.5em);
+    }
+    /* MOBILE TITLE */
+    .mobile-title {
+        display: block;
+        font-family: "Bai Jamjuree", sans-serif;
+        color: #333333;
+        font-size: 2em;
+        /* Adjust the font size as needed */
+        text-align: left;
+        /* Left-align the title */
+        margin-top: 1em;
+        margin-left: 1.5em;
+    }
+    /* FOOTER */
+    footer {
+        height: 2em;
+    }
+}

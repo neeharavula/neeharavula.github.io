@@ -1,164 +1,14 @@
 /* BODY & BACKGROUND */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     background: linear-gradient(45deg, #c5f9ee, #d3f2a8, #f9ca7b, #fdc4dc);
-    background-size: 200% 200%;
     animation: gradient 30s ease infinite;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
-    position: relative;
 }
 
 
-/* NAVIGATION */
-
-html {
-    overflow-x: hidden;
-}
-
-nav {
-    width: 100%;
-    padding: 20px;
-}
-
-.navbar ul {
-    padding-left: 1em;
-    padding-right: 1em;
-    display: flex;
-    justify-content: space-between;
-}
-
-.navbar li {
-    font-family: "JetBrains Mono", monospace;
-    color: #333333;
-    list-style: none;
-    font-size: 1em;
-    font-weight: 200;
-    cursor: pointer;
-}
-
-.navbar li.left {
-    margin-right: auto;
-}
-
-.navbar li:not(.left) {
-    margin-left: 3em;
-}
-
-#hamburger {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 10;
-}
-
-#hamburger div {
-    width: 22px;
-    height: 2px;
-    background-color: #333333;
-    margin: 4px 0;
-    transition: 0.5s;
-}
-
-#hamburger {
-    display: none;
-}
-
-@media screen and (max-width: 768px) {
-    #hamburger {
-        display: block;
-    }
-    .navbar {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #f3f3ef;
-        transform: translateY(-100%);
-        transition: 0.5s;
-    }
-    .navbar ul {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: center;
-        margin: 15px 0;
-        padding-top: 5em;
-    }
-    .navbar li {
-        font-size: 3em;
-        font-weight: 200;
-        padding-top: 30px;
-        padding-right: 10px;
-        text-align: center;
-    }
-    .navbar li.left {
-        margin-right: 0;
-    }
-    .navbar li:not(.left) {
-        margin-left: 0;
-    }
-}
-
-.nav-active {
-    transform: translateX(0);
-}
-
-#hamburger.toggle div {
-    background-color: #333333;
-}
-
-.toggle #bar1 {
-    transform: rotate(-45deg) translate(-5px, 4px);
-}
-
-.toggle #bar2 {
-    opacity: 0;
-}
-
-.toggle #bar3 {
-    transform: rotate(45deg) translate(-5px, -4px);
-}
-
-.hover-underline-animation {
-    display: inline-block;
-    position: relative;
-    color: #333333;
-}
-
-.hover-underline-animation:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #333333;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-
-/* HOME - SUMMARY */
+/* SUMMARY */
 
 .summary {
     float: left;
@@ -180,71 +30,22 @@ nav {
 /* FOOTER */
 
 footer {
-    border-top: 1px solid #333333;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 4.5em;
-}
-
-.socials p {
-    float: left;
-    font-family: "JetBrains Mono", monospace;
-    color: #333333;
-    text-align: center;
-    font-size: 1em;
-    font-weight: 200;
-    padding-left: 2em;
-    padding-top: 25px;
-}
-
-.socials .fa {
-    float: right;
-    margin-right: 10px;
-    padding-top: 27px;
-    padding-bottom: 20px;
-    padding-left: 8px;
-    padding-right: 1em;
-    text-align: center;
-    text-decoration: none;
-    background: transparent;
-    color: #333333;
+    height: 4em;
 }
 
 
 /* MOBILE MEDIA QUERY */
 
 @media screen and (max-width: 768px) {
-    body {
-        height: 100vh;
-        overflow: hidden;
-        margin: 0;
-        display: flex;
-        /* Use flexbox */
-        flex-direction: column;
-        /* Stack children vertically */
-    }
     /* HOME - SUMMARY */
     .summary {
-        float: left;
         padding-right: 3em;
         padding-left: 2.5em;
-        padding-top: 4em;
     }
     .summary h1 {
-        font-family: "Bai Jamjuree", sans-serif;
-        color: #333333;
-        text-align: left;
-        font-size: 1.5em;
-        font-weight: 400;
-        max-height: none;
-    }
-    .socials p {
-        display: none;
+        font-size: 1em;
     }
     footer {
-        border-top: 1px solid #333333;
-        width: 100%;
         height: 4.5em;
     }
 }
