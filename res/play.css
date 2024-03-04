@@ -45,6 +45,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding-left: 1.5em;
+    padding-right: 0.3em;
 }
 
 
@@ -102,6 +103,7 @@ body {
         width: 100%;
         float: none;
         padding-left: 0;
+        padding-right: 0;
     }
     .image-grid img {
         width: calc(50% - 10px);
