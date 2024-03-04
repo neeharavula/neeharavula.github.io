@@ -91,12 +91,20 @@ body {
 /* PHOTO GRID RESPONSIVENESS */
 
 @media screen and (max-width: 768px) {
+    .title-box h2 {
+        padding-left: 0;
+    }
+    .caption-box p {
+        padding-left: 0;
+    }
     .text-boxes,
     .image-grid {
         width: 100%;
         float: none;
+        padding-left: 0;
     }
     .image-grid img {
         width: calc(50% - 10px);
+        aspect-ratio: 3/4;
     }
 }
