@@ -118,30 +118,10 @@ workTilesContainer.querySelectorAll(".work-tile").forEach((tile, index) => {
         // Get the custom path associated with the clicked tile
         const customPath = workExperiences[index].path;
 
-        // Determine the base path based on the custom path
-        const basePath = getBasePath(customPath);
-
-        // Remove the .html extension from the custom path
-        const newPath = `${basePath}/${customPath.replace('.html', '')}`;
-        history.pushState({}, '', newPath);
-
         // Redirect to the HTML file
         window.location.href = customPath;
     });
 });
-
-// Function to get the base path based on the custom path
-function getBasePath(customPath) {
-    // Mapping of specific HTML files to their base paths
-    const fileToBasePath = {
-        '../src/nm.html': '/nm',
-        '../src/work.html': '/work',
-        // Add more entries for other HTML files as needed
-    };
-
-    // Check if the custom path is defined in the mapping
-    return fileToBasePath[customPath] || '/'; // Default to '/' if not found
-}
 
 // SHOW CURSOR BUBBLE
 function showCursorBubble(event, text) {
