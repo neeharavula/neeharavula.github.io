@@ -60,11 +60,10 @@ window.addEventListener("resize", () => {
 
 // WORK PAGE TILES
 var workExperiences = [
-    { year: 2023, season: "SUMMER", projectName: "Northwestern Mutual", background: "nm.png", description: "🛠️ UNDER CONSTRUCTION" }, /* "SEE INTERNSHIP ➚" */
-    { year: 2023, season: "SPRING", projectName: "Melodics", background: "path/to/image2.jpg", description: "🛠️ UNDER CONSTRUCTION" },
-    { year: 2023, season: "SPRING", projectName: "Course Planner", background: "path/to/image3.jpg", description: "🛠️ UNDER CONSTRUCTION" },
-    { year: 2022, season: "SUMMER", projectName: "General Atomics", background: "path/to/image4.jpg", description: "🛠️ UNDER CONSTRUCTION" },
-    { year: 2022, season: "WINTER", projectName: "USC AthenaHacks", background: "path/to/image5.jpg", description: "🛠️ UNDER CONSTRUCTION" },
+    { path: "../src/nm.html", year: 2023, season: "SUMMER", projectName: "Northwestern Mutual", background: "nm.png", description: "🛠️ UNDER CONSTRUCTION" },
+    { path: "melodics.html", year: 2023, season: "SPRING", projectName: "Melodics", background: "path/to/image2.jpg", description: "🛠️ UNDER CONSTRUCTION" },
+    { path: "course-planner.html", year: 2023, season: "SPRING", projectName: "Course Planner", background: "path/to/image3.jpg", description: "🛠️ UNDER CONSTRUCTION" },
+    // Add paths for other tiles
 ];
 
 // SORT WORK TILES BY YEAR AND SEASON (NEWEST -> OLDEST)
@@ -105,7 +104,7 @@ workExperiences.forEach((experience) => {
 });
 
 
-// EVENT LISTENERS FOR HOVER ON WORK TILES
+// EVENT LISTENERS FOR HOVER AND CLICK ON WORK TILES
 workTilesContainer.querySelectorAll(".work-tile").forEach((tile, index) => {
     tile.addEventListener("mouseenter", (event) => {
         showCursorBubble(event, workExperiences[index].description);
@@ -113,6 +112,18 @@ workTilesContainer.querySelectorAll(".work-tile").forEach((tile, index) => {
 
     tile.addEventListener("mouseleave", () => {
         hideCursorBubble();
+    });
+
+    tile.addEventListener("click", () => {
+        // Get the custom path associated with the clicked tile
+        const customPath = workExperiences[index].path;
+
+        // Remove the .html extension from the custom path
+        const newPath = `/${customPath.replace('.html', '')}`;
+        history.pushState({}, '', newPath);
+
+        // Redirect to the HTML file
+        window.location.href = customPath;
     });
 });
 
