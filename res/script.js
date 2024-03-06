@@ -61,9 +61,9 @@ window.addEventListener("resize", () => {
 // WORK PAGE TILES
 var workExperiences = [
     { path: "../src/nm.html", year: 2023, season: "SUMMER", projectName: "Northwestern Mutual", background: "nm.png", description: "🛠️ UNDER CONSTRUCTION" },
-    { path: "melodics.html", year: 2023, season: "SPRING", projectName: "Melodics", background: "path/to/image2.jpg", description: "🛠️ UNDER CONSTRUCTION" },
-    { path: "course-planner.html", year: 2023, season: "SPRING", projectName: "Course Planner", background: "path/to/image3.jpg", description: "🛠️ UNDER CONSTRUCTION" },
-    // Add paths for other tiles
+    { path: "../src/melodics.html", year: 2023, season: "SPRING", projectName: "Melodics", background: "path/to/image2.jpg", description: "🛠️ UNDER CONSTRUCTION" },
+    { path: "../src/ga.html", year: 2022, season: "SUMMER", projectName: "General Atomics", background: "path/to/image3.jpg", description: "🛠️ UNDER CONSTRUCTION" },
+    { path: "../src/course-planner.html", year: 2023, season: "SPRING", projectName: "Course Planner", background: "path/to/image4.jpg", description: "🛠️ UNDER CONSTRUCTION" },
 ];
 
 // SORT WORK TILES BY YEAR AND SEASON (NEWEST -> OLDEST)
@@ -103,7 +103,6 @@ workExperiences.forEach((experience) => {
     workTilesContainer.appendChild(tile);
 });
 
-
 // EVENT LISTENERS FOR HOVER AND CLICK ON WORK TILES
 workTilesContainer.querySelectorAll(".work-tile").forEach((tile, index) => {
     tile.addEventListener("mouseenter", (event) => {
@@ -118,7 +117,7 @@ workTilesContainer.querySelectorAll(".work-tile").forEach((tile, index) => {
         // Get the custom path associated with the clicked tile
         const customPath = workExperiences[index].path;
 
-        // Redirect to the HTML file
+        // Navigate to the new page
         window.location.href = customPath;
     });
 });
@@ -158,3 +157,38 @@ function hideCursorBubble() {
     // hide the cursor bubble
     cursorBubble.style.display = "none";
 }
+
+// NEXT PROJECT NAVIGATION - WORK PAGES
+function navigateWorkPage(direction) {
+    // get the current page URL
+    var currentPage = window.location.pathname.split('/').pop();
+
+    // find the index of the current page in the workExperiences array
+    var currentIndex = workExperiences.findIndex(experience => experience.path.includes(currentPage));
+
+    // calculate the new index based on the direction
+    var newIndex = currentIndex + direction;
+
+    // check if the new index is within bounds
+    if (newIndex >= workExperiences.length) {
+        // if newIndex exceeds the array length, loop back to the first page
+        newIndex = 0;
+    } else if (newIndex < 0) {
+        // if newIndex is negative, loop to the last page
+        newIndex = workExperiences.length - 1;
+    }
+
+    // construct the new page URL
+    var newPage = workExperiences[newIndex].path;
+
+    // navigate to the new page
+    window.location.href = newPage;
+}
+
+// NEXT PROJECT NAVIGATION ARROWS - WORK PAGES
+var section3 = document.getElementById("section3");
+var nextArrow = document.getElementById("nextArrow");
+
+nextArrow.addEventListener("click", function() {
+    navigateWorkPage(1);
+});
