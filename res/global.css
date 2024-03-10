@@ -9,6 +9,13 @@
     body {
         background-size: 200% 200%;
         position: relative;
+        min-height: 100vh;
+        /* Ensure the body takes at least the full height of the viewport */
+    }
+    
+    .main-content {
+        flex: 1;
+        /* This will make the content area grow to fill the available space */
     }
     /* NAVIGATION */
     
@@ -156,9 +163,13 @@
     
     footer {
         border-top: 1px solid #333333;
+        width: 100%;
+        padding: 10px;
+        /* Add padding as needed */
+        background-color: #f3f3ef;
+        /* Set a background color for your footer if needed */
         position: absolute;
         bottom: 0;
-        width: 100%;
     }
     
     .socials p {
