@@ -62,7 +62,7 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        z-index: 10;
+        z-index: 2;
     }
     
     #hamburger div {
@@ -80,6 +80,7 @@
     @media screen and (max-width: 768px) {
         #hamburger {
             display: block;
+            transition: 1s ease;
         }
         .navbar {
             position: absolute;
@@ -89,7 +90,7 @@
             height: 100%;
             background-color: #f3f3ef;
             transform: translateY(-100%);
-            transition: 0.5s;
+            transition: 0.5s ease;
         }
         .navbar ul {
             width: 100%;
