@@ -124,7 +124,7 @@ body {
     #section1 {
         flex-direction: column;
         /* stack items vertically */
-        padding-bottom: 3em;
+        padding-bottom: 7em;
     }
     #section1 .left-section,
     #section1 .right-section {
@@ -134,9 +134,11 @@ body {
     #section1 .right-section {
         text-align: center;
     }
-    #section1 .right-section h2,
+    #section1 .right-section h2 {
+        font-size: 2em;
+    }
     #section1 .right-section p {
-        font-size: 1.5em;
+        font-size: 1em;
     }
     #section2 {
         flex-direction: column;
