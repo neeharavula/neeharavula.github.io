@@ -198,6 +198,9 @@
     /* MOBILE MEDIA QUERY */
     
     @media screen and (max-width: 768px) {
+        .socials .fa {
+            margin: 0;
+        }
         .socials p {
             display: none;
         }
