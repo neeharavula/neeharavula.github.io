@@ -94,6 +94,7 @@ body {
 @media screen and (max-width: 768px) {
     .title-box h2 {
         padding-left: 0;
+        font-size: 2em;
     }
     .caption-box p {
         padding-left: 0.1em;
