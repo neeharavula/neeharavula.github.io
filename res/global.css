@@ -11,6 +11,8 @@
         position: relative;
         min-height: 100vh;
         /* Ensure the body takes at least the full height of the viewport */
+        animation: fadeInAnimation ease 1.3s;
+        animation-iteration-count: 1;
     }
     
     .main-content {
@@ -188,6 +190,32 @@
         text-decoration: none;
         background: transparent;
         color: #333333;
+    }
+    
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes enter-animation {
+        0% {
+            transform: translateY(100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @media (prefers-reduced-motion: no-preference) {
+        .appear-animation {
+            animation: enter-animation 0.8s 1;
+        }
     }
     /* MOBILE MEDIA QUERY */
     

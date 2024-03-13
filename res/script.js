@@ -1,3 +1,19 @@
+const observer = new IntersectionObserver(entries => {
+    // Loop over the entries
+    entries.forEach(entry => {
+        // If the element is visible
+        if (entry.isIntersecting) {
+            // Add the animation class
+            entry.target.classList.add('appear-animation');
+        }
+    });
+});
+
+const viewbox = document.querySelectorAll('.appear');
+viewbox.forEach(image => {
+    observer.observe(image);
+});
+
 // RESPONSIVE HAMBURGER MENU
 var hamburger = document.querySelector("#hamburger");
 var nav = document.querySelector(".navbar");
