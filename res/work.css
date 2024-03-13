@@ -112,9 +112,14 @@ body {
     display: flex;
     gap: 1em;
     margin-top: 1.5em;
+    flex-wrap: wrap;
+    /* Added for mobile responsiveness */
 }
 
 #section1 .rounded-rectangle {
+    /* Adjusted for mobile responsiveness */
+    box-sizing: border-box;
+    /* Added for proper box sizing */
     padding: 0.3em 1.5em 0.3em 1.5em;
     border: 1px solid #333333;
     border-radius: 15px;
@@ -264,15 +269,7 @@ body {
         padding-top: 0.7em
     }
     #section1 .rounded-rectangle {
-        padding: 0.3em 1.7em 0.3em 1.7em;
-        border: 1px solid #333333;
-        border-radius: 15px;
-        background-color: transparent;
-        color: #333333;
-        text-align: center;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 0.6em;
-        font-weight: 200;
+        font-size: 0.8em;
     }
     /* FOOTER */
     footer {
