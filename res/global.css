@@ -165,12 +165,8 @@
     footer {
         border-top: 1px solid #333333;
         width: 100%;
-        padding: 10px;
-        /* Add padding as needed */
+        padding: 2em 0 3em 0;
         background-color: #f3f3ef;
-        /* Set a background color for your footer if needed */
-        position: absolute;
-        bottom: 0;
     }
     
     .socials p {
@@ -181,14 +177,11 @@
         font-size: 1em;
         font-weight: 200;
         padding-left: 2em;
-        padding-top: 22px;
     }
     
     .socials .fa {
         float: right;
         margin-right: 10px;
-        padding-top: 24px;
-        padding-bottom: 20px;
         padding-left: 8px;
         padding-right: 1em;
         text-align: center;

@@ -13,7 +13,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 2em;
-    padding-bottom: 3em;
+    padding-bottom: 1em;
 }
 
 .work-tile {
@@ -159,7 +159,7 @@ body {
     display: flex;
     justify-content: flex-end;
     /* align items to the right */
-    padding: 1.5em 0 5em 0;
+    padding: 1.5em 0 3em 0;
     margin-right: 2em;
 }
 
@@ -217,9 +217,10 @@ body {
 
 /* FOOTER */
 
-footer {
-    height: 2em;
-}
+
+/*footer {
+    height: 3.5em;
+}*/
 
 
 /* MOBILE MEDIA QUERY */
