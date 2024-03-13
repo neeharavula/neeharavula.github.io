@@ -1,7 +1,7 @@
 /* BODY & BACKGROUND */
 
 body {
-    background: linear-gradient(45deg, #f3f3ef, #d3f2a8, #c5f9ee, #d3f2a8);
+    background: linear-gradient(45deg, #c5f9ee, #f3f3ef, #c5f9ee, #f3f3ef);
     animation: gradient 30s ease infinite;
     min-height: 100%;
 }
