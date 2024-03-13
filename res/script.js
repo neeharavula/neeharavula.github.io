@@ -60,10 +60,10 @@ window.addEventListener("resize", () => {
 
 // WORK PAGE TILES
 var workExperiences = [
-    { path: "../src/nm.html", year: 2023, season: "SUMMER", projectName: "Northwestern Mutual", background: "nm.png", description: "🛠️ UNDER CONSTRUCTION" },
-    { path: "../src/melodics.html", year: 2023, season: "SPRING", projectName: "Melodics", background: "path/to/image2.jpg", description: "🛠️ UNDER CONSTRUCTION" },
-    { path: "../src/ga.html", year: 2022, season: "SUMMER", projectName: "General Atomics", background: "path/to/image3.jpg", description: "🛠️ UNDER CONSTRUCTION" },
-    { path: "../src/course-planner.html", year: 2023, season: "SPRING", projectName: "Course Planner", background: "path/to/image4.jpg", description: "🛠️ UNDER CONSTRUCTION" },
+    { path: "../src/nm.html", year: 2023, season: "SUMMER", projectName: "Northwestern Mutual", background: "nm.png", description: "SEE INTERNSHIP ➚" },
+    { path: "../src/melodics.html", year: 2023, season: "SPRING", projectName: "Melodics", background: "path/to/image2.jpg", description: "SEE PROJECT ➚" },
+    { path: "../src/ga.html", year: 2022, season: "SUMMER", projectName: "General Atomics", background: "path/to/image3.jpg", description: "SEE INTERNSHIP ➚" },
+    { path: "../src/course-planner.html", year: 2023, season: "SPRING", projectName: "Course Planner", background: "path/to/image4.jpg", description: "SEE PROJECT ➚" },
 ];
 
 // SORT WORK TILES BY YEAR AND SEASON (NEWEST -> OLDEST)
