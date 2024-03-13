@@ -220,14 +220,6 @@ body {
 }
 
 
-/* FOOTER */
-
-
-/*footer {
-    height: 3.5em;
-}*/
-
-
 /* MOBILE MEDIA QUERY */
 
 @media screen and (max-width: 768px) {
@@ -280,7 +272,7 @@ body {
         margin-top: 1.5em;
     }
     #section1 .rounded-rectangle {
-        font-size: 1em;
+        font-size: 0.8em;
     }
     /* FOOTER */
     footer {

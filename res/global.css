@@ -192,6 +192,14 @@
         color: #333333;
     }
     
+    .grow {
+        transition: all .3s ease-in-out;
+    }
+    
+    .grow:hover {
+        transform: scale(1.1);
+    }
+    
     @keyframes fadeInAnimation {
         0% {
             opacity: 0;
