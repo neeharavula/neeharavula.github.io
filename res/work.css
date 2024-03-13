@@ -81,12 +81,12 @@ body {
 #section1 .right-section {
     flex: 2;
     width: 66.67%;
-    margin-left: 2em;
+    margin-left: -3em;
 }
 
 #section1 .image-container {
-    width: 100%;
-    padding-top: 100%;
+    width: 80%;
+    padding-top: 80%;
     background-color: #ccc;
     background-size: cover;
     background-position: center;
@@ -96,7 +96,7 @@ body {
 #section1 h2 {
     font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: 400;
     margin-bottom: 0.5em;
 }
@@ -104,14 +104,14 @@ body {
 #section1 p {
     font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 300;
 }
 
 #section1 .rounded-rectangles {
     display: flex;
     gap: 1em;
-    margin-top: 1.5em;
+    margin-top: 2.5em;
     flex-wrap: wrap;
     /* Added for mobile responsiveness */
 }
@@ -127,7 +127,7 @@ body {
     color: #333333;
     text-align: center;
     font-family: "JetBrains Mono", monospace;
-    font-size: 0.8em;
+    font-size: 1em;
     font-weight: 200;
 }
 
@@ -265,8 +265,19 @@ body {
         width: 100%;
         margin-left: 0;
     }
+    #section1 .image-container {
+        width: 100%;
+        padding-top: 100%;
+    }
     #section1 h2 {
-        padding-top: 0.7em
+        padding-top: 0.7em;
+        font-size: 2em;
+    }
+    #section1 p {
+        font-size: 1em;
+    }
+    #section1 .rounded-rectangles {
+        margin-top: 1.5em;
     }
     #section1 .rounded-rectangle {
         font-size: 0.8em;
