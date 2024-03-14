@@ -48,7 +48,7 @@ hamburger.addEventListener("click", () => {
     if (isActive) {
         firstMenuItem.textContent = "HOME";
     } else {
-        firstMenuItem.textContent = "Neeha Ravula";
+        firstMenuItem.textContent = "NEEHA RAVULA";
     }
 
     // set font size and other styles based on screen width
