@@ -143,6 +143,22 @@ workExperiences.forEach((experience) => {
     workTilesContainer.appendChild(tile);
 });
 
+// APPEAR WORK TILES ON SCROLL
+const workObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        // if the element is visible
+        if (entry.isIntersecting) {
+            // add the animation class
+            entry.target.classList.add('appear-animation');
+        }
+    });
+});
+
+const workTiles = document.querySelectorAll('.work-tile');
+workTiles.forEach(tile => {
+    workObserver.observe(tile);
+});
+
 // EVENT LISTENERS FOR HOVER AND CLICK ON WORK TILES
 workTilesContainer.querySelectorAll(".work-tile").forEach((tile, index) => {
     tile.addEventListener("mouseenter", (event) => {
@@ -170,16 +186,19 @@ workTilesContainer.querySelectorAll(".work-tile").forEach((tile, index) => {
 
 // SHOW CURSOR BUBBLE
 function showCursorBubble(event, text) {
-    var cursorBubble = document.querySelector(".cursor-bubble");
+    // Check if the screen width is greater than 768px (assuming mobile devices have a width less than this)
+    if (window.innerWidth > 768) {
+        var cursorBubble = document.querySelector(".cursor-bubble");
 
-    // show the cursor bubble
-    cursorBubble.style.display = "block";
+        // show the cursor bubble
+        cursorBubble.style.display = "block";
 
-    // update the position smoothly
-    updateCursorBubblePosition(event);
+        // update the position smoothly
+        updateCursorBubblePosition(event);
 
-    // set the text content
-    cursorBubble.textContent = text;
+        // set the text content
+        cursorBubble.textContent = text;
+    }
 }
 
 // EVENT LISTENER FOR MOUSEMOVE ON DOCUMENT

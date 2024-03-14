@@ -237,6 +237,7 @@ body {
     .work-tile {
         padding: 15em 1em 0.8em;
         width: calc(100% - 0.5em);
+        cursor: pointer;
     }
     .year {
         font-size: 0.8em;
