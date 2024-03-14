@@ -9,7 +9,7 @@ body {
 /* SECTION 1 STYLES */
 
 #section1 {
-    padding: 1.5em 2em 7em 2em;
+    padding: 5em 2em 7em 2em;
     display: flex;
     justify-content: space-between;
     /* distribute space evenly between items */

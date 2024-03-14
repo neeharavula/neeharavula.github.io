@@ -5,6 +5,10 @@ body {
     min-height: 100%;
 }
 
+.content {
+    padding-top: 4em;
+}
+
 
 /* PHOTO GRID */
 
@@ -98,6 +102,7 @@ body {
     }
     .caption-box p {
         padding-left: 0.1em;
+        font-size: 1.3em;
     }
     .text-boxes,
     .image-grid {
