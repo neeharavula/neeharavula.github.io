@@ -78,7 +78,7 @@ body {
 }
 
 #section2 .title-box h2 {
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
     font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
     font-size: 2.7em;
@@ -94,7 +94,7 @@ body {
 }
 
 #section2 .left-section .playlist iframe {
-    height: 608px
+    height: 588px
 }
 
 #section2 .right-section {
@@ -143,12 +143,13 @@ body {
         flex-direction: column;
         padding-bottom: 3em;
     }
-    #section2 .left-section,
+    #section2 .left-section {
+        padding-bottom: 2em;
+    }
     #section2 .right-section {
         padding: 0;
     }
-    #section2 .left-section h2,
-    #section2 .right-section h2 {
+    #section2 .title-box h2 {
         font-size: 2em;
     }
     #section2 .left-section .playlist {
