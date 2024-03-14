@@ -66,18 +66,15 @@ body {
 /* SECTION 2 STYLES */
 
 #section2 {
-    padding: 3em 2em 7em;
+    padding: 2em 2em 3em;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    /* Align items to the start of the flex container */
 }
 
 #section2 .left-section,
 #section2 .right-section {
     flex: 1;
-}
-
-#section2 .left-section {
-    padding-right: 1em;
 }
 
 #section2 .title-box h2 {
@@ -88,23 +85,30 @@ body {
     font-weight: 400;
 }
 
-#section2 .rectangle {
-    width: 100%;
-    height: 200px;
-    background-color: #ccc;
-    border-radius: 8px;
+#section2 .left-section {
+    padding-right: 1em;
+}
+
+#section2 .left-section .playlist {
+    padding-top: 0.3em;
+}
+
+#section2 .left-section .playlist iframe {
+    height: 608px
 }
 
 #section2 .right-section {
     padding-left: 1em;
 }
 
-#section2 .photo-grid {
+#section2 .right-section .photo-grid {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+    /* Align items to the start of the flex container */
 }
 
-#section2 .photo-grid img {
+#section2 .right-section .photo-grid img {
     width: calc(33.33% - 10px);
     margin: 5px;
     box-sizing: border-box;
@@ -119,7 +123,6 @@ body {
 @media screen and (max-width: 768px) {
     #section1 {
         flex-direction: column;
-        /* stack items vertically */
         padding-bottom: 7em;
     }
     #section1 .left-section,
@@ -144,10 +147,25 @@ body {
     #section2 .right-section {
         padding: 0;
     }
-    #section2 .rectangle {
-        height: 150px;
+    #section2 .left-section h2,
+    #section2 .right-section h2 {
+        font-size: 2em;
     }
-    #section2 .photo-grid img {
+    #section2 .left-section .playlist {
+        width: 100vw;
+        /* Set width to match viewport width */
+        margin: 0;
+        /* Remove any margins */
+        padding: 0 4.3em 0 0;
+        /* Remove any padding */
+        box-sizing: border-box;
+        /* Ensure the width includes padding */
+    }
+    #section2 .left-section .playlist iframe {
+        width: 100%;
+        height: 400px;
+    }
+    #section2 .right-section .photo-grid img {
         width: calc(50% - 10px);
         aspect-ratio: 3/4;
     }
