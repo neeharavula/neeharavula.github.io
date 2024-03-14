@@ -32,11 +32,11 @@ body {
 
 .caption-box p {
     margin-bottom: 1em;
-    padding-left: 0.9em;
-    font-family: "JetBrains Mono", monospace;
+    padding-left: 0.7em;
+    font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
-    font-size: 1em;
-    font-weight: 200;
+    font-size: 1.4em;
+    font-weight: 300;
 }
 
 .image-grid {
