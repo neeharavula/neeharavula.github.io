@@ -80,6 +80,7 @@ var workExperiences = [
     { path: "../src/melodics.html", year: 2023, season: "SPRING", projectName: "Melodics", background: "path/to/image2.jpg", description: "SEE PROJECT ➚" },
     { path: "../src/ga.html", year: 2022, season: "SUMMER", projectName: "General Atomics", background: "path/to/image3.jpg", description: "SEE INTERNSHIP ➚" },
     { path: "../src/course-planner.html", year: 2023, season: "SPRING", projectName: "Course Planner", background: "path/to/image4.jpg", description: "SEE PROJECT ➚" },
+    { path: "https://devpost.com/software/usc_sos", year: 2021, season: "WINTER", projectName: "USC AthenaHacks", background: "path/to/image5.jpg", description: "SEE HACKATHON ➚" },
 ];
 
 // SORT WORK TILES BY YEAR AND SEASON (NEWEST -> OLDEST)
@@ -133,8 +134,14 @@ workTilesContainer.querySelectorAll(".work-tile").forEach((tile, index) => {
         // Get the custom path associated with the clicked tile
         const customPath = workExperiences[index].path;
 
-        // Navigate to the new page
-        window.location.href = customPath;
+        // Check if it's the USC AthenaHacks tile
+        if (customPath === "https://devpost.com/software/usc_sos") {
+            // Open the link in a new tab
+            window.open(customPath, "_blank");
+        } else {
+            // Navigate to the new page
+            window.location.href = customPath;
+        }
     });
 });
 
