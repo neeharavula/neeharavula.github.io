@@ -12,15 +12,13 @@ body {
     padding: 1.5em 2em 7em 2em;
     display: flex;
     justify-content: space-between;
-    /* Distribute space evenly between items */
+    /* distribute space evenly between items */
     align-items: center;
 }
 
 #section1 .left-section {
     flex: 1;
-    /* Take up 100% of the available space on mobile */
     padding-right: 1em;
-    /* Add some spacing between image and text */
 }
 
 #section1 .image-container img {
@@ -32,7 +30,6 @@ body {
 
 #section1 .right-section {
     flex: 1;
-    /* Take up 100% of the available space on mobile */
     text-align: left;
     padding: 20px;
 }
@@ -77,7 +74,6 @@ body {
 #section2 .left-section,
 #section2 .right-section {
     flex: 1;
-    /* maintain equal width for both columns */
 }
 
 #section2 .left-section {

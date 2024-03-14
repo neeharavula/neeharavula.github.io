@@ -113,13 +113,10 @@ body {
     gap: 1.5em;
     margin-top: 2.5em;
     flex-wrap: wrap;
-    /* Added for mobile responsiveness */
 }
 
 #section1 .rounded-rectangle {
-    /* Adjusted for mobile responsiveness */
     box-sizing: border-box;
-    /* Added for proper box sizing */
     padding: 0.3em 1.5em 0.3em 1.5em;
     border: 1px solid #333333;
     border-radius: 15px;
@@ -193,7 +190,7 @@ body {
 }
 
 
-/* CURSOR BUBBLE HOVER */
+/* CURSOR BUBBLE ON HOVER */
 
 .cursor-bubble {
     position: fixed;
@@ -223,6 +220,16 @@ body {
 /* MOBILE MEDIA QUERY */
 
 @media screen and (max-width: 768px) {
+    /* MOBILE TITLE */
+    .mobile-title {
+        display: block;
+        font-family: "Bai Jamjuree", sans-serif;
+        color: #333333;
+        font-size: 2em;
+        text-align: left;
+        margin-top: 1em;
+        margin-left: 1.5em;
+    }
     /* WORK EXPERIENCE TILES */
     .work-tiles {
         justify-content: center;
@@ -237,17 +244,7 @@ body {
     .project-name {
         font-size: 1.5em;
     }
-    /* MOBILE TITLE */
-    .mobile-title {
-        display: block;
-        font-family: "Bai Jamjuree", sans-serif;
-        color: #333333;
-        font-size: 2em;
-        text-align: left;
-        margin-top: 1em;
-        margin-left: 1.5em;
-    }
-    /* INDIVIDUAL WORK PAGES - SECTION 1*/
+    /* INDIVIDUAL WORK PAGES - SECTION 1 */
     #section1 {
         flex-direction: column;
         align-items: flex-start;

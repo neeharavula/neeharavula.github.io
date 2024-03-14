@@ -1,9 +1,9 @@
+// APPEAR ELEMENTTS ON SCROLL
 const observer = new IntersectionObserver(entries => {
-    // Loop over the entries
     entries.forEach(entry => {
-        // If the element is visible
+        // if the element is visible
         if (entry.isIntersecting) {
-            // Add the animation class
+            // add the animation class
             entry.target.classList.add('appear-animation');
         }
     });
@@ -131,15 +131,15 @@ workTilesContainer.querySelectorAll(".work-tile").forEach((tile, index) => {
     });
 
     tile.addEventListener("click", () => {
-        // Get the custom path associated with the clicked tile
+        // get the custom path associated with the clicked tile
         const customPath = workExperiences[index].path;
 
-        // Check if it's the USC AthenaHacks tile
+        // check for USC AthenaHacks tile
         if (customPath === "https://devpost.com/software/usc_sos") {
-            // Open the link in a new tab
+            // open link in new tab
             window.open(customPath, "_blank");
         } else {
-            // Navigate to the new page
+            // open associated html page
             window.location.href = customPath;
         }
     });
