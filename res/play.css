@@ -110,7 +110,10 @@ body {
         width: calc(50% - 10px);
         aspect-ratio: 3/4;
     }
-    .full-screen-image {
-        max-height: 95vh;
-    }
+    /*.full-screen-image {
+        width: 200vh;
+        height: 70vh;
+        /*height: 70vh;
+        width: 100%;
+    }*/
 }

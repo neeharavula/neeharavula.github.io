@@ -38,27 +38,50 @@ hamburger.addEventListener("click", () => {
     // burger animation
     hamburger.classList.toggle("toggle");
 
-    // dynamically change first menu item
-    Array.from(navLinks).forEach((li) => {
-        if (li.textContent.trim() === "NEEHA RAVULA") {
-            li.textContent = "HOME";
+    // get the first menu item
+    const firstMenuItem = navLinks[0];
 
-            // set font size based on screen width
-            if (window.innerWidth < 768) {
-                li.style.fontSize = "3em"; // set mobile font size
-            } else {
-                li.style.fontSize = "1em"; // set desktop font size
-            }
+    // check if the navigation menu is active
+    const isActive = nav.classList.contains("nav-active");
 
-            li.style.fontFamily = "JetBrains Mono, monospace";
-            li.style.color = "#333333";
-            li.style.listStyle = "none";
-            li.style.textDecoration = "none";
-            li.style.fontWeight = "200";
-            li.style.cursor = "pointer";
+    // dynamically change the first menu item
+    if (isActive) {
+        firstMenuItem.textContent = "HOME";
+    } else {
+        firstMenuItem.textContent = "Neeha Ravula";
+    }
+
+    // set font size and other styles based on screen width
+    if (window.innerWidth < 768) {
+        if (isActive) {
+            firstMenuItem.style.fontSize = "3em";
+        } else {
+            firstMenuItem.style.fontSize = "1em";
         }
-    });
+    } else {
+        firstMenuItem.style.fontSize = "1em"; // set desktop font size
+    }
+
+    firstMenuItem.style.fontFamily = "JetBrains Mono, monospace";
+    firstMenuItem.style.color = "#333333";
+    firstMenuItem.style.listStyle = "none";
+    firstMenuItem.style.textDecoration = "none";
+    firstMenuItem.style.fontWeight = "200";
+    firstMenuItem.style.cursor = "pointer";
+
+    // set the href attribute for the first menu item to navigate to home page
+    firstMenuItem.querySelector("a").setAttribute("href", "../index.html");
 });
+
+// handle click event for "Home" menu item
+navLinks[0].addEventListener("click", (event) => {
+    // prevent default behavior to ensure link navigation
+    event.preventDefault();
+
+    // navigate to home page
+    window.location.href = "../index.html";
+});
+
 
 // UPDATE STYLES ON WINDOW RESIZE
 window.addEventListener("resize", () => {
