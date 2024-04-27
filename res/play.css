@@ -31,12 +31,12 @@ body {
 }
 
 .caption-box p {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     padding-left: 0.7em;
-    font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
-    font-size: 1.4em;
-    font-weight: 300;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: 200;
+    font-size: 1em;
 }
 
 .caption-box a {
