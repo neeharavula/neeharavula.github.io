@@ -144,14 +144,26 @@ body {
     padding: 1em 1em 0 1em;
 }
 
-#section2 p {
+#section2 h3 {
+    font-family: "Bai Jamjuree", sans-serif;
+    color: #333333;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-left: 1.4em;
+    margin-right: 1.7em;
+    margin-bottom: 0.5em;
+}
+
+#section2 p,
+li {
     font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
     font-size: 1.2em;
     font-weight: 300;
-    margin-left: 1.7em;
+    margin-left: 1.8em;
     margin-right: 1.7em;
     margin-bottom: 0.5em;
+    list-style-type: circle;
 }
 
 
