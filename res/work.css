@@ -90,7 +90,7 @@ body {
     background-color: #ccc;
     background-size: cover;
     background-position: center;
-    /* add background image later */
+    /*background-image: url(../assets/logos/nm.png) // sets it for all of them, fix */
 }
 
 #section1 h2 {

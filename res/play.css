@@ -93,6 +93,14 @@ body {
     border-radius: 8px;
 }
 
+.static {
+    position: absolute;
+}
+
+.static:hover {
+    opacity: 0;
+}
+
 
 /* PHOTO GRID RESPONSIVENESS */
 
