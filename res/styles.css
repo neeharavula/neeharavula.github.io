@@ -1,9 +1,10 @@
 /* BODY & BACKGROUND */
 
 body {
-    background: linear-gradient(45deg, #c5f9ee, #f3f3ef, #c5f9ee, #f3f3ef);
-    animation: gradient 20s ease infinite;
-    min-height: 100%;
+    background: linear-gradient(45deg, #c5f9ee, #f3f3ef, #f3f3ef, #c5f9ee);
+    animation: gradient 15s ease infinite;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -15,7 +16,7 @@ body {
 }
 
 .summary h2 {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
     font-size: 4.5em;
@@ -47,8 +48,12 @@ body {
 /* MOBILE MEDIA QUERY */
 
 @media screen and (max-width: 768px) {
-    #summary {
+    .summary {
         flex-direction: column;
+        padding: 9em 1em 0 2em;
         /* stack items vertically */
+    }
+    .summary h2 {
+        font-size: 3em;
     }
 }

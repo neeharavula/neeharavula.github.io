@@ -10,10 +10,8 @@
         background-size: 200% 200%;
         position: relative;
         min-height: 100vh;
-        animation: fadeInAnimation ease 1.3s;
         display: flex;
         flex-direction: column;
-        animation-iteration-count: 1;
     }
     
     .main-content {
