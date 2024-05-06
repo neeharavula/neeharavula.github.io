@@ -168,6 +168,32 @@ body {
     list-style-type: circle;
 }
 
+#section2 p a {
+    text-decoration: none;;
+}
+
+#section2 .titles-captions .title-caption .user-flow {
+    display: flex;
+    width: 100vw;
+    padding-left: 2em;
+    padding-right: 3em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+#section2 .titles-captions .title-caption .frame-container {
+    display: flex;
+    width: 100vw;
+    height: 50vw;
+    padding-left: 2em;
+    padding-right: 3em;
+}
+#section2 .titles-captions .title-caption .frame-container .melodics{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+
 
 /* section 3 styles */
 
