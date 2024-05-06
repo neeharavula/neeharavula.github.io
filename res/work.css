@@ -172,6 +172,21 @@ body {
     text-decoration: none;;
 }
 
+#section2 .titles-captions .research {
+    display: flex;
+}
+#section2 .titles-captions .research .survey {
+    float: right;
+    width: 30%;
+    padding-left: 2em;
+    padding-right: 3em;
+}
+
+/*#section2 .titles-captions .research .survey img {
+    border-radius: 15px;
+}*/
+
+
 #section2 .titles-captions .title-caption .user-flow {
     display: flex;
     width: 100vw;
