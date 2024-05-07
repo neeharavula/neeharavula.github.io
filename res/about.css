@@ -12,14 +12,13 @@ body {
 #section1 {
     padding: 2.5em 2em 7em 2em;
     display: flex;
-    justify-content: space-between;
-    /* distribute space evenly between items */
-    align-items: center;
+    align-items: flex-start;
+    /* Align items to the start of the flex container */
 }
 
 #section1 .left-section {
     flex: 1;
-    padding-right: 1em;
+    padding-right: 2em;
 }
 
 #section1 .image-container img {
@@ -36,12 +35,12 @@ body {
 }
 
 #section1 .right-section h2 {
-    margin-bottom: 10px;
+    margin-bottom: 1em;
     font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
     font-size: 2.7em;
     font-weight: 400;
-    margin-bottom: 0.5em;
+    /* Add this to remove top margin */
 }
 
 #section1 .right-section p {
@@ -49,7 +48,7 @@ body {
     font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
     line-height: 1.5em;
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: 300;
 }
 
@@ -133,10 +132,12 @@ body {
         padding: 0;
     }
     #section1 .right-section {
-        text-align: center;
+        text-align: left;
     }
     #section1 .right-section h2 {
         font-size: 2em;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
     }
     #section1 .right-section p {
         font-size: 1.3em;
