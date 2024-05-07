@@ -174,17 +174,23 @@ body {
 
 #section2 .titles-captions .research {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+#section2 .titles-captions .research .title-caption {
+    flex: 1;
 }
 #section2 .titles-captions .research .survey {
-    float: right;
-    width: 30%;
-    padding-left: 2em;
-    padding-right: 3em;
+    flex: 1;
+    max-width: 20%;
 }
 
-/*#section2 .titles-captions .research .survey img {
+#section2 .titles-captions .research .survey img {
+    max-width: 100%;
+    height: auto;
     border-radius: 15px;
-}*/
+}
 
 
 #section2 .titles-captions .title-caption .user-flow {
@@ -331,6 +337,14 @@ body {
     }
     #section2 h3 {
         font-size: 1.4em;
+    }
+    #section2 .titles-captions .research {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #section2 .titles-captions .research .survey {
+        max-width: 100%;
+        margin-top: 20px;
     }
     /* FOOTER */
     footer {
