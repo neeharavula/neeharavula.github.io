@@ -69,13 +69,13 @@ body {
 #section2 {
     padding: 2em 2em 3em;
     display: flex;
-    align-items: flex-start;
-    /* Align items to the start of the flex container */
 }
 
 #section2 .left-section,
 #section2 .right-section {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 #section2 .title-box h2 {
@@ -87,26 +87,30 @@ body {
 }
 
 #section2 .left-section {
-    padding-right: 1em;
+    padding-right: 2em;
+    /* Add padding to the right */
 }
 
 #section2 .left-section .playlist {
-    padding-top: 0.3em;
+    flex: 1;
 }
 
 #section2 .left-section .playlist iframe {
-    height: 538px
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 #section2 .right-section {
-    padding-left: 1em;
+    padding-left: 1.5em;
+    /* Add padding to the left */
 }
 
 #section2 .right-section .photo-grid {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    /* Align items to the start of the flex container */
+    justify-content: space-between;
 }
 
 #section2 .right-section .photo-grid img {
@@ -145,6 +149,10 @@ body {
     #section2 {
         flex-direction: column;
         padding-bottom: 3em;
+        padding-left: 1em;
+        /* Add left padding to compensate for playlist padding */
+        padding-right: 1em;
+        /* Add right padding to compensate for playlist padding */
     }
     #section2 .left-section {
         padding-bottom: 2em;
@@ -156,14 +164,10 @@ body {
         font-size: 2em;
     }
     #section2 .left-section .playlist {
-        width: 100vw;
-        /* Set width to match viewport width */
-        margin: 0;
-        /* Remove any margins */
-        padding: 0 4.3em 0 0;
-        /* Remove any padding */
-        box-sizing: border-box;
-        /* Ensure the width includes padding */
+        width: calc(100% - 2em);
+        /* Adjust playlist width */
+        padding: 0;
+        /* Remove playlist padding */
     }
     #section2 .left-section .playlist iframe {
         width: 100%;
