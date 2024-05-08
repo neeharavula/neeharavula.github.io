@@ -244,17 +244,28 @@ body {
 #section2 .bubble-container {
     display: flex;
     justify-content: center;
-    margin-top: 2em;
+    margin: 1em;
 }
 
 #section2 .bubble {
     background-color: #ffffff;
+    border-radius: 25px;
     color: #333333;
-    border-radius: 20px;
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-family: "Bai Jamjuree", sans-serif;
-    font-size: 1.2em;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 1em;
+    text-align: center;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+}
+
+#section2 .bubble-text {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1em;
+    font-weight: 200;
 }
 
 
@@ -384,6 +395,25 @@ body {
     #section2 .bubble-container {
         flex-direction: column;
         align-items: center;
+    }
+    #section2 .bubble {
+        background-color: #ffffff;
+        border-radius: 25px;
+        color: #333333;
+        padding-top: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        margin: 1em;
+        text-align: center;
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+        /* Center vertically */
+    }
+    #section2 .bubble-text {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 1em;
+        font-weight: 200;
     }
     /* FOOTER */
     footer {
