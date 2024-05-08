@@ -93,6 +93,8 @@ body {
     background-position: center;
     position: relative;
     border-radius: 15px;
+    z-index: 998;
+    /* Ensure it's behind the hamburger menu */
 }
 
 #section1 .image-container::before {
@@ -104,6 +106,8 @@ body {
     bottom: 0;
     background: inherit;
     border-radius: 15px;
+    z-index: 998;
+    /* Ensure it's behind the hamburger menu */
 }
 
 #section1 h2 {
