@@ -21,6 +21,10 @@
     html {
         overflow-x: hidden;
     }
+    
+    strong {
+        font-weight: 500;
+    }
     /* NAVIGATION */
     
     nav {
