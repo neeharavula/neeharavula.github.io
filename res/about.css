@@ -128,7 +128,7 @@ body {
 @media screen and (max-width: 768px) {
     #section1 {
         flex-direction: column;
-        padding-bottom: 7em;
+        padding-bottom: 5em;
     }
     #section1 .left-section,
     #section1 .right-section {
@@ -149,9 +149,9 @@ body {
     #section2 {
         flex-direction: column;
         padding-bottom: 3em;
-        padding-left: 1em;
+        padding-left: 1.5em;
         /* Add left padding to compensate for playlist padding */
-        padding-right: 1em;
+        padding-right: 1.5em;
         /* Add right padding to compensate for playlist padding */
     }
     #section2 .left-section {
@@ -162,6 +162,7 @@ body {
     }
     #section2 .title-box h2 {
         font-size: 2em;
+        padding-left: 0.3em;
     }
     #section2 .left-section .playlist {
         width: calc(100% + 2em);
