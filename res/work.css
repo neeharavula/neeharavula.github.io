@@ -13,7 +13,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
     padding-bottom: 1em;
 }
 
@@ -212,6 +213,31 @@ body {
     border-radius: 15px;
 }
 
+#section2 .see-project-button {
+    text-align: center;
+    margin-top: 2em;
+}
+
+#section2 .rounded-rectangle {
+    box-sizing: border-box;
+    padding: 0.5em 1.5em;
+    border: 1px solid #333333;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #333333;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1em;
+    font-weight: 200;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#section2 .rounded-rectangle:hover {
+    background-color: #333333;
+    color: #f3f3ef;
+}
+
 
 /* section 3 styles */
 
@@ -291,6 +317,7 @@ body {
     /* WORK EXPERIENCE TILES */
     .work-tiles {
         justify-content: center;
+        margin-top: 2em;
     }
     .work-tile {
         padding: 15em 1em 0.8em;
