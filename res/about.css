@@ -51,6 +51,30 @@ body {
     font-size: 1.3em;
     font-weight: 300;
 }
+#section1 .social-button {
+    text-align: left;
+    margin-top: 2em;
+}
+
+#section1 .rounded-rectangle {
+    box-sizing: border-box;
+    padding: 0.5em 1.5em;
+    border: 1px solid #333333;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #333333;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1em;
+    font-weight: 200;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#section1 .rounded-rectangle:hover {
+    background-color: #333333;
+    color: #f3f3ef;
+}
 
 
 /* PAGE DIVIDER */
@@ -122,6 +146,11 @@ body {
     aspect-ratio: 3/4;
 }
 
+@media only screen and (min-width: 1200px) { 
+    #section1 .right-section p {
+        font-size: 1.3em;
+    }
+}
 
 /* MOBILE MEDIA QUERY */
 
@@ -144,7 +173,10 @@ body {
         margin-bottom: 0.5em;
     }
     #section1 .right-section p {
-        font-size: 1.3em;
+        font-size: 1em;
+    }
+    #section1 .social-button {
+        text-align: center;
     }
     #section2 {
         flex-direction: column;
