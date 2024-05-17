@@ -63,7 +63,7 @@
             <div class="titles-captions">
                 <div class="title-caption">
                     <h2>Overview</h2>
-                    <p><strong><a href="https://tech4good.soe.ucsc.edu/initiatives" target="_blank" class="hover-underline-animation">UC Santa Cruz's Tech4Good Lab 🡥</a></strong> is a research organization dedicated to social computing and developing systems to help individuals and communities to thrive in work, education, and more. During my time at the lab, I worked on the <strong>APIs and Frameworks</strong> team where I was involved in adding functionality to <strong><a href="https://causeway.soe.ucsc.edu/#/" target="_blank" class="hover-underline-animation">Causeway 🡥</a></strong>, an educational app where users can learn skills like web development through streamlined learning pathways, project hierarchies, mentorship, and collaboration.</p>
+                    <p><strong><a href="https://tech4good.soe.ucsc.edu/initiatives" target="_blank" class="hover-underline-animation">UC Santa Cruz's Tech4Good Lab <span>&#8599;</span></a></strong> &nbsp;is a research organization dedicated to social computing and developing systems to help individuals and communities to thrive in work, education, and more. During my time at the lab, I worked on the <strong>APIs and Frameworks</strong> team where I was involved in adding functionality to <strong><a href="https://causeway.soe.ucsc.edu/#/" target="_blank" class="hover-underline-animation">Causeway <span>&#8599;</span></a></strong>, an educational app where users can learn skills like web development through streamlined learning pathways, project hierarchies, mentorship, and collaboration.</p>
                 </div>
                 <div class="title-caption">
                     <h2 class="appear">Task</h2>
@@ -73,14 +73,14 @@
                     <li class="appear"><strong>Code Editor:</strong> to allow the user to make changes to a selected file</li>
                     <li class="appear"><strong>Output Pane:</strong> to view the results of code changes (ex: a html webpage)</li>
                     <li class="appear"><strong>Terminal Pane:</strong> to allow the user to compile and run code</li>
-                    <p class="appear">To accomplish this task, we used the <strong><a href="https://webcontainers.io/" target="_blank" class="hover-underline-animation">Stackblitz WebContainers API 🡥</a></strong>, which allows us to boot up a <strong>WebContainer</strong>― a browser-based runtime for executing applications and operating system commands. From there, we can populate the container's file system, install packages, and finally run the IDE server in a browser window.</p>
+                    <p class="appear">To accomplish this task, we used the <strong><a href="https://webcontainers.io/" target="_blank" class="hover-underline-animation">Stackblitz WebContainers API <span>&#8599;</span></a></strong>, which allows us to boot up a <strong>WebContainer</strong>― a browser-based runtime for executing applications and operating system commands. From there, we can populate the container's file system, install packages, and finally run the IDE server in a browser window.</p>
                 </div>
                 <!-- DEVELOPMENT -->
                 <div class="title-caption">
                     <h2 class="appear">Development</h2>
                     <!-- SETTING UP WEBCONTAINER -->
                     <h3 class="appear">Setting up the WebContainer</h3>
-                    <p class="appear">First, we constructed the WebContainer using <strong><a href="https://vitejs.dev/" target="_blank" class="hover-underline-animation">Vite 🡥</a></strong>, a development tool equipped with a dev server and used for building modern web apps. This involved constructing referenceable HTML objects for our code editor/textarea and output boxes as depicted below:</p>
+                    <p class="appear">First, we constructed the WebContainer using <strong><a href="https://vitejs.dev/" target="_blank" class="hover-underline-animation">Vite <span>&#8599;</span></a></strong>, a development tool equipped with a dev server and used for building modern web apps. This involved constructing referenceable HTML objects for our code editor/textarea and output boxes as depicted below:</p>
                     <img src="../assets/t4g/ide1.png" alt="IDE Image 1" class="t4g-image appear">
                     <p class="appear">Then, we installed the <strong>WebContainers API</strong> package and created an event listener for booting up a WebContainer instance, and imported an <strong>Express</strong> app to the WebContainer, which contains the files <strong>index.js</strong> (for app startup and routing) and <strong>package.json</strong> (to handle dependencies), into our main JS module. At this point, we were able to load the contents of a file in the code editor.</p>
                     <!-- RUNNING SERVER -->
