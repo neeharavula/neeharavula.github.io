@@ -1,7 +1,7 @@
 /* BODY & BACKGROUND */
 
 body {
-    background: #f3f3ef;
+    background: #FDFDFA;
     min-height: 100%;
     animation: fadeInAnimation ease 1.3s;
 }
@@ -35,7 +35,7 @@ body {
 
 .year {
     font-family: "JetBrains Mono", monospace;
-    color: #f3f3ef;
+    color: #FDFDFA;
     font-size: 1em;
     font-weight: 200;
 }
@@ -43,7 +43,7 @@ body {
 .project-name {
     font-size: 2.5em;
     font-family: "Bai Jamjuree", sans-serif;
-    color: #f3f3ef;
+    color: #FDFDFA;
     text-align: left;
     font-weight: 400;
 }
@@ -242,7 +242,7 @@ body {
 
 #section2 .rounded-rectangle:hover {
     background-color: #333333;
-    color: #f3f3ef;
+    color: #FDFDFA;
 }
 
 
@@ -257,6 +257,7 @@ body {
 #section2 .bubble {
     background-color: #ffffff;
     border-radius: 25px;
+    border: 1px solid #333333;
     color: #333333;
     padding-top: 0.5em;
     padding-left: 1em;
@@ -316,7 +317,7 @@ body {
 .cursor-bubble {
     position: fixed;
     display: none;
-    background-color: #f3f3ef;
+    background-color: #FDFDFA;
     color: #333333;
     padding: 7px 12px 7px 12px;
     border-radius: 15px;
@@ -408,7 +409,7 @@ body {
         align-items: center;
     }
     #section2 .bubble {
-        background-color: #ffffff;
+        background-color: #FDFDFA;
         border-radius: 25px;
         color: #333333;
         padding-top: 0.5em;
