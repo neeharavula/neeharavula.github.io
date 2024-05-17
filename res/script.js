@@ -99,7 +99,7 @@ window.addEventListener("resize", () => {
 
 // WORK PAGE TILES
 var workExperiences = [
-    { path: "../src/nm.html", year: 2023, season: "SUMMER", projectName: "Northwestern Mutual", background: "../assets/logos/nm.png", description: "SEE INTERNSHIP &#8599;" },
+    { path: "../src/nm.html", year: 2023, season: "SUMMER", projectName: "Northwestern Mutual", background: "../assets/logos/nm.png", description: "SEE INTERNSHIP 🡥" },
     { path: "../src/melodics.html", year: 2023, season: "SPRING", projectName: "Melodics", background: "../assets/logos/melodics.png", description: "SEE PROJECT 🡥" },
     { path: "../src/ga.html", year: 2022, season: "SUMMER", projectName: "General Atomics", background: "../assets/logos/ga.png", description: "SEE INTERNSHIP 🡥" },
     { path: "../src/course-planner.html", year: 2023, season: "SPRING", projectName: "Course Planner", background: "../assets/logos/cp.png", description: "SEE PROJECT 🡥" },
