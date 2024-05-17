@@ -199,6 +199,14 @@ body {
     padding-bottom: 1em;
 }
 
+#section2 .titles-captions .title-caption .t4g-image {
+    display: block;
+    margin: 2em auto;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 900px;
+}
+
 #section2 .titles-captions .title-caption .frame-container {
     display: flex;
     width: 100vw;
@@ -391,6 +399,10 @@ body {
     }
     #section2 h3 {
         font-size: 1.4em;
+    }
+    #section2 .titles-captions .title-caption .t4g-image {
+        width: 85%;
+        margin: 1em auto;
     }
     #section2 .bubble-container {
         flex-direction: column;
