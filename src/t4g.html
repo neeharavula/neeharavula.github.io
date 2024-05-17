@@ -51,7 +51,7 @@
                     <div class="rounded-rectangle grow">Web Development</div>
                     <div class="rounded-rectangle grow">Stackblitz WebContainers</div>
                     <div class="rounded-rectangle grow">JavaScript</div>
-                    <div class="rounded-rectangle grow">[insert]</div>
+                    <div class="rounded-rectangle grow">Angular</div>
                 </div>
             </div>
         </section>
@@ -63,24 +63,43 @@
             <div class="titles-captions">
                 <div class="title-caption">
                     <h2>Overview</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu cursus vitae congue mauris rhoncus. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Nunc
-                        faucibus a pellentesque sit amet porttitor eget dolor. Tristique magna sit amet purus gravida quis. </p>
+                    <p>UC Santa Cruz's Tech4Good Lab 🡥 is a research organization dedicated to social computing and developing systems to support individuals and communities to thrive in work, education, and more. During my time at the lab, I worked on the APIs and Frameworks team where I was involved in adding functionality to Causeway, an educational app where users can learn skills like web development through streamlined learning pathways, project hierarchies, mentorship, and collaboration.</p>
                 </div>
                 <div class="title-caption">
-                    <h2 class="appear">Tasks</h2>
-                    <p class="appear">Amet venenatis urna cursus eget nunc scelerisque viverra mauris in. Aliquam eleifend mi in nulla. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Integer feugiat scelerisque varius morbi.</p>
+                    <h2 class="appear">Task</h2>
+                    <p class="appear">My teammate and I were responsible for developing an interactive integrated development environment (IDE) that can be added to Causeway to allow users to learn programming concepts hands-on. The IDE had to include the following components:</p>
+                    <li class="appear">Instructions Pane: containing step-by-step tutorials for specific tasks/projects</li>
+                    <li class="appear">File Panel: to allow the user to select files</li>
+                    <li class="appear">Code Editor: to allow the user to make changes to a selected file</li>
+                    <li class="appear">Output Pane: to view the results of code changes (ex: a html webpage)</li>
+                    <li class="appear">Terminal Pane: to allow the user to compile and run code</li>
+                    <p class="appear">To accomplish this task, we used the Stackblitz WebContainers API, which allows us to boot up a WebContainer-- a browser-based runtime for executing applications and operating system commands. From there, we can populate the container's file system, install packages, and finally run the IDE server in a browser window.</p>
                 </div>
                 <div class="title-caption">
-                    <h2 class="appear">Contributions</h2>
-                    <p class="appear">Faucibus scelerisque eleifend donec pretium vulputate sapien. Risus ultricies tristique nulla aliquet enim tortor at auctor urna. Lacus laoreet non curabitur gravida arcu. Amet venenatis urna cursus eget nunc scelerisque viverra mauris
-                        in. Aliquam eleifend mi in nulla. Orci phasellus egestas tellus rutrum tellus pellentesque eu tincidunt. Integer feugiat scelerisque varius morbi. Est sit amet facilisis magna etiam tempor. At consectetur lorem donec massa sapien
-                        faucibus et molestie ac. Venenatis urna cursus eget nunc scelerisque viverra mauris. Sit amet luctus venenatis lectus magna fringilla urna porttitor rhoncus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit.
-                        Habitant morbi tristique senectus et. Ut sem nulla pharetra diam sit. Viverra aliquet eget sit amet tellus cras. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Eget nunc lobortis mattis aliquam
-                        faucibus purus in massa.</p>
+                    <h2 class="appear">Development</h2>
+                    <h3 class="appear">Setting up the WebContainer</h3>
+                    <p class="appear">First, we constructed the WebContainer using Vite, a development tool equipped with a dev server and used for building modern web apps. This involved constructing referenceable HTML objects for our code editor/textarea and output boxes as depicted below:</p>
+                    <p class="appear">[ insert image ]</p>
+                    <p class="appear">Then, we installed the WebContainers API package and created an event listener for booting up a WebContainer instance, and imported an Express app to the WebContainer, which contains the files index.js (for app startup and routing) and package.json (to handle dependencies), into our main JS module. At this point, we were able to load the contents of a file in the code editor:</p>
+                    <p class="appear">[ insert image ]</p>
+                    <h3 class="appear">Running the Dev Server</h3>
+                    <p class="appear">To be able to run commands such as "npm install" from inside the WebContainer, we created an installDependencies function inside the event listener. From there, we created another function called startDevServer, which</p>
+                    <li class="appear">Runs the server using npm run dev</li>
+                    <li class="appear">Listens to the server-ready event</li>
+                    <li class="appear">Assigns a URL to the output box of the WebContainer</li>
+                    <p class="appear">This allowed us to run the Express app in the WebContainer, and successfully update the output box based on the code in the code editor:</p>
+                    <p class="appear">[ insert image ]</p>
+                    <h3 class="appear">Creating the File System Tree</h3>
+                    <p class="appear">We utilized the API's file system operations to build a file tree, which involved recursively traversing through the directories with the readdir function. Then, we used mat-tree (an Angular Material design component) to create the file tree pane UI.</p>
+                    <h3 class="appear">Adding Edit Functionality</h3>
+                    <p class="appear">In order to make a selected file editable in the code editor, we created a function to write changes to the code editor and used CodeMirror to listen to the value changes and immediately update the output box accordingly. We also styled the code editor for better readability using the corresponding CodeMirror scss code.</p>
+                    <h3 class="appear">Connecting a Terminal</h3>
+                    <p class="appear">We used Xterm.js to embed a terminal in our IDE, which is the same terminal used by Visual Studio Code and other popular IDEs. We constructed a referenceable HTML object for the terminal window and redirected the output of our installDependencies and startDevServer methods to the terminal. Finally, we created a button to toggle the visibility of the terminal, similar to other IDEs.</p>
+                    <p class="appear">[ insert final gif here ]</p>
                 </div>
                 <div class="title-caption">
                     <h2 class="appear">Reflections</h2>
-                    <p class="appear">Libero justo laoreet sit amet cursus sit amet. Magna ac placerat vestibulum lectus mauris ultrices eros in cursus. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra. Sed vulputate mi sit amet mauris commodo quis.</p>
+                    <p class="appear">Coming from very little experience with JavaScript, this task was challenging and helped me learn a lot about working with APIs and the Angular framework. I enjoyed being able to work in a team of other passionate individuals and contribute to a cause that could improve means of education for future students!</p>
                 </div>
             </div>
         </section>
