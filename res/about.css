@@ -166,7 +166,7 @@ body {
 @media screen and (max-width: 768px) {
     #section1 {
         flex-direction: column;
-        padding-bottom: 5em;
+        padding: 1em 2em 5em 2em;
     }
     #section1 .left-section,
     #section1 .right-section {
