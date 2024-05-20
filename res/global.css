@@ -25,6 +25,10 @@
     strong {
         font-weight: 500;
     }
+    
+    .favicon {
+        display: none;
+    }
     /* NAVIGATION */
     
     nav {
@@ -120,6 +124,14 @@
         }
         .navbar li:not(.left) {
             margin-left: 0;
+        }
+        .favicon {
+            display: inline-block;
+            width: 25px;
+            /* Adjust size to match hamburger icon */
+            height: auto;
+            margin-right: 10px;
+            /* Adjust spacing */
         }
     }
     
