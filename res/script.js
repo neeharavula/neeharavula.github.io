@@ -99,12 +99,12 @@ window.addEventListener("resize", () => {
 
 // WORK PAGE TILES
 var workExperiences = [
-    { path: "../src/nm.html", year: 2023, season: "SUMMER", projectName: "Northwestern Mutual", background: "../assets/logos/nm.png", description: "SEE INTERNSHIP ➚" },
-    { path: "../src/melodics.html", year: 2023, season: "SPRING", projectName: "Melodics", background: "../assets/logos/melodics.png", description: "SEE PROJECT ➚" },
-    { path: "../src/ga.html", year: 2022, season: "SUMMER", projectName: "General Atomics", background: "../assets/logos/ga.png", description: "SEE INTERNSHIP ➚" },
-    { path: "../src/course-planner.html", year: 2023, season: "SPRING", projectName: "Course Planner", background: "../assets/logos/cp.png", description: "SEE PROJECT ➚" },
-    { path: "../src/t4g.html", year: 2023, season: "SPRING", projectName: "Tech 4 Good", background: "../assets/logos/t4g1.png", description: "SEE EXPERIENCE ➚" },
-    { path: "../src/ahacks.html", year: 2021, season: "WINTER", projectName: "USC AthenaHacks", background: "../assets/logos/ahacks.png", description: "SEE HACKATHON ➚" },
+    { path: "../../work/nm", year: 2023, season: "SUMMER", projectName: "Northwestern Mutual", background: "../assets/logos/nm.png", description: "SEE INTERNSHIP ➚" },
+    { path: "../../work/melodics", year: 2023, season: "SPRING", projectName: "Melodics", background: "../assets/logos/melodics.png", description: "SEE PROJECT ➚" },
+    { path: "../../work/ga", year: 2022, season: "SUMMER", projectName: "General Atomics", background: "../assets/logos/ga.png", description: "SEE INTERNSHIP ➚" },
+    { path: "../../work/courseplanner", year: 2023, season: "SPRING", projectName: "Course Planner", background: "../assets/logos/cp.png", description: "SEE PROJECT ➚" },
+    { path: "../../work/tech4good", year: 2023, season: "SPRING", projectName: "Tech 4 Good", background: "../assets/logos/t4g1.png", description: "SEE EXPERIENCE ➚" },
+    { path: "../../work/athenahacks", year: 2021, season: "WINTER", projectName: "USC AthenaHacks", background: "../assets/logos/ahacks.png", description: "SEE HACKATHON ➚" },
 ];
 
 // SORT WORK TILES BY YEAR AND SEASON (NEWEST -> OLDEST)
@@ -226,35 +226,35 @@ function hideCursorBubble() {
 
 // NEXT PROJECT NAVIGATION - WORK PAGES
 function navigateWorkPage(direction) {
-    // get the current page URL
-    var currentPage = window.location.pathname.split('/').pop();
+    // Get the current page URL
+    var currentPagePath = window.location.pathname.split('/');
+    currentPagePath.pop(); // Remove the last part which is "index.html"
+    var currentPage = currentPagePath.pop(); // Get the current page (e.g., "nm")
 
-    // find the index of the current page in the workExperiences array
-    var currentIndex = workExperiences.findIndex(experience => experience.path.includes(currentPage));
+    // Find the index of the current page in the workExperiences array
+    var currentIndex = workExperiences.findIndex(experience => experience.path.split('/').pop() === currentPage);
 
-    // calculate the new index based on the direction
+    // Calculate the new index based on the direction
     var newIndex = currentIndex + direction;
 
-    // check if the new index is within bounds
+    // Loop back to the beginning if the new index is out of bounds
     if (newIndex >= workExperiences.length) {
-        // if newIndex exceeds the array length, loop back to the first page
         newIndex = 0;
     } else if (newIndex < 0) {
-        // if newIndex is negative, loop to the last page
         newIndex = workExperiences.length - 1;
     }
 
-    // construct the new page URL
-    var newPage = workExperiences[newIndex].path;
+    // Construct the new page URL
+    var newPage = currentPagePath.join('/') + '/' + workExperiences[newIndex].path.split('/').pop(); // Assuming each subpage has its own index.html
 
-    // navigate to the new page
+    // Navigate to the new page
     window.location.href = newPage;
 }
 
 // NEXT PROJECT NAVIGATION ARROWS - WORK PAGES
-var section3 = document.getElementById("section3");
-var nextArrow = document.getElementById("nextArrow");
-
-nextArrow.addEventListener("click", function() {
+document.getElementById("nextArrow").addEventListener("click", function() {
     navigateWorkPage(1);
 });
+
+// NEXT PROJECT NAVIGATION ARROWS - WORK PAGES
+var section3 = document.getElementById("section3");
