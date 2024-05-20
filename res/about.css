@@ -1,7 +1,7 @@
 /* BODY & BACKGROUND */
 
 body {
-    background: #f3f3ef;
+    background: #FDFDFA;
     min-height: 100%;
     animation: fadeInAnimation ease 1.3s;
 }
@@ -35,10 +35,10 @@ body {
 }
 
 #section1 .right-section h2 {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
-    font-size: 2.7em;
+    font-size: 2.3em;
     font-weight: 400;
     /* Add this to remove top margin */
 }
@@ -48,8 +48,32 @@ body {
     font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
     line-height: 1.5em;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 300;
+}
+#section1 .social-button {
+    text-align: left;
+    margin-top: 2em;
+}
+
+#section1 .rounded-rectangle {
+    box-sizing: border-box;
+    padding: 0.5em 1.5em;
+    border: 1px solid #333333;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #333333;
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8em;
+    font-weight: 200;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#section1 .rounded-rectangle:hover {
+    background-color: #333333;
+    color: #f3f3ef;
 }
 
 
@@ -122,6 +146,18 @@ body {
     aspect-ratio: 3/4;
 }
 
+@media only screen and (min-width: 1524px) { 
+    #section1 .right-section h2 {
+        font-size: 2.7em;
+        margin-bottom: 1em;
+    }
+    #section1 .right-section p {
+        font-size: 1.3em;
+    }
+    #section1 .rounded-rectangle {
+        font-size: 1em;
+    }
+}
 
 /* MOBILE MEDIA QUERY */
 
@@ -145,6 +181,9 @@ body {
     }
     #section1 .right-section p {
         font-size: 1.3em;
+    }
+    #section1 .social-button {
+        text-align: center;
     }
     #section2 {
         flex-direction: column;
