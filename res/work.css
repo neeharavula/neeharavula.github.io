@@ -6,6 +6,7 @@ body {
     animation: fadeInAnimation ease 1.3s;
 }
 
+
 /* WORK EXPERIENCE TILES */
 
 .work-tiles {
@@ -303,6 +304,7 @@ body {
 }
 
 #section3 .arrow-container i {
+    padding-top: 0.4em;
     font-size: 1em;
     color: #333333;
 }
