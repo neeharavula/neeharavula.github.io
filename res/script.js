@@ -66,7 +66,7 @@ hamburger.addEventListener("click", () => {
     firstMenuItem.style.color = "#333333";
     firstMenuItem.style.listStyle = "none";
     firstMenuItem.style.textDecoration = "none";
-    firstMenuItem.style.fontWeight = "200";
+    firstMenuItem.style.fontWeight = "400";
     firstMenuItem.style.cursor = "pointer";
 
     // set the href attribute for the first menu item to navigate to home page
