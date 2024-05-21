@@ -11,16 +11,22 @@ body {
 /* SUMMARY */
 
 .summary {
-    padding: 9em 15em 0 2em;
-    display: flex;
+    padding: 12em 15em 0 2em;
+    display: block;
 }
 
 .summary h2 {
+    font-family: "Bai Jamjuree", sans-serif;
+    color: #333333;
+    font-size: 8em;
+    font-weight: 300;
+}
+.summary p {
     margin-bottom: 2em;
     font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
-    font-size: 4em;
-    font-weight: 400;
+    font-size: 3em;
+    font-weight: 300;
 }
 
 
