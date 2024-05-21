@@ -11,21 +11,21 @@ body {
 /* SUMMARY */
 
 .summary {
-    padding: 12em 15em 0 2em;
+    padding: 9em 15em 0 2em;
     display: block;
 }
 
 .summary h2 {
     font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
-    font-size: 8em;
+    font-size: 7em;
     font-weight: 300;
 }
 .summary p {
     margin-bottom: 2em;
     font-family: "Bai Jamjuree", sans-serif;
     color: #333333;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 300;
 }
 
@@ -60,6 +60,9 @@ body {
         /* stack items vertically */
     }
     .summary h2 {
+        font-size: 4em;
+    }
+    .summary p {
         font-size: 2.5em;
     }
 }
