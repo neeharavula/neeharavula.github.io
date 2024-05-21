@@ -56,13 +56,13 @@ body {
 @media screen and (max-width: 768px) {
     .summary {
         flex-direction: column;
-        padding: 3em 1.5em 0 2em;
+        padding: 2em 1.5em 0 2em;
         /* stack items vertically */
     }
     .summary h2 {
-        font-size: 4em;
+        font-size: 2.5em;
     }
     .summary p {
-        font-size: 2.5em;
+        font-size: 1.5em;
     }
 }
