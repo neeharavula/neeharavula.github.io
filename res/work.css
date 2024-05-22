@@ -42,8 +42,8 @@ body {
 }
 
 .project-name {
-    font-size: 2.5em;
-    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 2.3em;
+    font-family: "JetBrains Mono", monospace;
     color: #FDFDFA;
     text-align: left;
     font-weight: 400;
@@ -112,9 +112,9 @@ body {
 }
 
 #section1 h2 {
-    font-family: "Bai Jamjuree", sans-serif;
+    font-family: "JetBrains Mono", monospace;
     color: #333333;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 400;
     margin-bottom: 0.5em;
 }
@@ -154,7 +154,7 @@ body {
 }
 
 #section2 h2 {
-    font-family: "Bai Jamjuree", sans-serif;
+    font-family: "JetBrains Mono", monospace;
     color: #333333;
     font-size: 2em;
     font-weight: 400;
@@ -163,7 +163,7 @@ body {
 }
 
 #section2 h3 {
-    font-family: "Bai Jamjuree", sans-serif;
+    font-family: "JetBrains Mono", monospace;
     color: #333333;
     font-size: 1.5em;
     font-weight: 500;
@@ -297,7 +297,7 @@ body {
 
 #section3 .arrow-container h2 {
     margin-right: 1em;
-    font-family: "Bai Jamjuree", sans-serif;
+    font-family: "JetBrains Mono", monospace;
     color: #333333;
     font-size: 2em;
     font-weight: 400;
@@ -367,8 +367,7 @@ body {
         font-size: 0.8em;
     }
     .project-name {
-        font-size: 1.5em;
-        font-family: "JetBrains Mono", monospace;
+        font-size: 1.3em;
     }
     /* INDIVIDUAL WORK PAGES - SECTION 1 */
     #section1 {
@@ -386,7 +385,7 @@ body {
     }
     #section1 h2 {
         padding-top: 0.7em;
-        font-size: 2em;
+        font-size: 1.8em;
         font-family: "JetBrains Mono", monospace;
     }
     #section1 p {
@@ -401,11 +400,10 @@ body {
         padding: 0.3em 1.2em 0.3em 1.2em;
     }
     #section2 h2 {
-        font-family: "JetBrains Mono", monospace;
+        font-size: 1.8em;
     }
     #section2 h3 {
-        font-size: 1.4em;
-        font-family: "JetBrains Mono", monospace;
+        font-size: 1.2em;
     }
     #section2 .titles-captions .title-caption .t4g-image {
         width: 85%;

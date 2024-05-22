@@ -99,12 +99,12 @@ window.addEventListener("resize", () => {
 
 // WORK PAGE TILES
 var workExperiences = [
-    { path: "../../work/nm", year: 2023, season: "SUMMER", projectName: "Northwestern Mutual", background: "../assets/logos/nm.png", description: "SEE INTERNSHIP ➚" },
-    { path: "../../work/melodics", year: 2023, season: "SPRING", projectName: "Melodics", background: "../assets/logos/melodics.png", description: "SEE PROJECT ➚" },
-    { path: "../../work/ga", year: 2022, season: "SUMMER", projectName: "General Atomics", background: "../assets/logos/ga.png", description: "SEE INTERNSHIP ➚" },
-    { path: "../../work/courseplanner", year: 2023, season: "SPRING", projectName: "Course Planner", background: "../assets/logos/cp.png", description: "SEE PROJECT ➚" },
-    { path: "../../work/tech4good", year: 2023, season: "SPRING", projectName: "Tech 4 Good", background: "../assets/logos/t4g1.png", description: "SEE EXPERIENCE ➚" },
-    { path: "../../work/athenahacks", year: 2021, season: "WINTER", projectName: "USC AthenaHacks", background: "../assets/logos/ahacks.png", description: "SEE HACKATHON ➚" },
+    { path: "../../work/nm", year: 2023, season: "SUMMER", projectName: "NORTHWESTERN MUTUAL", background: "../assets/logos/nm.png", description: "SEE INTERNSHIP ➚" },
+    { path: "../../work/melodics", year: 2023, season: "SPRING", projectName: "MELODICS", background: "../assets/logos/melodics.png", description: "SEE PROJECT ➚" },
+    { path: "../../work/ga", year: 2022, season: "SUMMER", projectName: "GENERAL ATOMICS", background: "../assets/logos/ga.png", description: "SEE INTERNSHIP ➚" },
+    { path: "../../work/courseplanner", year: 2023, season: "SPRING", projectName: "COURSE PLANNER", background: "../assets/logos/cp.png", description: "SEE PROJECT ➚" },
+    { path: "../../work/tech4good", year: 2023, season: "SPRING", projectName: "TECH4GOOD", background: "../assets/logos/t4g1.png", description: "SEE EXPERIENCE ➚" },
+    { path: "../../work/athenahacks", year: 2021, season: "WINTER", projectName: "USC ATHENAHACKS", background: "../assets/logos/ahacks.png", description: "SEE HACKATHON ➚" },
 ];
 
 // SORT WORK TILES BY YEAR AND SEASON (NEWEST -> OLDEST)
