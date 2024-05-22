@@ -54,7 +54,7 @@ hamburger.addEventListener("click", () => {
     // set font size and other styles based on screen width
     if (window.innerWidth < 768) {
         if (isActive) {
-            firstMenuItem.style.fontSize = "3em";
+            firstMenuItem.style.fontSize = "1em";
         } else {
             firstMenuItem.style.fontSize = "1em";
         }
