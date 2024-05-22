@@ -347,7 +347,7 @@ body {
     /* MOBILE TITLE */
     .mobile-title {
         display: block;
-        font-family: "Bai Jamjuree", sans-serif;
+        font-family: "JetBrains Mono", monospace;
         color: #333333;
         font-size: 2em;
         text-align: left;

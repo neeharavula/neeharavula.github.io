@@ -109,6 +109,7 @@ body {
     .title-box h2 {
         padding-left: 0;
         font-size: 2em;
+        font-family: "JetBrains Mono", monospace;
     }
     .caption-box p {
         padding-left: 0.1em;
