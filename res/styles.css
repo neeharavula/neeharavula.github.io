@@ -11,7 +11,7 @@ body {
 /* SUMMARY */
 
 .summary {
-    padding: 8em 15em 0 2em;
+    padding: 6em 15em 0 2em;
     display: block;
 }
 
@@ -63,6 +63,7 @@ body {
     .summary h2 {
         font-size: 4em;
         margin-bottom: 0.5em;
+        line-height: 1em;
     }
     .summary p {
         font-size: 2em;
