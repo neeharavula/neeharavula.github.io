@@ -14,22 +14,22 @@ viewbox.forEach(image => {
     observer.observe(image);
 });
 
-// RESPONSIVE HAMBURGER MENU
+/// RESPONSIVE HAMBURGER MENU
 var hamburger = document.querySelector("#hamburger");
 var nav = document.querySelector(".navbar");
-var navLinks = document.querySelectorAll(".navbar li");
+var navLinks = document.querySelectorAll(".navbar li a");
 
 // when list items are clicked, close menu
-Array.from(navLinks).forEach((li) =>
-    li.addEventListener("click", () => {
+Array.from(navLinks).forEach((link) => {
+    link.addEventListener("click", () => {
         if (hamburger.classList.contains("toggle")) {
             hamburger.classList.remove("toggle");
         }
         if (nav.classList.contains("nav-active")) {
             nav.classList.remove("nav-active");
         }
-    })
-);
+    });
+});
 
 // TOGGLE HAMBURGER ICON ON CLICK
 hamburger.addEventListener("click", () => {
@@ -70,7 +70,7 @@ hamburger.addEventListener("click", () => {
     firstMenuItem.style.cursor = "pointer";
 
     // set the href attribute for the first menu item to navigate to home page
-    firstMenuItem.querySelector("a").setAttribute("href", "../index.html");
+    firstMenuItem.setAttribute("href", "/");
 });
 
 // handle click event for "Home" menu item
@@ -79,7 +79,7 @@ navLinks[0].addEventListener("click", (event) => {
     event.preventDefault();
 
     // navigate to home page
-    window.location.href = "../index.html";
+    window.location.href = "/";
 });
 
 
