@@ -367,7 +367,7 @@ body {
         font-size: 0.8em;
     }
     .project-name {
-        font-size: 1.3em;
+        font-size: 1.5em;
     }
     /* INDIVIDUAL WORK PAGES - SECTION 1 */
     #section1 {
@@ -385,11 +385,11 @@ body {
     }
     #section1 h2 {
         padding-top: 0.7em;
-        font-size: 1.8em;
+        font-size: 1.6em;
         font-family: "JetBrains Mono", monospace;
     }
     #section1 p {
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
     #section1 .rounded-rectangles {
         margin-top: 1.5em;
@@ -400,10 +400,14 @@ body {
         padding: 0.3em 1.2em 0.3em 1.2em;
     }
     #section2 h2 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
     #section2 h3 {
         font-size: 1.2em;
+    }
+    #section2 p,
+    #section2 li {
+        font-size: 1.1em;
     }
     #section2 .titles-captions .title-caption .t4g-image {
         width: 85%;
