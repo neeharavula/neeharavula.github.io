@@ -1,7 +1,7 @@
 /* BODY & BACKGROUND */
 
 body {
-    background: linear-gradient(45deg, #c5f9ee, #f3f3ef, #f3f3ef, #c5f9ee);
+    background: linear-gradient(45deg, #a2bae7, #c5f3e9, #f3f3ef, #fac192);
     animation: gradient 15s ease infinite;
     min-height: 100vh;
     overflow: hidden;
