@@ -170,6 +170,7 @@ body {
     margin-left: 1.4em;
     margin-right: 1.7em;
     margin-bottom: 0.5em;
+    padding-top: 0.5em;
 }
 
 #section2 p,
@@ -236,7 +237,7 @@ body {
     text-align: center;
     font-family: "JetBrains Mono", monospace;
     font-size: 1em;
-    font-weight: 200;
+    font-weight: 300;
     text-decoration: none;
     display: inline-block;
 }
@@ -274,7 +275,7 @@ body {
 #section2 .bubble-text {
     font-family: "JetBrains Mono", monospace;
     font-size: 1em;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 

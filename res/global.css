@@ -25,6 +25,12 @@
     strong {
         font-weight: 500;
     }
+
+    code {
+        color:#333333;
+        font-size: 0.9em;
+        font-family: "JetBrains Mono", monospace;
+    }
     
     .favicon {
         display: none;
