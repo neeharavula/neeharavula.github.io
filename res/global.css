@@ -92,6 +92,7 @@
         display: none;
     }
     
+    /* MOBILE MEDIA QUERY */
     @media screen and (max-width: 768px) {
         #hamburger {
             display: block;
@@ -134,10 +135,8 @@
         .favicon {
             display: inline-block;
             width: 27px;
-            /* Adjust size to match hamburger icon */
             height: auto;
             margin-right: 10px;
-            /* Adjust spacing */
         }
     }
     
@@ -160,7 +159,6 @@
     .toggle #bar3 {
         transform: rotate(45deg) translate(-5px, -4px);
     }
-    /* HOVER UNDERLINE ANIMATION */
     
     .hover-underline-animation {
         display: inline-block;

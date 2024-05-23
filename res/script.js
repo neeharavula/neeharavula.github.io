@@ -1,4 +1,4 @@
-// APPEAR ELEMENTTS ON SCROLL
+// APPEAR ELEMENTS ON SCROLL
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         // if the element is visible
@@ -38,13 +38,10 @@ hamburger.addEventListener("click", () => {
     // burger animation
     hamburger.classList.toggle("toggle");
 
-    // get the first menu item
+    // dynamically change the first menu item
     const firstMenuItem = navLinks[0];
-
-    // check if the navigation menu is active
     const isActive = nav.classList.contains("nav-active");
 
-    // dynamically change the first menu item
     if (isActive) {
         firstMenuItem.textContent = "HOME";
     } else {
@@ -59,7 +56,7 @@ hamburger.addEventListener("click", () => {
             firstMenuItem.style.fontSize = "1em";
         }
     } else {
-        firstMenuItem.style.fontSize = "1em"; // set desktop font size
+        firstMenuItem.style.fontSize = "1em";
     }
 
     firstMenuItem.style.fontFamily = "JetBrains Mono, monospace";
@@ -73,12 +70,9 @@ hamburger.addEventListener("click", () => {
     firstMenuItem.setAttribute("href", "/");
 });
 
-// handle click event for "Home" menu item
+// handle click event for home menu item
 navLinks[0].addEventListener("click", (event) => {
-    // prevent default behavior to ensure link navigation
     event.preventDefault();
-
-    // navigate to home page
     window.location.href = "/";
 });
 
@@ -89,9 +83,9 @@ window.addEventListener("resize", () => {
         if (li.textContent.trim() === "HOME") {
             // update font size based on screen width
             if (window.innerWidth < 768) {
-                li.style.fontSize = "3em"; // set mobile font size
+                li.style.fontSize = "3em"; // mobile
             } else {
-                li.style.fontSize = "1em"; // set desktop font size
+                li.style.fontSize = "1em"; // desktop
             }
         }
     });
@@ -109,7 +103,7 @@ var workExperiences = [
 
 // SORT WORK TILES BY YEAR AND SEASON (NEWEST -> OLDEST)
 workExperiences.sort((a, b) => {
-    // compare years first
+    // compare years
     if (b.year !== a.year) {
         return b.year - a.year;
     }
@@ -128,7 +122,7 @@ workExperiences.forEach((experience) => {
     var tile = document.createElement("div");
     tile.classList.add("work-tile");
 
-    // set background image or fallback to grey background
+    // fallback background
     tile.style.backgroundImage = `url(${experience.background}), linear-gradient(#aaaaaa, #aaaaaa)`;
 
     var year = document.createElement("div");
@@ -187,17 +181,16 @@ workTilesContainer.querySelectorAll(".work-tile").forEach((tile, index) => {
 
 // SHOW CURSOR BUBBLE
 function showCursorBubble(event, text) {
-    // Check if the screen width is greater than 768px (assuming mobile devices have a width less than this)
     if (window.innerWidth > 768) {
         var cursorBubble = document.querySelector(".cursor-bubble");
 
         // show the cursor bubble
         cursorBubble.style.display = "block";
 
-        // update the position smoothly
+        // update the position
         updateCursorBubblePosition(event);
 
-        // set the text content
+        // set text
         cursorBubble.textContent = text;
     }
 }
@@ -211,7 +204,7 @@ document.addEventListener("mousemove", (event) => {
 function updateCursorBubblePosition(event) {
     var cursorBubble = document.querySelector(".cursor-bubble");
 
-    // update the position smoothly
+    // update the position
     cursorBubble.style.left = `${event.clientX + 10}px`;
     cursorBubble.style.top = `${event.clientY - 10}px`;
 }
@@ -226,28 +219,27 @@ function hideCursorBubble() {
 
 // NEXT PROJECT NAVIGATION - WORK PAGES
 function navigateWorkPage(direction) {
-    // Get the current page URL
     var currentPagePath = window.location.pathname.split('/');
-    currentPagePath.pop(); // Remove the last part which is "index.html"
-    var currentPage = currentPagePath.pop(); // Get the current page (e.g., "nm")
+    currentPagePath.pop();
+    var currentPage = currentPagePath.pop();
 
-    // Find the index of the current page in the workExperiences array
+    // find index of current page in workExperiences array
     var currentIndex = workExperiences.findIndex(experience => experience.path.split('/').pop() === currentPage);
 
-    // Calculate the new index based on the direction
+    // calculate new index based on direction
     var newIndex = currentIndex + direction;
 
-    // Loop back to the beginning if the new index is out of bounds
+    // loop back to beginning if the new index is out of bounds
     if (newIndex >= workExperiences.length) {
         newIndex = 0;
     } else if (newIndex < 0) {
         newIndex = workExperiences.length - 1;
     }
 
-    // Construct the new page URL
-    var newPage = currentPagePath.join('/') + '/' + workExperiences[newIndex].path.split('/').pop(); // Assuming each subpage has its own index.html
+    // construct the new page URL
+    var newPage = currentPagePath.join('/') + '/' + workExperiences[newIndex].path.split('/').pop();
 
-    // Navigate to the new page
+    // navigate to the new page
     window.location.href = newPage;
 }
 
@@ -256,5 +248,4 @@ document.getElementById("nextArrow").addEventListener("click", function() {
     navigateWorkPage(1);
 });
 
-// NEXT PROJECT NAVIGATION ARROWS - WORK PAGES
 var section3 = document.getElementById("section3");

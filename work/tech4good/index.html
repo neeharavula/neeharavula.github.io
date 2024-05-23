@@ -23,7 +23,7 @@
         <nav>
             <!-- FAVICON -->
             <a href="../../index.html">
-                <img src="../../assets/favicon.ico" alt="Favicon" class="favicon">
+                <img src="../../assets/favicon.ico" alt="favicon" class="favicon">
             </a>
             <!-- HAMBURGER MENU -->
             <div id="hamburger">
@@ -66,13 +66,15 @@
         <!-- SECTION 2 - INFO -->
         <section class="section" id="section2">
             <div class="titles-captions">
+                <!-- OVERVIEW -->
                 <div class="title-caption">
-                    <h2>Overview</h2>
-                    <p><strong><a href="https://tech4good.soe.ucsc.edu/initiatives" target="_blank" class="hover-underline-animation">UC Santa Cruz's Tech4Good Lab <span>&#8599;</span></a></strong> &nbsp;is a research organization dedicated to social computing
+                    <h2 class="appear">Overview</h2>
+                    <p class="appear"><strong><a href="https://tech4good.soe.ucsc.edu/initiatives" target="_blank" class="hover-underline-animation">UC Santa Cruz's Tech4Good Lab <span>&#8599;</span></a></strong> &nbsp;is a research organization dedicated to social computing
                         and developing systems to help individuals and communities to thrive in work, education, and more. During my time at the lab, I worked on the <strong>APIs and Frameworks</strong> team where I was involved in adding functionality
                         to <strong><a href="https://causeway.soe.ucsc.edu/#/" target="_blank" class="hover-underline-animation">Causeway <span>&#8599;</span></a></strong>, an educational app where users can learn skills like web development through streamlined
                         learning pathways, project hierarchies, mentorship, and collaboration.</p>
                 </div>
+                <!-- TASK -->
                 <div class="title-caption">
                     <h2 class="appear">Task</h2>
                     <p class="appear">My teammate and I were responsible for developing an <strong>integrated development environment (IDE)</strong> that could be added to Causeway to allow users to learn programming concepts hands-on. The IDE had to include the following
@@ -104,15 +106,18 @@
                     <li class="appear">Listens to the server-ready event</li>
                     <li class="appear">Assigns a URL to the output box of the WebContainer</li>
                     <p class="appear">This allowed us to run the Express app inside the WebContainer, and successfully update the output box based on the code in the code editor.</p>
+                    <!-- CREATING FILE SYSTEM -->
                     <h3 class="appear">Creating a File System Tree</h3>
                     <p class="appear">We utilized the API's file system operations to build a <strong>file tree</strong>, which involved recursively traversing through the directories with the <code>readdir</code> function. Then, we used <strong><code>mat-tree</code></strong> (an Angular Material
                         design component) to create the file tree pane UI. In order to make a selected file editable in the code editor, we created a function to write changes to the code editor and used <strong>CodeMirror</strong> to listen to the value
                         changes and immediately update the output box accordingly. We also styled the code editor for better readability using the corresponding CodeMirror scss code.</p>
+                    <!-- CONNECTING TERMINAL -->
                     <h3 class="appear">Connecting a Terminal</h3>
                     <p class="appear">Finally, we used <strong>Xterm.js</strong> to embed a terminal in our IDE, which is the same terminal used by Visual Studio Code and other popular IDEs. We constructed a referenceable HTML object for the terminal window and redirected
                         the output of our <code>installDependencies</code> and <code>startDevServer</code> methods to the terminal. Then, we created a button to toggle the visibility of the terminal for a better user experience.</p>
                     <img src="../../assets/t4g/final-ide.gif" alt="final IDE" class="t4g-image appear">
                 </div>
+                <!-- REFLECTIONS -->
                 <div class="title-caption">
                     <h2 class="appear">Reflections</h2>
                     <p class="appear">Coming from very little experience with <strong>JavaScript</strong>, this task was super rewarding and helped me learn a lot about working with APIs and frameworks like <strong>Angular</strong> and <strong>Express.js</strong>. I enjoyed being able to work in a team
@@ -132,6 +137,7 @@
                 </div>
         </section>
         </div>
+        
         <!-- FOOTER -->
         <footer>
             <div class="socials">

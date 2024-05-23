@@ -31,7 +31,6 @@ body {
 
 .work-tile:hover {
     transform: scale(1.03);
-    /*opacity: 0.8;*/
 }
 
 .year {
@@ -57,7 +56,7 @@ body {
 /* INDIVIDUAL WORK PAGE STYLES */
 
 
-/* page dividers */
+/* PAGE DIVIDERS */
 
 .divider {
     height: 1px;
@@ -67,7 +66,7 @@ body {
 }
 
 
-/* section 1 styles */
+/* SECTION 1 STYLES */
 
 #section1 {
     padding: 2em 2em 3em;
@@ -95,7 +94,6 @@ body {
     position: relative;
     border-radius: 15px;
     z-index: 998;
-    /* Ensure it's behind the hamburger menu */
 }
 
 #section1 .image-container::before {
@@ -108,7 +106,6 @@ body {
     background: inherit;
     border-radius: 15px;
     z-index: 998;
-    /* Ensure it's behind the hamburger menu */
 }
 
 #section1 h2 {
@@ -147,7 +144,7 @@ body {
 }
 
 
-/* section 2 styles */
+/* SECTION 2 STYLES */
 
 #section2 {
     padding-bottom: 2em;
@@ -188,7 +185,6 @@ body {
 
 #section2 p a {
     text-decoration: none;
-    ;
 }
 
 #section2 .titles-captions .title-caption .user-flow {
@@ -247,9 +243,6 @@ body {
     color: #FDFDFA;
 }
 
-
-/* BUBBLE STYLES */
-
 #section2 .bubble-container {
     display: flex;
     justify-content: center;
@@ -269,7 +262,6 @@ body {
     font-size: 1em;
     display: flex;
     align-items: center;
-    /* Center vertically */
 }
 
 #section2 .bubble-text {
@@ -279,12 +271,11 @@ body {
 }
 
 
-/* section 3 styles */
+/* SECTION 3 STYLES */
 
 #section3 .navigation-arrows {
     display: flex;
     justify-content: flex-end;
-    /* align items to the right */
     padding: 1.5em 0 3em 0;
     margin-right: 2em;
 }
@@ -400,6 +391,7 @@ body {
         font-size: 0.8em;
         padding: 0.3em 1.2em 0.3em 1.2em;
     }
+    /* INDIVIDUAL WORK PAGES - SECTION 2 */
     #section2 h2 {
         font-size: 1.6em;
         padding-left: 1.2em;
@@ -431,12 +423,10 @@ body {
         font-size: 1em;
         display: flex;
         align-items: center;
-        /* Center vertically */
     }
     #section2 .bubble-text {
         font-family: "JetBrains Mono", monospace;
         font-size: 1em;
         font-weight: 200;
     }
-    /* FOOTER */
 }

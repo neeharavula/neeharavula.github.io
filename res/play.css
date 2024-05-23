@@ -103,7 +103,7 @@ body {
 }
 
 
-/* PHOTO GRID RESPONSIVENESS */
+/* MOBILE MEDIA QUERY */
 
 @media screen and (max-width: 768px) {
     .title-box h2 {
@@ -126,10 +126,4 @@ body {
         width: calc(50% - 10px);
         aspect-ratio: 3/4;
     }
-    /*.full-screen-image {
-        width: 200vh;
-        height: 70vh;
-        /*height: 70vh;
-        width: 100%;
-    }*/
 }

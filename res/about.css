@@ -13,7 +13,6 @@ body {
     padding: 2.5em 2em 7em 2em;
     display: flex;
     align-items: flex-start;
-    /* Align items to the start of the flex container */
 }
 
 #section1 .left-section {
@@ -21,6 +20,7 @@ body {
     padding-right: 2em;
 }
 
+/* SECTION 1 - Photo */
 #section1 .image-container img {
     width: 100%;
     height: auto;
@@ -34,15 +34,16 @@ body {
     padding: 20px;
 }
 
+/* SECTION 1 - Title */
 #section1 .right-section h2 {
     margin-bottom: 1em;
     font-family: "JetBrains Mono", monospace;
     color: #333333;
     font-size: 2.3em;
     font-weight: 400;
-    /* Add this to remove top margin */
 }
 
+/* SECTION 1 - Text */
 #section1 .right-section p {
     margin-bottom: 0;
     font-family: "Bai Jamjuree", sans-serif;
@@ -52,6 +53,7 @@ body {
     font-weight: 300;
 }
 
+/* SECTION 1 - Social Buttons */
 #section1 .social-button {
     text-align: left;
     margin-top: 2em;
@@ -85,7 +87,6 @@ body {
     background-color: #333333;
     width: 100%;
     margin: 20px 0;
-    /* Adjust as needed */
 }
 
 
@@ -113,9 +114,9 @@ body {
 
 #section2 .left-section {
     padding-right: 2em;
-    /* Add padding to the right */
 }
 
+/* SECTION 2 - Playlist */
 #section2 .left-section .playlist {
     flex: 1;
 }
@@ -128,9 +129,9 @@ body {
 
 #section2 .right-section {
     padding-left: 1.5em;
-    /* Add padding to the left */
 }
 
+/* SECTION 2 - Photo Grid */
 #section2 .right-section .photo-grid {
     display: flex;
     flex-wrap: wrap;
@@ -146,6 +147,8 @@ body {
     background-color: #ccc;
     aspect-ratio: 3/4;
 }
+
+/* SMALL DESKTOP MEDIA QUERY */
 
 @media only screen and (min-width: 1524px) {
     #section1 .right-section h2 {
@@ -191,9 +194,7 @@ body {
         flex-direction: column;
         padding-bottom: 3em;
         padding-left: 1.5em;
-        /* Add left padding to compensate for playlist padding */
         padding-right: 1.5em;
-        /* Add right padding to compensate for playlist padding */
     }
     #section2 .left-section {
         padding-bottom: 2em;
@@ -207,9 +208,7 @@ body {
     }
     #section2 .left-section .playlist {
         width: calc(100% + 2em);
-        /* Adjusted width */
         padding: 0 0.5em 0 0.5em;
-        /* Set padding */
     }
     #section2 .left-section .playlist iframe {
         width: 100%;

@@ -38,13 +38,10 @@ hamburger.addEventListener("click", () => {
     // burger animation
     hamburger.classList.toggle("toggle");
 
-    // get the first menu item
+    // dynamically change the first menu item
     const firstMenuItem = navLinks[0];
-
-    // check if the navigation menu is active
     const isActive = nav.classList.contains("nav-active");
 
-    // dynamically change the first menu item
     if (isActive) {
         firstMenuItem.textContent = "HOME";
     } else {
@@ -59,7 +56,7 @@ hamburger.addEventListener("click", () => {
             firstMenuItem.style.fontSize = "1em";
         }
     } else {
-        firstMenuItem.style.fontSize = "1em"; // set desktop font size
+        firstMenuItem.style.fontSize = "1em";
     }
 
     firstMenuItem.style.fontFamily = "JetBrains Mono, monospace";
@@ -73,12 +70,10 @@ hamburger.addEventListener("click", () => {
     firstMenuItem.querySelector("a").setAttribute("href", "../index.html");
 });
 
-// handle click event for "Home" menu item
+// handle click event for home menu item
 navLinks[0].addEventListener("click", (event) => {
-    // prevent default behavior to ensure link navigation
     event.preventDefault();
 
-    // navigate to home page
     window.location.href = "../index.html";
 });
 
@@ -88,9 +83,9 @@ window.addEventListener("resize", () => {
         if (li.textContent.trim() === "HOME") {
             // update font size based on screen width
             if (window.innerWidth < 768) {
-                li.style.fontSize = "3em"; // set mobile font size
+                li.style.fontSize = "3em"; // mobile
             } else {
-                li.style.fontSize = "1em"; // set desktop font size
+                li.style.fontSize = "1em"; // desktop
             }
         }
     });
